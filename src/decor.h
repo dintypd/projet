@@ -15,15 +15,15 @@
  * 
  * @brief Classe permettant l'utilisation de décors
  */
- class Decor
- {
-	 private:
+class Decor
+{
+	private:
 		unsigned int _id; // identifiant unique
-		static unsigned int nextId; // le prochain objet aura cet identifiant
+		static unsigned int _nextId; // le prochain objet aura cet identifiant
 		Position _position;
 		bool _viewLine; // la ligne de vue
 		
-	 public:
+	public:
 		/**
 		 * @brief Constructeur
 		 * @param position La position du décor sur la carte
@@ -47,8 +47,8 @@
 		 * @return vrai si le décor autorise la ligne de vue
 		 */
 		bool isViewLine() const;
- };
+};
  
- #endif // DECOR_H
+#endif // DECOR_H
 
 

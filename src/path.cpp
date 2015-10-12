@@ -27,7 +27,7 @@ Position Path::popPos()
 	return pos;
 }
 
-unsigned int Path::size()
+unsigned int Path::size() const
 {
 	return _path.size();
 }
