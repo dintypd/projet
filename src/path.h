@@ -46,7 +46,7 @@ class Path
 		 * @brief calcule la taille de la file
 		 * @return la taille de _path
 		 */
-		unsigned int size();
+		unsigned int size() const;
 		
 		Position operator[](unsigned int const & i);
 };

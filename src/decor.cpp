@@ -7,9 +7,9 @@
 
 #include "decor.h"
 
-unsigned int Decor::nextId = 0;
+unsigned int Decor::_nextId = 0;
 
-Decor::Decor(Position position) : _id(nextId++), _position(position), _viewLine(true)
+Decor::Decor(Position position) : _id(++_nextId), _position(position), _viewLine(true)
 {
 	// rien à faire
 } 

@@ -1,5 +1,5 @@
 /**
- * @file map.h
+ * @file map.cpp
  * @author B. Le Clère, A. Perhirin
  * @since 06/10/2015
  * @brief Implémentation de la classe Map
@@ -19,7 +19,7 @@ Map::Map()
 	_tiles = {l1, l2, l3, l4, l5};
 } 
 
-bool Map::isValidPath(/*Unit unit,*/ Path path)
+bool Map::isValidPath(/*Unit unit,*/ Path path) const
 {
 	bool valid = true;
 	unsigned int i = 1;
@@ -46,22 +46,22 @@ bool Map::isValidPath(/*Unit unit,*/ Path path)
 	return valid;
 }
 
-bool Map::isValidViewLine(/*Unit unit,*/ Position position)
+bool Map::isValidViewLine(/*Unit unit,*/ Position position) const
 {
 	return true;
 }
 
-void Map::getUnitAt(Position position)
+void Map::getUnitAt(Position position) const
 {
 	
 }
 
-bool Map::isUnitAt(Position position)
+bool Map::isUnitAt(Position position) const
 {
 	return false;
 }
 
-Decor Map::getDecorAt(Position position)
+Decor Map::getDecorAt(Position position) const
 {
 	unsigned int i = 0;
 	unsigned int taille = _decors.size();
@@ -79,7 +79,7 @@ Decor Map::getDecorAt(Position position)
 	return _decors[i];
 }
 
-bool Map::isDecorAt(Position position)
+bool Map::isDecorAt(Position position) const
 {
 	unsigned int i = 0;
 	unsigned int taille = _decors.size();
