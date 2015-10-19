@@ -23,7 +23,7 @@ class Player
 		unsigned int _id; // identifiant unique
 		static unsigned int _nextId; // le prochain objet aura cet identifiant
 		Base _base;
-		std::vector<Unit> _units;
+		std::vector<Unit*> _units;
 		unsigned int _golds;
 		
 	public:
@@ -48,7 +48,7 @@ class Player
 		 * @brief Accesseur du tableau des unités
 		 * @return le tableau des unités du joueur
 		 */
-		std::vector<Unit> getUnits() const;
+		std::vector<Unit*> getUnits() const;
 		
 		/**
 		 * @brief Accesseur de la base

@@ -15,7 +15,7 @@ int main()
 	
 	Unit unit(10, p0);
 	
-	cout << m.isValidPath(unit, path) << endl;
+	cout << m.isValidPath(&unit, path) << endl;
 	
 	return 0;
 }

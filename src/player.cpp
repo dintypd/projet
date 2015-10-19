@@ -21,7 +21,7 @@ unsigned int Player::getGolds() const
 	return _golds;
 }
 
-vector<Unit> Player::getUnits() const
+vector<Unit*> Player::getUnits() const
 {
 	return _units;
 }

@@ -19,12 +19,12 @@ Map::Map()
 	_tiles = {l1, l2, l3, l4, l5};
 } 
 
-bool Map::isValidPath(Unit unit, Path path) const
+bool Map::isValidPath(Unit* unit, Path path) const
 {
 	bool valid = true;
 	unsigned int i = 1;
 	
-	if((unit.getPosition().distance(path[0]) != 1) || 
+	if((unit->getPosition().distance(path[0]) != 1) || 
 	   (isDecorAt(path[0])) || 
 	   (isUnitAt(path[0])))
 	{
@@ -46,7 +46,7 @@ bool Map::isValidPath(Unit unit, Path path) const
 	return valid;
 }
 
-bool Map::isValidViewLine(Unit unit, Position position) const
+bool Map::isValidViewLine(Unit* unit, Position position) const
 {
 	return true;
 }
@@ -62,11 +62,11 @@ Unit* Map::getUnitAt(Position position) const
 	while(!trouve && i < nbPlayers)
 	{
 		j = 0;
-		taille = _players[i].getUnits().size();
+		taille = _players[i]->getUnits().size();
 		
 		while(!trouve && j < taille)
 		{
-			if(_players[i].getUnits()[j].getPosition() == position)
+			if(_players[i]->getUnits()[j]->getPosition() == position)
 			{
 				trouve = true;
 			}
@@ -75,12 +75,34 @@ Unit* Map::getUnitAt(Position position) const
 		++i;
 	}
 	
-	return *_players[i].getUnits()[j];
+	return _players[i]->getUnits()[j];
 }
 
 bool Map::isUnitAt(Position position) const
 {
-	return false;
+	unsigned int i = 0;
+	unsigned int nbPlayers = _players.size();
+	bool trouve = false;
+	
+	unsigned int j = 0, taille;
+	
+	while(!trouve && i < nbPlayers)
+	{
+		j = 0;
+		taille = _players[i]->getUnits().size();
+		
+		while(!trouve && j < taille)
+		{
+			if(_players[i]->getUnits()[j]->getPosition() == position)
+			{
+				trouve = true;
+			}
+			++j;
+		}
+		++i;
+	}
+	
+	return trouve;
 }
 
 Decor* Map::getDecorAt(Position position) const
@@ -91,14 +113,14 @@ Decor* Map::getDecorAt(Position position) const
 	
 	while(i < taille && !trouve)
 	{
-		if(_decors[i].getPosition() == position)
+		if(_decors[i]->getPosition() == position)
 		{
 			trouve = true;
 		}
 		++i;
 	}
 	
-	return *_decors[i];
+	return _decors[i];
 }
 
 bool Map::isDecorAt(Position position) const
@@ -109,7 +131,7 @@ bool Map::isDecorAt(Position position) const
 	
 	while(i < taille && !trouve)
 	{
-		if(_decors[i].getPosition() == position)
+		if(_decors[i]->getPosition() == position)
 		{
 			trouve = true;
 		}

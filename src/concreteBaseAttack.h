@@ -2,7 +2,7 @@
  * @file concreteBaseAttack.h
  * @author B. Le Clère, A. Perhirin
  * @since 19/10/2015
- * @brief Définition del'attaque de base
+ * @brief Définition de l'attaque de base
 **/
 
 #ifndef CONCRETE_BASE_ATTACK_H
@@ -13,7 +13,7 @@
 
 class Map;
 /**
- * @class ConcreteBaseAttack attack.h
+ * @class ConcreteBaseAttack concreteBaseAttack.h
  * 
  * @brief Classe concrete définissant le comportement d'attaque de base des unités normales
  */

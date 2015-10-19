@@ -7,7 +7,6 @@
 
 #ifndef ATTACK_H
 #define ATTACK_H
-#include "map.h"
 #include "position.h"
 
 class Map;

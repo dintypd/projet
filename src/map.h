@@ -21,10 +21,10 @@ class Map
 {
 	private:
 		unsigned int _size;
-		std::vector<Decor> _decors;
+		std::vector<Decor*> _decors;
 		std::vector<std::vector<bool>> _tiles;
 		std::vector<Position> _startingPositions;
-		std::vector<Player> _players;
+		std::vector<Player*> _players;
 		//std::vector<Objective> objectives;
 		
 	public:
@@ -39,7 +39,7 @@ class Map
 		 * @param path le chemin à tester
 		 * @return vrai si le chemin est valide
 		 */
-		bool isValidPath(Unit unit, Path path) const;
+		bool isValidPath(Unit* unit, Path path) const;
 		
 		/**
 		 * @brief Méthode qui teste si une ligne de vue est valide pour une unité donnée
@@ -47,7 +47,7 @@ class Map
 		 * @param position la position ou l'action doit être effectuée
 		 * @return vrai si la ligne de vue est valide
 		 */
-		bool isValidViewLine(Unit unit, Position position) const;
+		bool isValidViewLine(Unit* unit, Position position) const;
 		
 		/**
 		 * @brief Méthode qui retourne une unité présente à une position donnée

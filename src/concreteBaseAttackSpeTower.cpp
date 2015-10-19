@@ -1,18 +1,18 @@
 /**
- * @file concreteBaseAttack.cpp
+ * @file attack.cpp
  * @author A. Perhirin B. Le Clère
  * @since 19/10/2015
- * @brief implémentation de l'attaque de base
+ * @brief implémentation del'attaque de base pour les unités spécialisées dans l'attaque de tours
  *
 **/
 
-#include "concreteBaseAttack.h"
+#include "concreteBaseAttackSpeTower.h"
 #include "map.h"
 #include <iostream>
 
 using namespace std;
 
-void ConcreteBaseAttack::attack(Position position, Map* map)
+void ConcreteBaseAttackSpeTower::attack(Position position, Map* map)
 {
 	if(map->isUnitAt(position))
 	{
@@ -24,3 +24,4 @@ void ConcreteBaseAttack::attack(Position position, Map* map)
 		cout << "pas d'attaque" << endl;
 	}
 }
+

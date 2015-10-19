@@ -10,12 +10,12 @@
 
 using namespace std;
 
-Unit::Unit(unsigned int range, Position position) : _range(range), _pos(position)
+Unit::Unit(unsigned int range, Position position) : _range(range), _position(position)
 {
 }
 
 Position Unit::getPosition() const
 {
-	return _pos;
+	return _position;
 }
 
