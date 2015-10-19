@@ -33,10 +33,11 @@ class Unit
 			_cost;			// Coût 
 		static unsigned int nextId; // le prochain objet aura cet identifiant
 		Position _position;		// Position actuelle
-		// Upgrade _upgrade;
-		// Specialisation _specialisation;
-		// Attack _attack;
-		// HPLoss _hpLoss;
+		// Upgrade *_upgrade;
+		// Specialisation *_specialisation;
+		// Attack *_attack;
+		// HPLoss *_hpLoss;
+		// Move *_move;
 		bool _summoner;		// unité peut invoquer près d'elle?
 		bool _builder;		// unité peut construire?
 		
@@ -54,14 +55,12 @@ class Unit
 		 * @param builder L'unité peut elle construire ?
 		 */
 		 Unit(  unsigned int range,
-				/*unsigned int ap,
+				unsigned int ap,
 				unsigned int mp,
 				unsigned int hp,
 				unsigned int dmgs,
-				unsigned int cost,*/
-				Position position/*,
-				bool summoner,
-				bool builder*/ );
+				unsigned int cost,
+				Position position);
 				
 		/**
 		 * @brief Accesseur de l'identifiant
