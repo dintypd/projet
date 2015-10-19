@@ -8,9 +8,8 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-//#include "unit.h"
+#include "unit.h"
 #include "base.h"
-#include "position.h"
 #include <vector>
 
 /**
@@ -23,8 +22,8 @@ class Player
 	private:
 		unsigned int _id; // identifiant unique
 		static unsigned int _nextId; // le prochain objet aura cet identifiant
-		//Base _base;
-		//std::vector<Unit> _units;
+		Base _base;
+		std::vector<Unit> _units;
 		unsigned int _golds;
 		
 	public:
@@ -45,18 +44,24 @@ class Player
 		 */ 
 		unsigned int getGolds() const;
 		
+		/** 
+		 * @brief Accesseur du tableau des unités
+		 * @return le tableau des unités du joueur
+		 */
+		std::vector<Unit> getUnits() const;
+		
 		/**
 		 * @brief Accesseur de la base
 		 * @return la base du joueur
 		 */
-		//Base getBase() const;
+		Base getBase() const;
 		
 		/**
 		 * @brief Méthode qui permet à un joueur d'invoquer une unité donnée à une position donnée
 		 * @param unit l'unité 
 		 * @param position la position voulue
 		 */
-		void summon(/*Unit unit, */Position position);
+		void summon(Unit unit, Position position);
 		
 		/**
 		 * @brief Méthode qui crédite l'argent d'un joueur de la somme donnée

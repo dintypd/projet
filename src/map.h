@@ -1,5 +1,5 @@
 /**
- * @file decor.h
+ * @file m.h
  * @author B. Le Clère, A. Perhirin
  * @since 07/10/2015
  * @brief Définition de la classe Map
@@ -8,9 +8,8 @@
 #ifndef MAP_H
 #define MAP_H
 
+#include "player.h"
 #include "decor.h"
-#include "path.h"
-#include "position.h"
 #include <vector>
 
 /**
@@ -25,7 +24,7 @@ class Map
 		std::vector<Decor> _decors;
 		std::vector<std::vector<bool>> _tiles;
 		std::vector<Position> _startingPositions;
-		//std::vector<Player> players;
+		std::vector<Player> _players;
 		//std::vector<Objective> objectives;
 		
 	public:
@@ -40,7 +39,7 @@ class Map
 		 * @param path le chemin à tester
 		 * @return vrai si le chemin est valide
 		 */
-		bool isValidPath(/*Unit unit, */Path path) const;
+		bool isValidPath(Unit unit, Path path) const;
 		
 		/**
 		 * @brief Méthode qui teste si une ligne de vue est valide pour une unité donnée
@@ -48,14 +47,14 @@ class Map
 		 * @param position la position ou l'action doit être effectuée
 		 * @return vrai si la ligne de vue est valide
 		 */
-		bool isValidViewLine(/*Unit unit, */Position position) const;
+		bool isValidViewLine(Unit unit, Position position) const;
 		
 		/**
 		 * @brief Méthode qui retourne une unité présente à une position donnée
 		 * @param position la position à laquelle on va récupèrer l'unité
 		 * @return l'unité présente à la position donnée
 		 */
-		/*Unit*/void getUnitAt(Position position) const;
+		Unit* getUnitAt(Position position) const;
 		
 		/**
 		 * @brief Méthode testant la présence d'une unité à une position donnée
@@ -69,7 +68,7 @@ class Map
 		 * @param position la position à laquelle on va récupèrer le décor
 		 * @return le décor présent à la position donnée
 		 */
-		Decor getDecorAt(Position position) const;
+		Decor* getDecorAt(Position position) const;
 		
 		/**
 		 * @brief Méthode testant la présence d'un décor à une position donnée

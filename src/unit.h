@@ -8,11 +8,13 @@
 #ifndef UNIT_H
 #define UNIT_H
 
-#include "position.h"
 // #include "upgrade.h"
 // #include "specialisation.h"
-// #include "attack.h"
+#include "attack.h"
+#include "move.h"
 // #include "hploss.h"
+
+class Map;
 
 /**
  * @class Unit unit.h
@@ -30,7 +32,7 @@ class Unit
 			_dmgs,			// Damages
 			_cost;			// Coût 
 		static unsigned int nextId; // le prochain objet aura cet identifiant
-		Position _pos;		// Position actuelle
+		Position _position;		// Position actuelle
 		// Upgrade _upgrade;
 		// Specialisation _specialisation;
 		// Attack _attack;
@@ -52,14 +54,14 @@ class Unit
 		 * @param builder L'unité peut elle construire ?
 		 */
 		 Unit(  unsigned int range,
-				unsigned int ap,
+				/*unsigned int ap,
 				unsigned int mp,
 				unsigned int hp,
 				unsigned int dmgs,
-				unsigned int cost,
-				Position pos,
+				unsigned int cost,*/
+				Position position/*,
 				bool summoner,
-				bool builder );
+				bool builder*/ );
 				
 		/**
 		 * @brief Accesseur de l'identifiant
@@ -154,12 +156,12 @@ class Unit
 		/**
 		 * @brief Setter de capacité Summoner ( la rend TRUE )
 		 */
-		void setSummoner();		// A utiliser suit e a une upgrade => rend toujours TRUE
+		void setSummoner();		// A utiliser suite a une upgrade => rend toujours TRUE
 		
 		/**
 		 * @brief Setter de capacité Builder ( la rend TRUE )
 		 */
-		void setBuilder(); 		// A utiliser suit e a une upgrade => rend toujours TRUE
+		void setBuilder(); 		// A utiliser suite a une upgrade => rend toujours TRUE
 
 		/**
 		 * @brief L'unité attaque la position pos

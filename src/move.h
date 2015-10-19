@@ -8,6 +8,10 @@
 #ifndef MOVE_H
 #define MOVE_H
 
+#include "path.h"
+
+class Map;
+
 /**
  * @class Move move.h
  * 
@@ -18,7 +22,7 @@ class Move
 {
 	public:
 		virtual void move(Path path, Map map) = 0;
-}
+};
 
 /**
  * @class ConcreteMove move.h
@@ -27,8 +31,9 @@ class Move
  */
 class ConcreteMove
 {
-	public void move(Path path, Map map);
-}
+	public:
+		void move(Path path, Map map);
+};
 
 /**
  * @class ConcreteNoMove move.h
@@ -37,7 +42,8 @@ class ConcreteMove
  */
 class ConcreteNoMove
 {
-	public void move(Path path, Map map);
-}
+	public:
+		void move(Path path, Map map);
+};
 
 #endif // MOVE_H

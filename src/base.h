@@ -8,7 +8,6 @@
 #ifndef BASE_H
 #define BASE_H
 
-//#include "unit.h"
 #include "position.h"
 
 /**
@@ -29,10 +28,22 @@ class Base
 		 */
 		Base();
 		
+		/**
+		 * @brief Accesseur du nombre de points de vie
+		 * @return Le nombre de points de vie de la base
+		 */
 		unsigned int getHp() const;
 		
+		/**
+		 * @brief Accesseur de la portée d'invocation
+		 * @return La portée d'invocation de la base
+		 */
 		unsigned int getSummonRange() const;
 		
+		/**
+		 * @brief Accesseur de la portée de construction
+		 * @return La portée de construction de la base
+		 */
 		unsigned int getBuildRange() const;
 };
  

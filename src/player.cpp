@@ -21,12 +21,17 @@ unsigned int Player::getGolds() const
 	return _golds;
 }
 
-/*Base Player::getBase() const
+vector<Unit> Player::getUnits() const
+{
+	return _units;
+}
+
+Base Player::getBase() const
 {
 	return _base;
-}*/
+}
 
-void Player::summon(/*Unit unit, */Position position)
+void Player::summon(Unit unit, Position position)
 {
 	// à implémenter
 }
