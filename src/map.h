@@ -1,5 +1,5 @@
 /**
- * @file m.h
+ * @file map.h
  * @author B. Le Clère, A. Perhirin
  * @since 07/10/2015
  * @brief Définition de la classe Map
@@ -8,9 +8,13 @@
 #ifndef MAP_H
 #define MAP_H
 
-#include "player.h"
-#include "decor.h"
 #include <vector>
+#include "position.h"
+
+class Decor;
+class Player;
+class Path;
+class Unit;
 
 /**
  * @class Map map.h

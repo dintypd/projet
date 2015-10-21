@@ -8,8 +8,8 @@
 #ifndef PATH_H
 #define PATH_H
 
-#include "position.h"
 #include <vector>
+#include "position.h"
 
 /**
  * @class Path

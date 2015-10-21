@@ -10,11 +10,13 @@
 
 // #include "upgrade.h"
 // #include "specialisation.h"
-#include "attack.h"
-#include "move.h"
-// #include "hploss.h"
+#include "position.h"
 
 class Map;
+class HPLoss;
+class Attack;
+class Move;
+class Path;
 
 /**
  * @class Unit unit.h
@@ -31,13 +33,13 @@ class Unit
 			_hp,			// Health Points
 			_dmgs,			// Damages
 			_cost;			// Coût 
-		static unsigned int nextId; // le prochain objet aura cet identifiant
+		static unsigned int _nextId; // le prochain objet aura cet identifiant
 		Position _position;		// Position actuelle
 		// Upgrade *_upgrade;
 		// Specialisation *_specialisation;
-		// Attack *_attack;
-		// HPLoss *_hpLoss;
-		// Move *_move;
+		Attack *_attack;
+		HPLoss *_hpLoss;
+		Move *_move;
 		bool _summoner;		// unité peut invoquer près d'elle?
 		bool _builder;		// unité peut construire?
 		
@@ -167,7 +169,7 @@ class Unit
 		 * @param pos La position à attaquer
 		 * @param map La carte
 		 */
-		void attack ( Position pos, Map map );
+		void attack ( Position pos, Map *map );
 		
 		/**
 		 * @brief L'unité perd des points de vie
@@ -180,7 +182,7 @@ class Unit
 		 * @param path Le chemin emprunté
 		 * @param map La carte
 		 */
-		void move ( Path path, Map map );
+		void move ( Path *path, Map *map );
 };
 
 #endif // UNIT_H			

@@ -8,9 +8,10 @@
 #ifndef MOVE_H
 #define MOVE_H
 
-#include "path.h"
 
+class Path;
 class Map;
+class Unit;
 
 /**
  * @class Move move.h
@@ -21,29 +22,7 @@ class Map;
 class Move
 {
 	public:
-		virtual void move(Path path, Map map) = 0;
-};
-
-/**
- * @class ConcreteMove move.h
- * 
- * @brief Classe concrete définissant le comportement de déplacement des unités mouvantes
- */
-class ConcreteMove
-{
-	public:
-		void move(Path path, Map map);
-};
-
-/**
- * @class ConcreteNoMove move.h
- * 
- * @brief Classe concrete définissant le comportement de déplacement des unités immobiles
- */
-class ConcreteNoMove
-{
-	public:
-		void move(Path path, Map map);
+		virtual void move(Path* path, Map* map, Unit* u) = 0;
 };
 
 #endif // MOVE_H

@@ -7,10 +7,10 @@
 
 #ifndef ATTACK_H
 #define ATTACK_H
+
 #include "position.h"
 
 class Map;
-class Unit;
 /**
  * @class Attack attack.h
  * 
@@ -20,30 +20,9 @@ class Unit;
 class Attack
 {
 	public:
-		virtual void attack(Position position, Map* map) = 0;
+		virtual void attack(Position position, Map* map, unsigned int dmgs) = 0;
 };
 
-/**
- * @class ConcreteBaseAttackSpeTower attack.h
- * 
- * @brief Classe concrete définissant le comportement d'attaque de base des unités spécialisées dans l'attaque de tours
- */
-/*class ConcreteBaseAttackSpeTower : Attack
-{
-	public:
-		void attack(Position position, Map* map);
-};*/
-
-/**
- * @class ConcreteNoBaseAttack attack.h
- * 
- * @brief Classe concrete définissant le comportement d'attaque de base des unités passives
- */
-/*class ConcreteNoBaseAttack : Attack
-{
-	public:
-		void attack(Position position, Map map);
-};*/
  
 #endif // ATTACK_H
 

@@ -6,6 +6,8 @@
 **/
 
 #include "player.h"
+#include "unit.h"
+#include "base.h"
 
 using namespace std;
 
@@ -26,7 +28,7 @@ vector<Unit*> Player::getUnits() const
 	return _units;
 }
 
-Base Player::getBase() const
+Base* Player::getBase() const
 {
 	return _base;
 }

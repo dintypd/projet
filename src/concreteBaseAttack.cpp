@@ -8,15 +8,17 @@
 
 #include "concreteBaseAttack.h"
 #include "map.h"
+#include "unit.h"
 #include <iostream>
 
 using namespace std;
 
-void ConcreteBaseAttack::attack(Position position, Map* map)
+void ConcreteBaseAttack::attack(Position position, Map* map, unsigned int dmgs)
 {
 	if(map->isUnitAt(position))
 	{
-		//Unit *u = map->getUnitAt(position);
+		Unit *u = map->getUnitAt(position);
+		u->hpLoss(dmgs);
 		cout << "unité trouvée" << endl;
 	}
 	else

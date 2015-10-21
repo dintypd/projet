@@ -8,8 +8,8 @@
 #ifndef CONCRETE_BASE_ATTACK_H
 #define CONCRETE_BASE_ATTACK_H
 
-#include "position.h"
 #include "attack.h"
+#include "position.h"
 
 class Map;
 /**
@@ -20,7 +20,7 @@ class Map;
 class ConcreteBaseAttack : Attack
 {
 	public:
-		void attack(Position position, Map* map);
+		void attack(Position position, Map* map, unsigned int dmgs);
 };
 
 #endif

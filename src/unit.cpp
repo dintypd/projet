@@ -7,8 +7,15 @@
 **/
 
 #include "unit.h"
+#include "attack.h"
+#include "move.h"
+#include "hploss.h"
+#include "move.h"
+#include "path.h"
 
 using namespace std;
+
+unsigned int Unit::_nextId = 0;
 
 Unit::Unit( unsigned int range, 
 			unsigned int ap, 
@@ -25,20 +32,17 @@ Unit::Unit( unsigned int range,
 									_cost(cost), 
 									_position(position), 
 									_summoner(false), 
-									_builder(false),
-									_attack = new ConcreteBaseAttack;
-									_move = new ConcreteMove;
-									_hpLoss = new ConcreteHPLoss;
+									_builder(false)
 {
-		//rien a faire
+	_attack = new ConcreteBaseAttack();
+	_move = new ConcreteMove();
+	_hpLoss = new ConcreteHPLoss();
 }
 
 Position Unit::getPosition() const
 {
 	return _position;
 }
-
-unsigned int Unit::_nextId = 0;
 
 unsigned int Unit::getId() const
 {
@@ -112,7 +116,7 @@ void Unit::setDmgs( unsigned int dmgs )
 
 void Unit::setPos( Position pos )
 {
-	_pos = pos;
+	_position = pos;
 }
 
 void Unit::setSummoner()
@@ -125,18 +129,18 @@ void Unit::setBuilder()
 	_builder = true;
 }
 
-void attack( Position pos, Map *map )
+void Unit::attack( Position pos, Map *map )
 {
-	_attack->attack(pos, *map);
+	_attack->attack(pos, *map, _dmgs);
 }
 
-void hpLoss( unsigned int value)
+void Unit::hpLoss( unsigned int value )
 {
-	_hpLoss->hpLoss(value);
+	_hpLoss->hpLoss(value, this);
 }
 
-void move( Path *path, Map *map )
+void Unit::move( Path *path, Map *map )
 {
-	_move->move(*path, *map);
+	_move->move(*path, *map, this);
 }
 
