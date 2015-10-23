@@ -8,11 +8,9 @@
 #ifndef MOVE_H
 #define MOVE_H
 
-
 class Path;
 class Map;
 class Unit;
-
 /**
  * @class Move move.h
  * 

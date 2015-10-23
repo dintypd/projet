@@ -9,15 +9,15 @@
 #define CONCRETE_NO_BASE_ATTACK_H
 
 #include "attack.h"
-#include "position.h"
 
+class Position;
 class Map;
 /**
  * @class ConcreteNoBaseAttack concreteNoBaseAttack.h
  * 
  * @brief Classe concrete définissant le comportement d'attaque de base des unités qui n'attaquent pas
  */
-class ConcreteNoBaseAttack : Attack
+class ConcreteNoBaseAttack : public Attack
 {
 	public:
 		void attack(Position position, Map* map, int dmgs);

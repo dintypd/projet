@@ -9,15 +9,16 @@
 #define CONCRETE_BASE_ATTACK_H
 
 #include "attack.h"
-#include "position.h"
 
+class Position;
 class Map;
+class Unit;
 /**
  * @class ConcreteBaseAttack concreteBaseAttack.h
  * 
  * @brief Classe concrete définissant le comportement d'attaque de base des unités normales
  */
-class ConcreteBaseAttack : Attack
+class ConcreteBaseAttack : public Attack
 {
 	public:
 		void attack(Position position, Map* map, unsigned int dmgs);

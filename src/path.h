@@ -17,7 +17,6 @@
  * @brief Classe implémentant un chemin (path) sur la map
  *
  **/
-
 class Path
 {
 	private:

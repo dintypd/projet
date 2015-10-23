@@ -16,7 +16,7 @@ class Unit;
  * 
  * @brief Classe concrete définissant le comportement de la perte de point de vie des unités défensives
  */
-class ConcreteHPLossSpeDef : HPLoss
+class ConcreteHPLossSpeDef : public HPLoss
 {
 	public:
 		void hpLoss(unsigned int value, Unit* u);

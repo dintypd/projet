@@ -9,8 +9,8 @@
 #define PLAYER_H
 
 #include <vector>
-#include "position.h"
 
+class Position;
 class Unit;
 class Base;
 /**

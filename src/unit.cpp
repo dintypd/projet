@@ -8,6 +8,13 @@
 
 #include "unit.h"
 #include "attack.h"
+#include "concreteBaseAttack.h"
+#include "concreteBaseAttackSpeTower.h"
+#include "concretehploss.h"
+#include "concretehplossspedef.h"
+#include "concretemove.h"
+#include "concreteNoBaseAttack.h"
+#include "concretenomove.h"
 #include "move.h"
 #include "hploss.h"
 #include "move.h"
@@ -131,7 +138,7 @@ void Unit::setBuilder()
 
 void Unit::attack( Position pos, Map *map )
 {
-	_attack->attack(pos, *map, _dmgs);
+	_attack->attack(pos, map, _dmgs);
 }
 
 void Unit::hpLoss( unsigned int value )
@@ -141,6 +148,6 @@ void Unit::hpLoss( unsigned int value )
 
 void Unit::move( Path *path, Map *map )
 {
-	_move->move(*path, *map, this);
+	_move->move(path, map, this);
 }
 

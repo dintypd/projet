@@ -7,9 +7,9 @@
 
 #include "map.h"
 #include "player.h"
-#include "path.h"
-#include "unit.h"
 #include "decor.h"
+#include "unit.h"
+#include "path.h"
 
 using namespace std;
 

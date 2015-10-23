@@ -9,15 +9,16 @@
 #define CONCRETE_BASE_ATTACK_SPE_TOWER_H
 
 #include "attack.h"
-#include "position.h"
 
 class Map;
+class Unit;
+class Position;
 /**
  * @class ConcreteBaseAttackSpeTower concreteBaseAttackSpeTower.h
  * 
  * @brief Classe concrete définissant le comportement d'attaque de base des unités spécialisées dans l'attaque de tours
  */
-class ConcreteBaseAttackSpeTower : Attack
+class ConcreteBaseAttackSpeTower : public Attack
 {
 	public:
 		void attack(Position position, Map* map, unsigned int dmgs);

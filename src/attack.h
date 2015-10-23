@@ -8,8 +8,7 @@
 #ifndef ATTACK_H
 #define ATTACK_H
 
-#include "position.h"
-
+class Position;
 class Map;
 /**
  * @class Attack attack.h

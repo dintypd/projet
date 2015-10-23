@@ -8,8 +8,7 @@
 #ifndef KNIGHT_H
 #define KNIGHT_H
 
-#include "position.h"
-
+#include "unit.h";
 
 /**
  * @class Knight knight.h

@@ -7,6 +7,7 @@
 **/
 
 #include "concreteNoBaseAttack.h"
+#include "position.h"
 #include "map.h"
 #include <iostream>
 

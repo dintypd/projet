@@ -18,7 +18,7 @@ class Unit;
  * 
  * @brief Classe concrete définissant le comportement de déplacement des unités immobiles
  */
-class ConcreteNoMove
+class ConcreteNoMove : public Move
 {
 	public:
 		void move(Path* path, Map* map, Unit* u);

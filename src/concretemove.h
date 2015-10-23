@@ -10,15 +10,15 @@
 
 #include "move.h"
 
-class Path;
 class Map;
+class Path;
 class Unit;
 /**
  * @class ConcreteMove conretemove.h
  * 
  * @brief Classe concrete définissant le comportement de déplacement des unités mouvantes
  */
-class ConcreteMove : Move
+class ConcreteMove : public Move
 {
 	public:
 		void move(Path* path, Map* map, Unit* u);

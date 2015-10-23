@@ -8,7 +8,6 @@
 #ifndef HPLOSS_H
 #define HPLOSS_H
 
-
 class Unit;
 /**
  * @class HPLoss hploss.h

@@ -15,9 +15,15 @@
 class Map;
 class HPLoss;
 class Attack;
+class ConcreteBaseAttack;
+class ConcreteBaseAttackSpeTower;
+class ConcreteHPLoss;
+class ConcreteHPLossSpeDef;
+class ConcreteMove;
+class ConcreteNoBaseAttack;
+class ConcreteNoMove;
 class Move;
 class Path;
-
 /**
  * @class Unit unit.h
  * 

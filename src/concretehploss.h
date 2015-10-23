@@ -16,7 +16,7 @@ class Unit;
  * 
  * @brief Classe concrete définissant le comportement de la perte de point de vie des unités normales
  */
-class ConcreteHPLoss : HPLoss
+class ConcreteHPLoss : public HPLoss
 {
 	public:
 		void hpLoss(unsigned int value, Unit* u);
