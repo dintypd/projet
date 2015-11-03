@@ -39,7 +39,7 @@ class Unit
 			_hp,			// Health Points
 			_dmgs,			// Damages
 			_cost;			// Coût 
-		static unsigned int _nextId; // le prochain objet aura cet identifiant
+		static unsigned int _nextId; // le prochain objet aura cet identifiant + 1
 		Position _position;		// Position actuelle
 		// Upgrade *_upgrade;
 		// Specialisation *_specialisation;
@@ -158,7 +158,7 @@ class Unit
 		/**
 		 * @brief Setter de positon
 		 */
-		void setPos ( Position pos );
+		void setPosition ( Position pos );
 		
 		/**
 		 * @brief Setter de capacité Summoner ( la rend TRUE )

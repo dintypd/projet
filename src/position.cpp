@@ -5,8 +5,8 @@
  * @brief implémentation des méthodes de la classe position
  *
 **/
-
 #include <stdlib.h>
+#include <stdio.h>
 #include "position.h"
 
 using namespace std;
@@ -36,7 +36,7 @@ void Position::setY(unsigned int y)
 	_Y = y;
 }
 
-unsigned int Position::distance(Position position)
+unsigned int Position::distance(Position position) const
 {
 	return ( abs(_X - position.getX()) + abs(_Y - position.getY()) );
 }
@@ -44,4 +44,9 @@ unsigned int Position::distance(Position position)
 bool Position::operator==(Position const& position)
 {
 	return this->_X == position._X && this->_Y == position._Y;
+}
+
+void Position::afficher() const
+{
+	printf("Pos: X -> %d ; Y -> %d\n", _X, _Y);
 }

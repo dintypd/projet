@@ -32,6 +32,11 @@ unsigned int Path::size() const
 	return _path.size();
 }
 
+Position Path::getPosition(unsigned int i) const
+{
+	return _path[i];
+}
+
 Position Path::operator[](unsigned int const & i)
 {
 	return _path[i];

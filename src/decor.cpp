@@ -9,7 +9,7 @@
 
 unsigned int Decor::_nextId = 0;
 
-Decor::Decor(Position position) : _id(++_nextId), _position(position), _viewLine(true)
+Decor::Decor(Position position, bool viewLine) : _id(++_nextId), _position(position), _viewLine(viewLine)
 {
 	// rien à faire
 } 

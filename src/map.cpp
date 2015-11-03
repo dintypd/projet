@@ -13,34 +13,32 @@
 
 using namespace std;
 
-Map::Map()
+Map::Map(std::vector<std::vector<bool>> tiles, 
+			std::vector<Decor*> decors, 
+			std::vector<Position> startingPositions) : _decors(decors), _tiles(tiles), _startingPositions(startingPositions)
 {
-	vector<bool> l1 {true, true, true, true, true};
-	vector<bool> l2 {true, true, true, true, true};
-	vector<bool> l3 {true, true, true, true, true};
-	vector<bool> l4 {true, true, true, true, true};
-	vector<bool> l5 {true, true, true, true, true};
-	_tiles = {l1, l2, l3, l4, l5};
+	// calcul de la taille : on suppoe la map carrée
+	_size = _tiles.size();
 } 
 
-bool Map::isValidPath(Unit* unit, Path path) const
+bool Map::isValidPath(Unit* unit, Path* path) const
 {
 	bool valid = true;
 	unsigned int i = 1;
 	
-	if((unit->getPosition().distance(path[0]) != 1) || 
-	   (isDecorAt(path[0])) || 
-	   (isUnitAt(path[0])))
+	if((unit->getPosition().distance(path->getPosition(0)) != 1) || 
+	   (isDecorAt(path->getPosition(0))) || 
+	   (isUnitAt(path->getPosition(0))))
 	{
 		valid = false;
 	}
 	
-	while(valid && i < path.size())
+	while(valid && i < path->size())
 	{
-		if((path[i-1].distance(path[i]) != 1) || 
-		   (isDecorAt(path[i])) || 
-		   (isUnitAt(path[i])) || 
-		   !_tiles[path[i].getY()][path[i].getX()])
+		if((path->getPosition(i-1).distance(path->getPosition(i)) != 1) || 
+		   (isDecorAt(path->getPosition(i))) || 
+		   (isUnitAt(path->getPosition(i))) || 
+		   !_tiles[path->getPosition(i).getY()][path->getPosition(i).getX()])
 		{
 			valid = false;
 		}
@@ -57,56 +55,44 @@ bool Map::isValidViewLine(Unit* unit, Position position) const
 
 Unit* Map::getUnitAt(Position position) const
 {
-	unsigned int i = 0;
-	unsigned int nbPlayers = _players.size();
-	bool trouve = false;
+	map<unsigned int, Unit*> & currentUnits = _players.at(1)->getUnits();
 	
-	unsigned int j = 0, taille;
-	
-	while(!trouve && i < nbPlayers)
+	// on itère dans la liste des joueurs
+	for(auto player : _players)
 	{
-		j = 0;
-		taille = _players[i]->getUnits().size();
-		
-		while(!trouve && j < taille)
+		currentUnits = player.second->getUnits();
+		// on itère dans la liste des unités
+		for(auto unit : currentUnits)
 		{
-			if(_players[i]->getUnits()[j]->getPosition() == position)
+			if(unit.second->getPosition() == position)
 			{
-				trouve = true;
+				return unit.second;
 			}
-			++j;
 		}
-		++i;
 	}
 	
-	return _players[i]->getUnits()[j];
+	return 0;
 }
 
 bool Map::isUnitAt(Position position) const
 {
-	unsigned int i = 0;
-	unsigned int nbPlayers = _players.size();
-	bool trouve = false;
+	map<unsigned int, Unit*> & currentUnits = _players.at(1)->getUnits();
 	
-	unsigned int j = 0, taille;
-	
-	while(!trouve && i < nbPlayers)
+	// on itère dans la liste des joueurs
+	for(auto player : _players)
 	{
-		j = 0;
-		taille = _players[i]->getUnits().size();
-		
-		while(!trouve && j < taille)
+		currentUnits = player.second->getUnits();
+		// on itère dans la liste des unités
+		for(auto unit : currentUnits)
 		{
-			if(_players[i]->getUnits()[j]->getPosition() == position)
+			if(unit.second->getPosition() == position)
 			{
-				trouve = true;
+				return true;
 			}
-			++j;
 		}
-		++i;
 	}
 	
-	return trouve;
+	return false;
 }
 
 Decor* Map::getDecorAt(Position position) const
@@ -143,4 +129,9 @@ bool Map::isDecorAt(Position position) const
 	}
 	
 	return trouve;
+}
+
+void Map::addPlayer(Player* player)
+{
+	_players[player->getId()] = player;
 }

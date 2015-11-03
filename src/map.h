@@ -8,6 +8,7 @@
 #ifndef MAP_H
 #define MAP_H
 
+#include <map>
 #include <vector>
 #include "position.h"
 
@@ -27,14 +28,16 @@ class Map
 		std::vector<Decor*> _decors;
 		std::vector<std::vector<bool>> _tiles;
 		std::vector<Position> _startingPositions;
-		std::vector<Player*> _players;
+		std::map<unsigned int, Player*> _players;
 		//std::vector<Objective> objectives;
 		
 	public:
 		/**
 		 * @brief Constructeur
 		 */
-		Map();
+		Map(std::vector<std::vector<bool>> tiles, 
+			std::vector<Decor*> decors, 
+			std::vector<Position> startingPositions);
 		
 		/**
 		 * @brief Méthode qui teste si un chemin est valide pour une unité donnée
@@ -42,7 +45,7 @@ class Map
 		 * @param path le chemin à tester
 		 * @return vrai si le chemin est valide
 		 */
-		bool isValidPath(Unit* unit, Path path) const;
+		bool isValidPath(Unit* unit, Path* path) const;
 		
 		/**
 		 * @brief Méthode qui teste si une ligne de vue est valide pour une unité donnée
@@ -79,6 +82,12 @@ class Map
 		 * @return vrai s'il y a un décor à la position donnée
 		 */
 		bool isDecorAt(Position position) const;
+		
+		/**
+		 * @brief Ajoute un joueur sur la map
+		 * @param player le joueur à ajouté
+		 */
+		void addPlayer(Player* player);
 };
  
 #endif // MAP_H

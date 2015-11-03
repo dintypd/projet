@@ -17,7 +17,6 @@
 #include "concretenomove.h"
 #include "move.h"
 #include "hploss.h"
-#include "move.h"
 #include "path.h"
 
 using namespace std;
@@ -121,7 +120,7 @@ void Unit::setDmgs( unsigned int dmgs )
 	_dmgs = dmgs;
 }
 
-void Unit::setPos( Position pos )
+void Unit::setPosition( Position pos )
 {
 	_position = pos;
 }

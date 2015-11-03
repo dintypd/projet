@@ -8,7 +8,7 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
-#include <vector>
+#include <map>
 
 class Position;
 class Unit;
@@ -21,23 +21,31 @@ class Base;
 class Player
 {
 	private:
+		std::string _name;
 		unsigned int _id; // identifiant unique
-		static unsigned int _nextId; // le prochain objet aura cet identifiant
+		static unsigned int _nextId; // le prochain objet aura cet identifiant + 1
 		Base *_base;
-		std::vector<Unit*> _units;
+		std::map<unsigned int, Unit*> _units;
 		unsigned int _golds;
+		Player* _next; // le joueur qui jouera après ce joueur
 		
 	public:
 		/**
 		 * @brief Constructeur
 		 */
-		Player();
+		Player(std::string name, unsigned int golds, Base* base);
 		
 		/**
 		 * @brief Accesseur de l'identifiant
 		 * @return l'identifiant du joueur
 		 */
 		unsigned int getId() const;
+		
+		/**
+		 * @brief Accesseur du nom 
+		 * @return le nom du joueur
+		 */
+		std::string getName() const;
 		
 		/**
 		 * @brief Accesseur du nombre de golds
@@ -49,7 +57,7 @@ class Player
 		 * @brief Accesseur du tableau des unités
 		 * @return le tableau des unités du joueur
 		 */
-		std::vector<Unit*> getUnits() const;
+		std::map<unsigned int, Unit*> & getUnits();
 		
 		/**
 		 * @brief Accesseur de la base
@@ -62,7 +70,7 @@ class Player
 		 * @param unit l'unité 
 		 * @param position la position voulue
 		 */
-		void summon(Unit unit, Position position);
+		void summon(Unit* unit/*, Position position*/);
 		
 		/**
 		 * @brief Méthode qui crédite l'argent d'un joueur de la somme donnée
@@ -77,6 +85,24 @@ class Player
 		 * @pre (_golds - golds >= 0)
 		 */
 		void rmGolds(unsigned int golds);
+		
+		/**
+		 * @brief Modifie le joueur suivant dans l'ordre du jeu
+		 * @param next le joueur qui jouera après "this"
+		 */
+		void setNext(Player* next);
+		
+		/**
+		 * @brief Retourne le joueur suivant dans l'ordre du jeu
+		 * @return le joueur qui jouera après "this"
+		 */
+		Player* getNext() const;
+		
+		/**
+		 * @brief Retourne l'unité du joueur en fonction du paramètre
+		 * @param id l'identifiant de l'unité choisie
+		 */
+		Unit* getUnit(unsigned int id) const;
 };
  
 #endif // PLAYER_H

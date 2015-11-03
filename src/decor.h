@@ -19,7 +19,7 @@ class Decor
 {
 	private:
 		unsigned int _id; // identifiant unique
-		static unsigned int _nextId; // le prochain objet aura cet identifiant
+		static unsigned int _nextId; // le prochain objet aura cet identifiant + 1
 		Position _position;
 		bool _viewLine; // la ligne de vue
 		
@@ -28,7 +28,7 @@ class Decor
 		 * @brief Constructeur
 		 * @param position La position du décor sur la carte
 		 */
-		Decor(Position position);
+		Decor(Position position, bool _viewLine);
 		
 		/**
 		 * @brief Accesseur de l'identifiant

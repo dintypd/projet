@@ -10,7 +10,7 @@
 
 using namespace std;
 
-Base::Base()
+Base::Base(unsigned int hp, unsigned int summonRange, unsigned int buildRange) : _hp(hp), _summonRange(summonRange), _buildRange(buildRange)
 {
 	// à implémenter
 }

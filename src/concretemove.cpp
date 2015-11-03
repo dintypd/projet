@@ -16,6 +16,9 @@ using namespace std;
 
 void ConcreteMove::move(Path* path, Map* map, Unit* u)
 {
-	// A DEFINIR
+	if(map->isValidPath(u, path))
+	{
+		u->setPosition(path->getPosition(path->size()-1));
+	}
 }
 

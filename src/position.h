@@ -60,11 +60,14 @@ class Position
        * @brief renvoie la distance entre la position actuelle et une autre position
        * @param position, l'autre position 
       **/
-      unsigned int distance(Position position);
+      unsigned int distance(Position position) const;
       
       /**
        * @brief surcharge de l'opérateur ==
        */
       bool operator==(Position const& position);
+      
+      // TEMPORAIRE
+      void afficher() const;
 };
 #endif

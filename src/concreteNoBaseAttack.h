@@ -20,7 +20,7 @@ class Map;
 class ConcreteNoBaseAttack : public Attack
 {
 	public:
-		void attack(Position position, Map* map, int dmgs);
+		void attack(Position position, Map* map, unsigned int dmgs);
 };
 
 #endif

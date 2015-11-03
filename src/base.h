@@ -24,7 +24,7 @@ class Base
 		/**
 		 * @brief Constructeur
 		 */
-		Base();
+		Base(unsigned int hp, unsigned int summonRange, unsigned int buildRange);
 		
 		/**
 		 * @brief Accesseur du nombre de points de vie
