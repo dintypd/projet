@@ -32,7 +32,7 @@ class Path;
  */
 class Unit
 {
-	private:
+	protected:
 		unsigned int _id, 	// identifiant unique
 			_range,			// portée d'attaque
 			_ap, 			// Action Points
@@ -71,7 +71,8 @@ class Unit
 				unsigned int cost,
 				Attack* attack,
 				HPLoss* hpLoss,
-				Move* move);
+				Move* move,
+				Position position);
 				
 		/**
 		 * @brief Accesseur de l'identifiant
@@ -205,9 +206,12 @@ class Unit
 		
 		/**
 		 * @brief Méthode qui retourne une unité possèdant le même type, mais aussi les même caractéristiques que "this"
+		 * @param position la position assignée à l'unité retournée
 		 * @return un clone de "this"
 		 */
-		virtual Unit* clone() = 0;
+		virtual Unit* clone(Position position) = 0;
+		
+		virtual void afficherInfos() = 0;
 };
 
 #endif // UNIT_H			

@@ -73,13 +73,6 @@ class Player
 		void summon(Unit* unit/*, Position position*/);
 		
 		/**
-		 * @brief Méthode qui permet de savoir si un joueur peut invoquer l'unité données
-		 * @param unit l'unité en question
-		 * @return vrai si le joueur peut invoquer l'unité
-		 */
-		bool canSummon(Unit* unit);
-		
-		/**
 		 * @brief Méthode qui crédite l'argent d'un joueur de la somme donnée
 		 * @param golds la somme à créditer
 		 */

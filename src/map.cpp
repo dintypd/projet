@@ -149,3 +149,27 @@ map<unsigned int, Player*> & Map::getPlayers()
 {
 	return _players;
 }
+
+Unit* Map::getUnit(unsigned int id)
+{
+	for(auto player : _players)
+	{
+		if(_player->getUnit(id) != 0)
+		{
+			return _player->getUnit(id);
+		}
+	}
+}
+
+bool Map::isUnit(unsigned int id)
+{
+	for(auto player : _players)
+	{
+		if(_player->getUnit(id) != 0)
+		{
+			return true;
+		}
+	}
+	
+	return false;
+}

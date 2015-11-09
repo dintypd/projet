@@ -8,6 +8,7 @@
 
 #include "spawner.h"
 #include "unit.h"
+#include "position.h"
 
 using namespace std;
 
@@ -15,7 +16,12 @@ Spawner::Spawner(Unit* prototype)
 : _prototype(prototype)
 {}
 
-Unit* Spawner::spawnUnit()
+Unit* Spawner::spawnUnit(Position position)
 {
-	return _prototype->clone();
+	return _prototype->clone(position);
+}
+
+unsigned int Spawner::getCost()
+{
+	return _prototype->getCost();
 }

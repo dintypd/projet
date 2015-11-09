@@ -16,6 +16,7 @@
 #include "data.h"
 #include "unit.h"
 #include "knight.h"
+#include "spawner.h"
 
 using namespace std;
 
@@ -97,6 +98,10 @@ void Game::play()
 			{
 				goldsCommand();
 			}
+			else if(commandSplit[0] == "/infos" && commandSplit.size() == 2)
+			{
+				infosCommand(commandSplit);
+			}
 			else
 			{
 				cout << "Commande invalide, tapez /help pour avoir toutes les commandes." << endl;
@@ -156,44 +161,59 @@ void Game::summonCommand(vector<string> command)
 	if(command.size() == 1)
 	{
 		cout << "Les classes disponibles sont :" << endl;
-		for(auto classe : _data->getClassesData_Game())
+		for(auto classe : _data->getClasses())
 		{
 			cout << "- " << classe << endl;
 		}
 	}
 	else
 	{
-		Position p(stoi(command[2]), stoi(command[3]));
-		if(_map->isValidSummonPosition(p, _currentPlayer))
+		// on parse la commande
+		string classe = command[1];
+		unsigned int x = stoi(command[2]);
+		unsigned int y = stoi(command[3]);
+		
+		
+		if(_data->isClasse(classe))
 		{
-			Unit* u = createUnit(command[1], p);
-			
-			if(u != 0)
+			Position p(x, y);
+			if(_map->isValidSummonPosition(p, _currentPlayer))
 			{
-				if(_currentPlayer->canSummon(u))
+				Spawner* sp = _data->getSpawner(command[1]);
+				
+				if(sp->getCost() <= _currentPlayer->getGolds())
 				{
+					Unit* u = sp->spawnUnit(p);
 					_currentPlayer->summon(u);
 					cout << "Unitée invoquée : ";
 					u->afficher();
 				}
 				else
 				{
-					cout << "Vous ne pouvez pas invoquer cette unité." << endl;
+					cout << "Vous n'avez pas assez d'argent pour invoquer cette unité." << endl;
 				}
+			}
+			else
+			{
+				cout << "Impossible d'invoquer une unité en ";
+				p.afficher();
+				cout << endl;
 			}
 		}
 		else
 		{
-			cout << "Impossible d'invoquer une unité en ";
-			p.afficher();
-			cout << endl;
+			cout << "La classe " << classe << " n'existe pas" << endl;
 		}
 	}
 }
 
 void Game::unitsCommand()
 {
-	_currentPlayer->afficheUnits();
+	for(auto player : _map->getPlayers)
+	{
+		cout << player->getName() << " :" << endl
+		player->afficheUnits();
+	}
 }
 
 void Game::goldsCommand()
@@ -201,24 +221,15 @@ void Game::goldsCommand()
 	_currentPlayer->afficheGolds();
 }
 
-Unit* Game::createUnit(string classe, Position p)
+void Game::infosCommand(vector<string> command)
 {
-	if(classe == "knight")
+	unsigned int id = command[1];
+	if(_map->isUnit(id))
 	{
-		map<string, unsigned int> data_us_unit = _data->getUnsignedIntData_Knight();
-		Unit* u = new Knight(data_us_unit["range"],
-						     data_us_unit["ap"], 
-							 data_us_unit["mp"], 
-						     data_us_unit["hp"],
-						     data_us_unit["dmgs"],
-						     data_us_unit["cost"],
-						     p);
-						     
-		return u;
+		_map->getUnit(id)->afficherInfos();
 	}
 	else
 	{
-		cout << "La classe choisie est invalide, /summon pour la liste des unités." << endl;
-		return 0;
+		cout << "Cette unité n'existe pas." << endl;
 	}
 }

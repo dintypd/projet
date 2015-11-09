@@ -1,17 +1,17 @@
 /**
- * @file knight.cpp
+ * @file archer.cpp
  * @author A. Perhirin B. Le Clère
- * @since 06/10/2015
- * @brief implémentation des méthodes de la classe knight
+ * @since 09/11/2015
+ * @brief implémentation des méthodes de la classe archer
  *
 **/
 
-#include "knight.h"
+#include "archer.h"
 #include <iostream>
 
 using namespace std;
 
-Knight::Knight( unsigned int range, 
+Archer::Archer( unsigned int range, 
 				unsigned int ap, 
 				unsigned int mp, 
 				unsigned int hp,
@@ -25,19 +25,19 @@ Knight::Knight( unsigned int range,
 	// rien à faire
 }
 
-Unit* Knight::clone(Position position)
+Unit* Archer::clone(Position position)
 {
-	return new Knight(_range, _ap, _mp, _hp, _dmgs, _cost, _attack, _hpLoss, _move, position);
+	return new Archer(_range, _ap, _mp, _hp, _dmgs, _cost, _attack, _hpLoss, _move, position);
 }
 
-string Knight::classe()
+string Archer::classe()
 {
-	return "knight";
+	return "archer";
 }
 
-void Knight::afficherInfos()
+void Archer::afficherInfos()
 {
-	cout << "Classe : knight" << endl;
+	cout << "Classe : archer" << endl;
 	cout << "Position : " << _position.afficher();
 	cout << "PA : " << _ap << endl;
 	cout << "PM : " << _mp << endl;

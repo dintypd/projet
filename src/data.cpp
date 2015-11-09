@@ -18,6 +18,9 @@
 #include "concretenomove.h"
 #include "move.h"
 #include "hploss.h"
+#include "knight.h"
+#include "archer.h"
+#include "spawner.h"
 
 using namespace std;
 
@@ -33,9 +36,14 @@ Data::Data()
 	_move = new ConcreteMove();
 	_noMove = new ConcreteNoMove();
 	
-	Knight* knightPrototype = new Knight(1, 8, 4, 160, 90, 100, _baseAttack, _hpLossSpeDef, _move);
-	Spawner* knightSpawner = new Spawner(_knightPrototype);
+	Position p(0, 0);
+	Knight* knightPrototype = new Knight(1, 8, 4, 160, 90, 100, _baseAttack, _hpLossSpeDef, _move, p);
+	Spawner* knightSpawner = new Spawner(knightPrototype);
 	_spawnerList["knight"] = knightSpawner;
+	
+	Archer* archerPrototype = new Archer(6, 9, 3, 70, 120, 130, _baseAttackSpeTower, _hpLoss, _move, p);
+	Spawner* archerSpawner = new Spawner(archerPrototype);
+	_spawnerList["archer"] = archerSpawner;
 }
 
 // Map Data
@@ -90,61 +98,30 @@ map<string, unsigned int> Data::getUnsignedIntData_Base()
 	return base;
 }
 
-// Knight Data
-map<string, unsigned int> Data::getUnsignedIntData_Knight()
-{
-	map<string, unsigned int> knight;
-	knight["range"] = 1;
-	knight["ap"] = 8;
-	knight["mp"] = 4;
-	knight["hp"] = 160;
-	knight["dmgs"] = 90;
-	knight["cost"] = 100;
-	
-	return knight;
-}
-
-map<string, bool> Data::getBoolData_Knight()
-{
-	map<string, bool> knight;
-	knight["summoner"] = false;
-	knight["builder"] = false;
-	
-	return knight;
-}
-
-Attack* Data::getAttackBehavior_Knight()
-{
-	return _baseAttack;
-}
-
-HPLoss* Data::getHPLossBehavior_Knight()
-{
-	return _hpLoss;
-}
-
-Move* Data::getMoveBehavior_Knight()
-{
-	return _move;
-}
-
 // Player
 unsigned int Data::getGolds_Player()
 {
 	return 260;
 }
 
-// Game
-vector<string> Data::getClassesData_Game()
-{
-	vector<string> classes;
-	classes.push_back("knight");
-	
-	return classes;
-}
-
 // Spawner
 Spawner* Data::getSpawner(std::string classe)
 {
-	return _spwanerList[classe];
+	return _spawnerList[classe];
+}
+
+bool Data::isClasse(string classe)
+{
+	return _spawnerList.count(classe);
+}
+
+vector<string> Data::getClasses()
+{
+	vector<string> classes;
+	for(auto classe : _spawnerList)
+	{
+		classes.push_back(classe.first);
+	}
+	
+	return classes;
 }

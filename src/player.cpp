@@ -49,11 +49,6 @@ void Player::summon(Unit* unit/*, Position position*/)
 	rmGolds(unit->getCost());
 }
 
-bool Player::canSummon(Unit* unit)
-{
-	return _golds >= unit->getCost();
-}
-
 void Player::addGolds(unsigned int golds)
 {
 	_golds += golds;

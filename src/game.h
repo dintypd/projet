@@ -37,7 +37,7 @@ class Game
 		void summonCommand(std::vector<std::string> command);
 		void unitsCommand();
 		void goldsCommand();
-		Unit* createUnit(std::string classe, Position p);
+		void infosCommand(std::vector<std::string> command);
 };
 
 #endif // GAME_H

@@ -9,6 +9,7 @@
 #define SPAWNER_H
 
 class Unit;
+class Position;
 
 /**
  * @class Spawner spawner.h
@@ -21,8 +22,24 @@ class Spawner
 		Unit* _prototype;
 
 	public:
+		/**
+		 * Constructeur
+		 * @param prototype le prototype qui sert de base au spawner
+		 */
 		Spawner(Unit* prototype);
-		Unit* spawnUnit();
+		
+		/**
+		 * Méthode qui copie le prototype et retourne l'unité correspondante
+		 * @param position la position que prendra l'unité retournée
+		 * @return une unité correspondante au prototype
+		 */
+		Unit* spawnUnit(Position position);
+		
+		/**
+		 * Retourne le coût de l'unité
+		 * @return un entier correspondant au cout
+		 */
+		unsigned int getCost();
 };
 
 #endif // SPAWNER_H

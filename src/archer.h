@@ -1,24 +1,24 @@
 /**
- * @file knight.h
+ * @file archer.h
  * @author B. Le Clère, A. Perhirin
- * @since 12/10/2015
- * @brief Définition de la classe Knight
+ * @since 09/11/2015
+ * @brief Définition de la classe Archer
 **/
 
-#ifndef KNIGHT_H
-#define KNIGHT_H
+#ifndef ARCHER_H
+#define ARCHER_H
 
 #include "unit.h"
 
 /**
- * @class Knight knight.h
+ * @class Archer archer.h
  * 
- * @brief Classe définissant un chevalier
+ * @brief Classe définissant un archer
  */
-class Knight : public Unit
+class Archer : public Unit
 {
 	public:
-		Knight( unsigned int range,
+		Archer( unsigned int range,
 				unsigned int ap,
 				unsigned int mp,
 				unsigned int hp,
@@ -37,3 +37,4 @@ class Knight : public Unit
 };
 
 #endif // KNIGHT_H
+

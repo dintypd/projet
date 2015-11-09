@@ -71,6 +71,20 @@ class Map
 		Unit* getUnitAt(Position position) const;
 		
 		/**
+		 * @brief Accesseur de l'unité en fonction de son identifiant
+		 * @param id l'identifiant de l'unité
+		 * @return l'unité qui possède id comme identifiant
+		 */
+		Unit* getUnit(unsigned int id) const;
+		
+		/**
+		 * @brief Permet de savoir si une unité existe
+		 * @param id l'identifiant de l'unité
+		 * @return vrai si l'unité existe
+		 */
+		 bool isUnit(unsigned int id) const;
+		
+		/**
 		 * @brief Méthode testant la présence d'une unité à une position donnée
 		 * @param position la position a laquelle on veut savoir si une unité est présente
 		 * @return vrai s'il y a une unité à la position donnée
