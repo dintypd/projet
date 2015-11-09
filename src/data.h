@@ -23,6 +23,7 @@ class ConcreteMove;
 class ConcreteNoBaseAttack;
 class ConcreteNoMove;
 class Move;
+class Spawner;
 /**
  * @class Data data.h
  * 
@@ -44,6 +45,9 @@ class Data
 		Move* _move;
 		Move* _noMove;
 		
+		// Liste des spawner
+		std::map<std::string, Spawner*> _spawnerList;
+		
 	public:
 		Data();
 		// Map data
@@ -54,12 +58,14 @@ class Data
 		// Base data
 		std::map<std::string, unsigned int> getUnsignedIntData_Base();
 		
-		// Knight data
-		std::map<std::string, unsigned int> getUnsignedIntData_Knight();
-		std::map<std::string, bool> getBoolData_Knight();
-		Attack* getAttackBehavior_Knight();
-		Move* getMoveBehavior_Knight();
-		HPLoss* getHPLossBehavior_Knight();
+		// Spawner
+		Spawner* getSpawner(std::string classe);
+		
+		// Player data
+		unsigned int getGolds_Player();
+		
+		// Game data
+		std::vector<std::string> getClassesData_Game();
 };
 
 #endif // DATA_H

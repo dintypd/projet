@@ -32,6 +32,10 @@ Data::Data()
 	
 	_move = new ConcreteMove();
 	_noMove = new ConcreteNoMove();
+	
+	Knight* knightPrototype = new Knight(1, 8, 4, 160, 90, 100, _baseAttack, _hpLossSpeDef, _move);
+	Spawner* knightSpawner = new Spawner(_knightPrototype);
+	_spawnerList["knight"] = knightSpawner;
 }
 
 // Map Data
@@ -122,4 +126,25 @@ HPLoss* Data::getHPLossBehavior_Knight()
 Move* Data::getMoveBehavior_Knight()
 {
 	return _move;
+}
+
+// Player
+unsigned int Data::getGolds_Player()
+{
+	return 260;
+}
+
+// Game
+vector<string> Data::getClassesData_Game()
+{
+	vector<string> classes;
+	classes.push_back("knight");
+	
+	return classes;
+}
+
+// Spawner
+Spawner* Data::getSpawner(std::string classe)
+{
+	return _spwanerList[classe];
 }

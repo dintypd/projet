@@ -56,6 +56,14 @@ class Map
 		bool isValidViewLine(Unit* unit, Position position) const;
 		
 		/**
+		 * @brief Méthode qui teste si une unité peut être invoquée à la position donnée
+		 * @param position la position d'invocation
+		 * @param player le joueur qui invoque
+		 * @return vrai si l'unité peut être invoquée à la position p
+		 */
+		bool isValidSummonPosition(Position position, Player* player) const;
+		
+		/**
 		 * @brief Méthode qui retourne une unité présente à une position donnée
 		 * @param position la position à laquelle on va récupèrer l'unité
 		 * @return l'unité présente à la position donnée
@@ -88,6 +96,12 @@ class Map
 		 * @param player le joueur à ajouté
 		 */
 		void addPlayer(Player* player);
+		
+		/**
+		 * @brief Accesseur de la map des joueurs
+		 * @return une map id -> joueur contenant tous les joueurs
+		 */
+		std::map<unsigned int, Player*> & getPlayers();
 };
  
 #endif // MAP_H

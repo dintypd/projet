@@ -6,6 +6,7 @@
  *
 **/
 
+#include <iostream>
 #include "unit.h"
 #include "attack.h"
 #include "concreteBaseAttack.h"
@@ -28,22 +29,23 @@ Unit::Unit( unsigned int range,
 			unsigned int mp, 
 			unsigned int hp,
 			unsigned int dmgs, 
-			unsigned int cost, 
-			Position position) : 	_id(++_nextId), 
-									_range(range), 
-									_ap(ap), 
-									_mp(mp), 
-									_hp(hp), 
-									_dmgs(dmgs), 
-									_cost(cost), 
-									_position(position), 
-									_summoner(false), 
-									_builder(false)
-{
-	_attack = new ConcreteBaseAttack();
-	_move = new ConcreteMove();
-	_hpLoss = new ConcreteHPLoss();
-}
+			unsigned int cost,
+			Attack* attack,
+			HPLoss* hpLoss,
+			Move* move) : 	_id(++_nextId), 
+							_range(range), 
+							_ap(ap), 
+							_mp(mp), 
+							_hp(hp), 
+							_dmgs(dmgs), 
+							_cost(cost), 
+							_position(0), 
+							_attack(attack),
+							_hpLoss(hpLoss),
+							_move(move),
+							_summoner(false), 
+							_builder(false)
+{}
 
 Position Unit::getPosition() const
 {
@@ -148,5 +150,12 @@ void Unit::hpLoss( unsigned int value )
 void Unit::move( Path *path, Map *map )
 {
 	_move->move(path, map, this);
+}
+
+void Unit::afficher()
+{
+	cout << "ID: " << _id << " ; Classe: " << classe() << " ; Position: ";
+	_position.afficher();
+	cout << endl;
 }
 

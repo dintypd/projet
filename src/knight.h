@@ -8,16 +8,29 @@
 #ifndef KNIGHT_H
 #define KNIGHT_H
 
-#include "unit.h";
+#include "unit.h"
 
 /**
  * @class Knight knight.h
  * 
  * @brief Classe définissant un chevalier
  */
-class Knight : Unit
+class Knight : public Unit
 {
-	private:
+	public:
+		Knight( unsigned int range,
+				unsigned int ap,
+				unsigned int mp,
+				unsigned int hp,
+				unsigned int dmgs,
+				unsigned int cost,
+				Attack* attack,
+				HPLoss* hpLoss,
+				Move* move);
+				
+		std::string classe();
+		
+		Unit* clone();
 };
 
 #endif // KNIGHT_H

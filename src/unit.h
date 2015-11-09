@@ -11,6 +11,7 @@
 // #include "upgrade.h"
 // #include "specialisation.h"
 #include "position.h"
+#include <string>
 
 class Map;
 class HPLoss;
@@ -68,7 +69,9 @@ class Unit
 				unsigned int hp,
 				unsigned int dmgs,
 				unsigned int cost,
-				Position position);
+				Attack* attack,
+				HPLoss* hpLoss,
+				Move* move);
 				
 		/**
 		 * @brief Accesseur de l'identifiant
@@ -189,6 +192,22 @@ class Unit
 		 * @param map La carte
 		 */
 		void move ( Path *path, Map *map );
+		
+		/**
+		 * @brief Méthode virtuelle qui affiche le nom de la classe de l'unité
+		 */
+		virtual std::string classe() = 0;
+		
+		/**
+		 * @brief Méthode qui affiche la classe de l'unité et sa position
+		 */
+		void afficher();
+		
+		/**
+		 * @brief Méthode qui retourne une unité possèdant le même type, mais aussi les même caractéristiques que "this"
+		 * @return un clone de "this"
+		 */
+		virtual Unit* clone() = 0;
 };
 
 #endif // UNIT_H			

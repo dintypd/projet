@@ -57,7 +57,7 @@ class Player
 		 * @brief Accesseur du tableau des unités
 		 * @return le tableau des unités du joueur
 		 */
-		std::map<unsigned int, Unit*> & getUnits();
+		std::map<unsigned int, Unit*> * getUnits();
 		
 		/**
 		 * @brief Accesseur de la base
@@ -73,6 +73,13 @@ class Player
 		void summon(Unit* unit/*, Position position*/);
 		
 		/**
+		 * @brief Méthode qui permet de savoir si un joueur peut invoquer l'unité données
+		 * @param unit l'unité en question
+		 * @return vrai si le joueur peut invoquer l'unité
+		 */
+		bool canSummon(Unit* unit);
+		
+		/**
 		 * @brief Méthode qui crédite l'argent d'un joueur de la somme donnée
 		 * @param golds la somme à créditer
 		 */
@@ -85,6 +92,11 @@ class Player
 		 * @pre (_golds - golds >= 0)
 		 */
 		void rmGolds(unsigned int golds);
+		
+		/**
+		 * @brief Méthode qui affiche la quantité d'argent du joueur
+		 */
+		void afficheGolds();
 		
 		/**
 		 * @brief Modifie le joueur suivant dans l'ordre du jeu
@@ -103,6 +115,8 @@ class Player
 		 * @param id l'identifiant de l'unité choisie
 		 */
 		Unit* getUnit(unsigned int id) const;
+		
+		void afficheUnits();
 };
  
 #endif // PLAYER_H

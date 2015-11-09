@@ -53,20 +53,28 @@ bool Map::isValidViewLine(Unit* unit, Position position) const
 	return true;
 }
 
+bool Map::isValidSummonPosition(Position position, Player* player) const
+{
+	return position.getX() <= _size-1 &&
+		   position.getY() <= _size-1 && 
+		   !isUnitAt(position) &&
+		   !isDecorAt(position);
+}
+
 Unit* Map::getUnitAt(Position position) const
 {
-	map<unsigned int, Unit*> & currentUnits = _players.at(1)->getUnits();
+	map<unsigned int, Unit*>* currentUnits = _players.at(1)->getUnits();
 	
 	// on itère dans la liste des joueurs
 	for(auto player : _players)
 	{
 		currentUnits = player.second->getUnits();
 		// on itère dans la liste des unités
-		for(auto unit : currentUnits)
-		{
-			if(unit.second->getPosition() == position)
+		for(map<unsigned int, Unit*>::iterator unit = currentUnits->begin(); unit != currentUnits->end(); ++unit)
+		{	
+			if(unit->second->getPosition() == position)
 			{
-				return unit.second;
+				return unit->second;
 			}
 		}
 	}
@@ -76,16 +84,17 @@ Unit* Map::getUnitAt(Position position) const
 
 bool Map::isUnitAt(Position position) const
 {
-	map<unsigned int, Unit*> & currentUnits = _players.at(1)->getUnits();
+	map<unsigned int, Unit*>* currentUnits = _players.at(1)->getUnits();
 	
 	// on itère dans la liste des joueurs
 	for(auto player : _players)
 	{
+		// BUG A CE NIVEAU
 		currentUnits = player.second->getUnits();
 		// on itère dans la liste des unités
-		for(auto unit : currentUnits)
-		{
-			if(unit.second->getPosition() == position)
+		for(map<unsigned int, Unit*>::iterator unit = currentUnits->begin(); unit != currentUnits->end(); ++unit)
+		{	
+			if(unit->second->getPosition() == position)
 			{
 				return true;
 			}
@@ -134,4 +143,9 @@ bool Map::isDecorAt(Position position) const
 void Map::addPlayer(Player* player)
 {
 	_players[player->getId()] = player;
+}
+
+map<unsigned int, Player*> & Map::getPlayers()
+{
+	return _players;
 }

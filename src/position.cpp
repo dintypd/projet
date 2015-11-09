@@ -48,5 +48,5 @@ bool Position::operator==(Position const& position)
 
 void Position::afficher() const
 {
-	printf("Pos: X -> %d ; Y -> %d\n", _X, _Y);
+	printf("[%d;%d]", _X, _Y);
 }
