@@ -14,5 +14,11 @@ using namespace std;
 
 void ConcreteHPLoss::hpLoss(unsigned int value, Unit* u)
 {
+	// on retire les hp
 	u->setHP(u->getHP()-value);
+
+	// on affiche les infos
+	u->afficher();
+	cout << "---> perd : " << value << " hp" << endl;
+	cout << "---> hp : " << u->getHP() << "/" << u->getMaxHP() << endl;
 }

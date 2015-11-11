@@ -10,6 +10,7 @@
 
 class Position;
 class Map;
+class Unit;
 /**
  * @class Attack attack.h
  * 
@@ -18,8 +19,12 @@ class Map;
  */
 class Attack
 {
+	protected:
+		unsigned int _ap;
+		
 	public:
-		virtual void attack(Position position, Map* map, unsigned int dmgs) = 0;
+		Attack(unsigned int ap);
+		virtual void attack(Position position, Map* map, Unit* attacker) = 0;
 };
 
  

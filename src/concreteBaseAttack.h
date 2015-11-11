@@ -21,7 +21,8 @@ class Unit;
 class ConcreteBaseAttack : public Attack
 {
 	public:
-		void attack(Position position, Map* map, unsigned int dmgs);
+		ConcreteBaseAttack(unsigned int ap);
+		void attack(Position position, Map* map, Unit* attacker);
 };
 
 #endif

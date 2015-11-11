@@ -76,7 +76,12 @@ Player* Player::getNext() const
 
 Unit* Player::getUnit(unsigned int id) const
 {
-	return _units.at(id);
+	if(_units.count(id))
+	{
+		return _units.at(id);
+	}
+
+	return 0;
 }
 
 void Player::afficheUnits()
@@ -92,4 +97,14 @@ void Player::afficheUnits()
 	{
 		cout << "Aucune unité." << endl;
 	}
+}
+
+void Player::endTurn()
+{
+	for(auto unit : _units)
+	{
+		unit.second->endTurn();
+	}
+
+	_golds += 120;
 }

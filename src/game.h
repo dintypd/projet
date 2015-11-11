@@ -29,15 +29,60 @@ class Game
 		Player* _currentPlayer;
 		Map* _map;
 	public:
+		/**
+		 * @brief constructeur
+		 */
 		Game();
+
+		/**
+		 * @brief Boucle du jeu, fini lorsque la commande tapée est /quit
+		 */
 		void play();
+
+		/**
+		 * @brief Méthode centralisant toutes les actions à effectuer à la fin du tour
+		 */
 		void endTurn();
+
+		/**
+		 * @brief Actions lors de la détection de /help
+		 */
 		void helpCommand();
+
+		/**
+		 * @brief Actions lors de la détection de /quit
+		 */
 		void quitCommand();
+
+		/**
+		 * @brief Actions lors de la détection de /summon
+		 */
 		void summonCommand(std::vector<std::string> command);
+
+		/**
+		 * @brief Actions lors de la détection de /units
+		 */
 		void unitsCommand();
+
+		/**
+		 * @brief Actions lors de la détection de /golds
+		 */
 		void goldsCommand();
+
+		/**
+		 * @brief Actions lors de la détection de /infos
+		 */
 		void infosCommand(std::vector<std::string> command);
-};
+
+		/**
+		 * @brief Actions lors de la détection de /move
+		 */
+		void moveCommand(std::vector<std::string> command);
+
+		/**
+		 * @brief Actions lors de la détection de /attack
+		 */
+		void attackCommand(std::vector<std::string> command);
+};		
 
 #endif // GAME_H

@@ -17,6 +17,8 @@
 #include "unit.h"
 #include "knight.h"
 #include "spawner.h"
+#include "path.h"
+#include "position.h"
 
 using namespace std;
 
@@ -102,6 +104,14 @@ void Game::play()
 			{
 				infosCommand(commandSplit);
 			}
+			else if(commandSplit[0] == "/move" && commandSplit.size() == 3)
+			{
+				moveCommand(commandSplit);
+			}
+			else if(commandSplit[0] == "/attack" && commandSplit.size() == 4)
+			{
+				attackCommand(commandSplit);
+			}
 			else
 			{
 				cout << "Commande invalide, tapez /help pour avoir toutes les commandes." << endl;
@@ -130,7 +140,7 @@ void Game::play()
 void Game::endTurn()
 {
 	++_turn;
-	_currentPlayer->addGolds(120);
+	_currentPlayer->endTurn();
 	_currentPlayer = _currentPlayer->getNext();
 }
 
@@ -138,15 +148,15 @@ void Game::helpCommand()
 {
 	cout << "Aide: les commandes disponibles sont :" << endl;
 	cout << "- /help                           : affiche l'aide du jeu" << endl;
-	cout << "- /unit						   : récapitulatif des unités" << endl;
+	cout << "- /units						   : récapitulatif des unités" << endl;
 	cout << "- /golds						   : affiche la quantité d'argent disponible" << endl;
-	cout << "- /info    [ID_unité]             : affiche des informations sur une unité" << endl;
+	cout << "- /infos    [ID_unité]            : affiche des informations sur une unité" << endl;
 	cout << "- /summon                         : affiche la liste des classes disponibles" << endl;
 	cout << "- /summon  [NOM_unité] [position] : invoque l'unité à la position donnée" << endl;
 	cout << "- /move    [ID_unité]  {z|q|s|d}* : déplace l'unité selon la chaine de déplacement" << endl;
 	cout << "- /attack  [ID_unité]  [position] : attaque l'unité à la position donnée" << endl;
-	cout << "- /upgrade [NOM_unité]            : affiche les améliorations disponibles pour l'unité" << endl;
-	cout << "- /upgrade [ID_unité]  [upgrade]  : améliore l'unité en fonction de l'upgrade donnée" << endl;
+	//cout << "- /upgrade [NOM_unité]            : affiche les améliorations disponibles pour l'unité" << endl;
+	//cout << "- /upgrade [ID_unité]  [upgrade]  : améliore l'unité en fonction de l'upgrade donnée" << endl;
 	cout << "- /end                            : termine le tour de jeu" << endl;
 	cout << "- /quit                           : quitte le jeu" << endl;
 }
@@ -172,8 +182,7 @@ void Game::summonCommand(vector<string> command)
 		string classe = command[1];
 		unsigned int x = stoi(command[2]);
 		unsigned int y = stoi(command[3]);
-		
-		
+
 		if(_data->isClasse(classe))
 		{
 			Position p(x, y);
@@ -185,8 +194,10 @@ void Game::summonCommand(vector<string> command)
 				{
 					Unit* u = sp->spawnUnit(p);
 					_currentPlayer->summon(u);
-					cout << "Unitée invoquée : ";
+					cout << _currentPlayer->getName() << " invoque : ";
 					u->afficher();
+					cout << "---> perd : " << u->getCost() << " golds" << endl;
+					cout << "---> golds : " << _currentPlayer->getGolds() << endl;
 				}
 				else
 				{
@@ -202,17 +213,17 @@ void Game::summonCommand(vector<string> command)
 		}
 		else
 		{
-			cout << "La classe " << classe << " n'existe pas" << endl;
+			cout << "La classe " << classe << " n'existe pas." << endl;
 		}
 	}
 }
 
 void Game::unitsCommand()
 {
-	for(auto player : _map->getPlayers)
+	for(auto player : _map->getPlayers())
 	{
-		cout << player->getName() << " :" << endl
-		player->afficheUnits();
+		cout << player.second->getName() << " :" << endl;
+		player.second->afficheUnits();
 	}
 }
 
@@ -223,10 +234,85 @@ void Game::goldsCommand()
 
 void Game::infosCommand(vector<string> command)
 {
-	unsigned int id = command[1];
+	unsigned int id = stoi(command[1]);
 	if(_map->isUnit(id))
 	{
 		_map->getUnit(id)->afficherInfos();
+	}
+	else
+	{
+		cout << "Cette unité n'existe pas." << endl;
+	}
+}
+
+void Game::moveCommand(vector<string> command)
+{
+	unsigned int id = stoi(command[1]);
+	string strPath = command[2];
+	
+	Unit* u = _currentPlayer->getUnit(id);
+	
+	if(u != 0)
+	{
+		bool valid = true;
+		Path* path = new Path;
+		Position p = u->getPosition();
+
+		for(auto c : strPath)
+		{
+			if(c == 'z' && p.getY() > 0)
+			{
+				p = p.up();
+			}
+			else if(c == 's' && p.getY() < _map->getSize()-1)
+			{
+				p = p.down();
+			}
+			else if(c == 'q' && p.getX() > 0)
+			{
+				p = p.left();
+			}
+			else if(c == 'd' && p.getX() < _map->getSize()-1)
+			{
+				p = p.right();
+			}
+			else
+			{
+				valid = false;
+			}
+			if(valid)
+			{
+				path->pushPos(p);
+			}
+		}
+
+		if(valid)
+		{
+			u->move(path, _map);
+		}
+		else
+		{
+			cout << "Le chemin choisi est invalide." << endl;
+		}
+	}
+	else
+	{
+		cout << "Cette unité n'existe pas." << endl;
+	}
+}
+
+void Game::attackCommand(vector<string> command)
+{
+	unsigned int id = stoi(command[1]);
+	unsigned int x = stoi(command[2]);
+	unsigned int y = stoi(command[3]);
+	Position p(x, y);
+
+	Unit* u = _currentPlayer->getUnit(id);
+	
+	if(u != 0)
+	{
+		u->attack(p, _map);
 	}
 	else
 	{

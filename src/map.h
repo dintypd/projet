@@ -116,6 +116,15 @@ class Map
 		 * @return une map id -> joueur contenant tous les joueurs
 		 */
 		std::map<unsigned int, Player*> & getPlayers();
+
+		/**
+		 * @brief Accesseur de la taille de la map
+		 * @return un unsigned int
+		 */
+		unsigned int getSize() const
+		{
+			return _size;
+		}
 };
  
 #endif // MAP_H

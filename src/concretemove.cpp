@@ -16,9 +16,27 @@ using namespace std;
 
 void ConcreteMove::move(Path* path, Map* map, Unit* u)
 {
-	if(map->isValidPath(u, path))
+	if(path->size() <= u->getMP())
 	{
-		u->setPosition(path->getPosition(path->size()-1));
+		if(map->isValidPath(u, path))
+		{
+			u->afficher();
+			u->setMP(u->getMP()-path->size());
+			u->setPosition(path->getPosition(path->size()-1));
+			cout << "---> perd : " << path->size() << " pm" << endl;
+			cout << "---> pm : " << u->getMP() << "/" << u->getMaxMP() << endl;
+			cout << "---> se déplace en : ";
+			u->getPosition().afficher();
+			cout << endl;
+		}
+		else
+		{
+			cout << "Le chemin de déplacement voulu est invalide." << endl;
+		}
+	}
+	else
+	{
+		cout << "L'unité n'a plus assez de pm : " << u->getMP() << " pm" << endl;
 	}
 }
 

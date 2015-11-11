@@ -108,8 +108,16 @@ class Player
 		 * @param id l'identifiant de l'unité choisie
 		 */
 		Unit* getUnit(unsigned int id) const;
-		
+
+		/**
+		 * @brief Affiche toutes les unité du joueur
+		 */
 		void afficheUnits();
+
+		/**
+		 * @brief Méthode qui appelle endTurn() de chaque unité
+		 */
+		void endTurn();
 };
  
 #endif // PLAYER_H

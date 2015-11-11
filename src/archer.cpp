@@ -38,8 +38,11 @@ string Archer::classe()
 void Archer::afficherInfos()
 {
 	cout << "Classe : archer" << endl;
-	cout << "Position : " << _position.afficher();
-	cout << "PA : " << _ap << endl;
-	cout << "PM : " << _mp << endl;
-	cout << "HP : " << _hp << endl;
+	cout << "Position : ";
+	_position.afficher();
+	cout << endl;
+	cout << "PA : " << _ap << "/" << _apMax << endl;
+	cout << "PM : " << _mp << "/" << _mpMax << endl;
+	cout << "HP : " << _hp << "/" << _hpMax << endl;
+	cout << "Dommages : " << _dmgs << endl;
 }

@@ -14,9 +14,12 @@
 
 using namespace std;
 
-void ConcreteBaseAttackSpeTower::attack(Position position, Map* map, unsigned int dmgs)
+ConcreteBaseAttackSpeTower::ConcreteBaseAttackSpeTower(unsigned int ap) : Attack(ap)
+{}
+
+void ConcreteBaseAttackSpeTower::attack(Position position, Map* map, Unit* attacker)
 {
-	if(map->isUnitAt(position))
+	/*if(map->isUnitAt(position))
 	{
 		Unit *u = map->getUnitAt(position);
 		u->hpLoss(dmgs);
@@ -25,6 +28,6 @@ void ConcreteBaseAttackSpeTower::attack(Position position, Map* map, unsigned in
 	else
 	{
 		cout << "pas d'attaque" << endl;
-	}
+	}*/
 }
 

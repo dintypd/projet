@@ -36,6 +36,7 @@ class Data
 		Attack* _baseAttack;
 		Attack* _baseAttackSpeTower;
 		Attack* _noBaseAttack;
+		unsigned int _attackAP;
 		
 		// Comportement de perte d'hp possibles
 		HPLoss* _hpLoss;

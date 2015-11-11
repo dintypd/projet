@@ -35,9 +35,12 @@ Unit::Unit( unsigned int range,
 			Move* move,
 			Position position) : 	_id(++_nextId), 
 							_range(range), 
-							_ap(ap), 
-							_mp(mp), 
-							_hp(hp), 
+							_ap(ap),
+							_apMax(ap),
+							_mp(mp),
+							_mpMax(mp),
+							_hp(hp),
+							_hpMax(hp),
 							_dmgs(dmgs), 
 							_cost(cost), 
 							_position(position), 
@@ -68,14 +71,29 @@ unsigned int Unit::getAP() const
 	return _ap;
 }
 
+unsigned int Unit::getMaxAP() const
+{
+	return _apMax;
+}
+
 unsigned int Unit::getMP() const
 {
 	return _mp;
 }
 
+unsigned int Unit::getMaxMP() const
+{
+	return _mpMax;
+}
+
 unsigned int Unit::getHP() const
 {
 	return _hp;
+}
+
+unsigned int Unit::getMaxHP() const
+{
+	return _hpMax;
 }
 
 unsigned int Unit::getDmgs() const
@@ -140,7 +158,7 @@ void Unit::setBuilder()
 
 void Unit::attack( Position pos, Map *map )
 {
-	_attack->attack(pos, map, _dmgs);
+	_attack->attack(pos, map, this);
 }
 
 void Unit::hpLoss( unsigned int value )
@@ -160,3 +178,8 @@ void Unit::afficher()
 	cout << endl;
 }
 
+void Unit::endTurn()
+{
+	_ap = _apMax;
+	_mp = _mpMax;
+}

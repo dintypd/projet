@@ -50,3 +50,23 @@ void Position::afficher() const
 {
 	printf("[%d;%d]", _X, _Y);
 }
+
+Position Position::up() const
+{
+	return Position(_X, _Y-1);
+}
+
+Position Position::down() const
+{
+	return Position(_X, _Y+1);
+}
+
+Position Position::left() const
+{
+	return Position(_X-1, _Y);
+}
+
+Position Position::right() const
+{
+	return Position(_X+1, _Y);
+}

@@ -150,22 +150,24 @@ map<unsigned int, Player*> & Map::getPlayers()
 	return _players;
 }
 
-Unit* Map::getUnit(unsigned int id)
+Unit* Map::getUnit(unsigned int id) const
 {
 	for(auto player : _players)
 	{
-		if(_player->getUnit(id) != 0)
+		if(player.second->getUnit(id) != 0)
 		{
-			return _player->getUnit(id);
+			return player.second->getUnit(id);
 		}
 	}
+
+	return 0;
 }
 
-bool Map::isUnit(unsigned int id)
+bool Map::isUnit(unsigned int id) const
 {
 	for(auto player : _players)
 	{
-		if(_player->getUnit(id) != 0)
+		if(player.second->getUnit(id) != 0)
 		{
 			return true;
 		}

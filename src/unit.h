@@ -35,9 +35,12 @@ class Unit
 	protected:
 		unsigned int _id, 	// identifiant unique
 			_range,			// portée d'attaque
-			_ap, 			// Action Points
+			_ap,			// Action Points
+			_apMax, 		// Action Points Max
 			_mp,			// Move Points
+			_mpMax,		    // Move Points Max
 			_hp,			// Health Points
+			_hpMax,			// Health Points Max
 			_dmgs,			// Damages
 			_cost;			// Coût 
 		static unsigned int _nextId; // le prochain objet aura cet identifiant + 1
@@ -97,18 +100,24 @@ class Unit
 		 * @return le nombre de PA
 		 */
 		unsigned int getAP() const;
+
+		unsigned int getMaxAP() const;
 		
 		/**
 		 * @brief Accesseur des points de mouvement
 		 * @return le nombre de PM
 		 */
 		unsigned int getMP() const;
+
+		unsigned int getMaxMP() const;
 		
 		/**
 		 * @brief Accesseur des points de vie
 		 * @return le nombre de HP 
 		 */
 		unsigned int getHP() const;
+
+		unsigned int getMaxHP() const;
 		
 		/**
 		 * @brief Accesseur des dommages
@@ -210,8 +219,16 @@ class Unit
 		 * @return un clone de "this"
 		 */
 		virtual Unit* clone(Position position) = 0;
-		
+
+		/**
+		 * @brief Affiche les infos de l'unité
+		 */
 		virtual void afficherInfos() = 0;
+
+		/**
+		 * @brief Méthode qui éxécute les actions de fin de tour comme réinitialiser les pa et pm
+		 */
+		void endTurn();
 };
 
 #endif // UNIT_H			

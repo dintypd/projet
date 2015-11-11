@@ -21,7 +21,8 @@ class Position;
 class ConcreteBaseAttackSpeTower : public Attack
 {
 	public:
-		void attack(Position position, Map* map, unsigned int dmgs);
+		ConcreteBaseAttackSpeTower(unsigned int ap);
+		void attack(Position position, Map* map, Unit* attacker);
 };
 
 #endif

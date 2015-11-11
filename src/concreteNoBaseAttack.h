@@ -12,6 +12,7 @@
 
 class Position;
 class Map;
+class Unit;
 /**
  * @class ConcreteNoBaseAttack concreteNoBaseAttack.h
  * 
@@ -20,7 +21,8 @@ class Map;
 class ConcreteNoBaseAttack : public Attack
 {
 	public:
-		void attack(Position position, Map* map, unsigned int dmgs);
+		ConcreteNoBaseAttack(unsigned int ap);
+		void attack(Position position, Map* map, Unit* attacker);
 };
 
 #endif

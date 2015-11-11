@@ -13,7 +13,10 @@
 
 using namespace std;
 
-void ConcreteNoBaseAttack::attack(Position position, Map* map, unsigned int dmgs)
+ConcreteNoBaseAttack::ConcreteNoBaseAttack(unsigned int ap) : Attack(ap)
+{}
+
+void ConcreteNoBaseAttack::attack(Position position, Map* map, Unit* attacker)
 {
 	cout << "Pas d'attaque" << endl;
 }
