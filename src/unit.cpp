@@ -33,7 +33,8 @@ Unit::Unit( unsigned int range,
 			Attack* attack,
 			HPLoss* hpLoss,
 			Move* move,
-			Position position) : 	_id(++_nextId), 
+			Position position,
+			String image) : _id(++_nextId), 
 							_range(range), 
 							_ap(ap),
 							_apMax(ap),
@@ -48,7 +49,8 @@ Unit::Unit( unsigned int range,
 							_hpLoss(hpLoss),
 							_move(move),
 							_summoner(false), 
-							_builder(false)
+							_builder(false),
+							_image(image)
 {}
 
 Position Unit::getPosition() const
@@ -106,6 +108,11 @@ unsigned int Unit::getCost() const
 	return _cost;
 }
 
+String Unit::getImage() const
+{
+	return _image;
+}
+
 bool Unit::isSummoner() const
 {
 	return _summoner;
@@ -144,6 +151,11 @@ void Unit::setDmgs( unsigned int dmgs )
 void Unit::setPosition( Position pos )
 {
 	_position = pos;
+}
+
+void Unit::setImage( String image )
+{
+	_image = image;
 }
 
 void Unit::setSummoner()

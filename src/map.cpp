@@ -17,7 +17,7 @@ Map::Map(std::vector<std::vector<bool>> tiles,
 			std::vector<Decor*> decors, 
 			std::vector<Position> startingPositions) : _decors(decors), _tiles(tiles), _startingPositions(startingPositions)
 {
-	// calcul de la taille : on suppoe la map carrée
+	// calcul de la taille : on suppose la map carrée
 	_size = _tiles.size();
 } 
 

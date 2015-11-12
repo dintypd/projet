@@ -27,7 +27,8 @@ class Archer : public Unit
 				Attack* attack,
 				HPLoss* hpLoss,
 				Move* move,
-				Position position);
+				Position position,
+				String image);
 				
 		std::string classe();
 		

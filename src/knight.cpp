@@ -20,14 +20,15 @@ Knight::Knight( unsigned int range,
 				Attack* attack,
 				HPLoss* hpLoss,
 				Move* move,
-				Position position) : Unit(range, ap, mp, hp, dmgs, cost, attack, hpLoss, move, position)
+				Position position,
+				String image) : Unit(range, ap, mp, hp, dmgs, cost, attack, hpLoss, move, position, image)
 {
 	// rien à faire
 }
 
 Unit* Knight::clone(Position position)
 {
-	return new Knight(_range, _ap, _mp, _hp, _dmgs, _cost, _attack, _hpLoss, _move, position);
+	return new Knight(_range, _ap, _mp, _hp, _dmgs, _cost, _attack, _hpLoss, _move, position, _image);
 }
 
 string Knight::classe()

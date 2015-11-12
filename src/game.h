@@ -28,6 +28,10 @@ class Game
 		unsigned int _turn;
 		Player* _currentPlayer;
 		Map* _map;
+		std::list<Observer*> _obs;
+		typedef std::list<Observer*>::iterator iterator; 
+		typedef std::list<Observer*>::const_iterator const_iterator;
+		
 	public:
 		/**
 		 * @brief constructeur
@@ -83,6 +87,28 @@ class Game
 		 * @brief Actions lors de la détection de /attack
 		 */
 		void attackCommand(std::vector<std::string> command);
+		
+		/**
+		 * @brief Ajout d'un poiteur vers observateur à la liste obs
+		 * @param o un pointeur vers observateur
+		 */
+		void addObs(Observer* o);
+
+		/**
+		 * @brief La suppression d'un pointeur vers observateur de la liste obs, s'il existe
+		 * @param o un pointeur vers observateur
+		 */
+		void rmObs(Observer* o);
+
+		/**
+		 * @brief Notifie à tous les observateurs de la liste obs que cette classe a changé
+		 */
+		void notifyObs();
+		
+		/**
+		 * @brief Retourne la map pour l'observer Window
+		 */
+		 Map* getData();
 };		
 
 #endif // GAME_H

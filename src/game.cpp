@@ -5,6 +5,8 @@
  * @brief implémentation des méthodes de la classe Game
  *
 **/
+#include <algorithm>
+#include <vector>
 #include <sstream>
 #include <iostream>
 #include <iterator>
@@ -19,6 +21,7 @@
 #include "spawner.h"
 #include "path.h"
 #include "position.h"
+#include "observer.hpp"
 
 using namespace std;
 
@@ -87,10 +90,12 @@ void Game::play()
 			{
 				quitCommand();
 				endGame = true;
+				notifyObs();
 			}
 			else if(commandSplit[0] == "/summon" && (commandSplit.size() == 1 || commandSplit.size() == 4))
 			{
 				summonCommand(commandSplit);
+				notifyObs();
 			}
 			else if(commandSplit[0] == "/units")
 			{
@@ -107,10 +112,12 @@ void Game::play()
 			else if(commandSplit[0] == "/move" && commandSplit.size() == 3)
 			{
 				moveCommand(commandSplit);
+				notifyObs();
 			}
 			else if(commandSplit[0] == "/attack" && commandSplit.size() == 4)
 			{
 				attackCommand(commandSplit);
+				notifyObs();
 			}
 			else
 			{
@@ -317,5 +324,30 @@ void Game::attackCommand(vector<string> command)
 	else
 	{
 		cout << "Cette unité n'existe pas." << endl;
+	}
+}
+
+Map* Game::getData()
+{
+	return _map;
+}
+
+void Game::addObs(Observer* o)
+{
+	_obs.push_back(o);
+}
+
+void Game::rmObs(Observer* o)
+{
+	iterator it = std::find(_obs.begin(), _obs.end(), o);
+	if(it != _obs.end())
+		_obs.erase(it);
+}
+
+void Game::notifyObs()
+{
+	for(auto o : _obs)
+	{
+		o->update(this);
 	}
 }
