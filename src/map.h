@@ -28,7 +28,7 @@ class Map
 	private:
 		unsigned int _size;
 		std::vector<Decor*> _decors;
-		std::vector<std::vector<bool>> _tiles;
+		std::vector<std::vector<unsigned int>> _tiles;
 		std::vector<Position> _startingPositions;
 		std::map<unsigned int, Player*> _players;
 		//std::vector<Objective> objectives;
@@ -37,7 +37,7 @@ class Map
 		/**
 		 * @brief Constructeur
 		 */
-		Map(std::vector<std::vector<bool>> tiles, 
+		Map(std::vector<std::vector<unsigned int>> tiles, 
 			std::vector<Decor*> decors, 
 			std::vector<Position> startingPositions);
 		

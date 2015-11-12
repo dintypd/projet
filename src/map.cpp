@@ -14,7 +14,7 @@
 
 using namespace std;
 
-Map::Map(std::vector<std::vector<bool>> tiles, 
+Map::Map(std::vector<std::vector<unsigned int>> tiles, 
 			std::vector<Decor*> decors, 
 			std::vector<Position> startingPositions) : _decors(decors), _tiles(tiles), _startingPositions(startingPositions)
 {
@@ -29,8 +29,9 @@ bool Map::isValidPath(Unit* unit, Path* path) const
 	
 	if((unit->getPosition().distance(path->getPosition(0)) != 1) || 
 	   (isDecorAt(path->getPosition(0))) || 
-	   (isUnitAt(path->getPosition(0)))) ||
-	   (
+	   (isUnitAt(path->getPosition(0))) ||
+	   (isBaseAt(path->getPosition(0))) ||
+	   (isBlocked(path->getPosition(0))))
 	{
 		valid = false;
 	}
@@ -40,7 +41,8 @@ bool Map::isValidPath(Unit* unit, Path* path) const
 		if((path->getPosition(i-1).distance(path->getPosition(i)) != 1) || 
 		   (isDecorAt(path->getPosition(i))) || 
 		   (isUnitAt(path->getPosition(i))) || 
-		   !_tiles[path->getPosition(i).getY()][path->getPosition(i).getX()])
+		   (isBaseAt(path->getPosition(0))) ||
+		   (isBlocked(path->getPosition(i))))
 		{
 			valid = false;
 		}
@@ -60,7 +62,10 @@ bool Map::isValidSummonPosition(Position position, Player* player) const
 	return position.getX() <= _size-1 &&
 		   position.getY() <= _size-1 && 
 		   !isUnitAt(position) &&
-		   !isDecorAt(position);
+		   !isDecorAt(position) && 
+		   !isBlocked(position) && 
+		   !isBaseAt(position) && 
+		   position.distance(player->getBase()->getPosition()) <= player->getBase()->getSummonRange();
 }
 
 Unit* Map::getUnitAt(Position position) const
@@ -212,5 +217,5 @@ unsigned int Map::getSize() const
 
 bool Map::isBlocked(Position position) const
 {
-	return _tiles[position->getX()][position->getY()] != 0;
+	return _tiles[position.getX()][position.getY()] == 0;
 }

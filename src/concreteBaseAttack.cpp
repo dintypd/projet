@@ -28,24 +28,48 @@ void ConcreteBaseAttack::attack(Position position, Map* map, Unit* attacker)
 	{
 		if(attacker->getAP() >= _ap)
 		{
-			// récupération des données
+			bool attack = false;
 			
+			// récupération des données
 			unsigned int dmgs = attacker->getDmgs();
 
 			// perte d'hp de  l'attaqué
 			if(u != 0)
-				u->hpLoss(dmgs);
+			{
+				if(u->getPosition().distance(attacker->getPosition()) <= attacker->getRange())
+				{
+					u->hpLoss(dmgs);
+					attack = true;
+				}
+				else
+				{
+					cout << "La cible est trop loin." << endl;
+				}
+			}
 			else if(b != 0)
-				b->hpLoss(dmgs);
+			{
+				if(b->getPosition().distance(attacker->getPosition()) <= attacker->getRange())
+				{
+					b->hpLoss(dmgs);
+					attack = true;
+				}
+				else
+				{
+					cout << "La cible est trop loin." << endl;
+				}
+			}
+			
+			if(attack)
+			{
+				// perte d'ap de  l'attaquant
+				attacker->setAP(attacker->getAP()-_ap);
 
-			// perte d'ap de  l'attaquant
-			attacker->setAP(attacker->getAP()-_ap);
-
-			// affichage
-			attacker->afficher();
-			cout << "---> perd : " << _ap << " pa" << endl;
-			cout << "---> pa : " << attacker->getAP() << "/" << attacker->getMaxAP() << endl;
-			cout << "---> inflige : " << dmgs << " hp" <<endl;
+				// affichage
+				attacker->afficher();
+				cout << "---> perd : " << _ap << " pa" << endl;
+				cout << "---> pa : " << attacker->getAP() << "/" << attacker->getMaxAP() << endl;
+				cout << "---> inflige : " << dmgs << " hp" << endl;
+			}
 		}
 		else
 		{

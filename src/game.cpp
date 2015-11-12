@@ -118,6 +118,8 @@ void Game::play()
 				cout << "Commande invalide, tapez /help pour avoir toutes les commandes." << endl;
 			}
 			
+			cout << endl;
+			
 			// on réinitialise la commande
 			commandSplit.clear();
 				
