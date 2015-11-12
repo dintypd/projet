@@ -10,6 +10,7 @@
 #include "decor.h"
 #include "unit.h"
 #include "path.h"
+#include "base.h"
 
 using namespace std;
 
@@ -28,7 +29,8 @@ bool Map::isValidPath(Unit* unit, Path* path) const
 	
 	if((unit->getPosition().distance(path->getPosition(0)) != 1) || 
 	   (isDecorAt(path->getPosition(0))) || 
-	   (isUnitAt(path->getPosition(0))))
+	   (isUnitAt(path->getPosition(0)))) ||
+	   (
 	{
 		valid = false;
 	}
@@ -174,4 +176,41 @@ bool Map::isUnit(unsigned int id) const
 	}
 	
 	return false;
+}
+
+bool Map::isBaseAt(Position position) const
+{
+	for(auto start : _startingPositions)
+	{
+		if(start == position)
+		{
+			return true;
+		}
+	}
+	
+	return false;
+}
+
+Base* Map::getBaseAt(Position position) const
+{
+	for(auto player : _players)
+	{
+		Base* b = player.second->getBase();
+		if(b->getPosition() == position)
+		{
+			return b;
+		}
+	}
+	
+	return 0;
+}
+
+unsigned int Map::getSize() const
+{
+	return _size;
+}
+
+bool Map::isBlocked(Position position) const
+{
+	return _tiles[position->getX()][position->getY()] != 0;
 }

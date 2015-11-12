@@ -34,10 +34,11 @@ Game::Game() : _turn(0)
 	// génération des bases et joueurs en fonction du nombre de slot de départ disponible
 	for(int i = 0; i < _data->getStartingPositions_Map().size(); ++i)
 	{
-		base = new Base(_data->getUnsignedIntData_Base()["hp"], _data->getUnsignedIntData_Base()["summonRange"], _data->getUnsignedIntData_Base()["buildRange"]);	
+		base = new Base(_data->getUnsignedIntData_Base()["hp"], _data->getUnsignedIntData_Base()["summonRange"], _data->getUnsignedIntData_Base()["buildRange"], _data->getHPLossBehavior_Base(), _data->getStartingPositions_Map()[i]);	
 		cout << "Nom du joueur " << i+1 << " ?" << endl;
 		cin >> name;
 		player = new Player(name, _data->getGolds_Player(), base);
+		base->setPlayer(player);
 		player->setNext(previous);
 		previous = player;
 		_map->addPlayer(player);
@@ -307,7 +308,7 @@ void Game::attackCommand(vector<string> command)
 	unsigned int x = stoi(command[2]);
 	unsigned int y = stoi(command[3]);
 	Position p(x, y);
-
+	
 	Unit* u = _currentPlayer->getUnit(id);
 	
 	if(u != 0)

@@ -7,13 +7,19 @@
 **/
 
 #include "concretehplossspedef.h"
-#include "attackable.h"
+#include "unit.h"
+#include "base.h"
 #include <iostream>
 
 using namespace std;
 
-void ConcreteHPLossSpeDef::hpLoss(unsigned int value, Attackable* attacked)
+void ConcreteHPLossSpeDef::hpLoss(unsigned int value, Unit* u)
 {
-	attacked->setHP(attacked->getHP()-(value/2));
+	u->setHP(u->getHP()-(value/2));
+}
+
+void ConcreteHPLossSpeDef::hpLoss(unsigned int value, Base* b)
+{
+	b->setHP(b->getHP()-(value/2));
 }
 

@@ -7,18 +7,30 @@
 **/
 
 #include "concretehploss.h"
-#include "attackable.h"
+#include "unit.h"
+#include "base.h"
 #include <iostream>
 
 using namespace std;
 
-void ConcreteHPLoss::hpLoss(unsigned int value, Attackable* attacked)
+void ConcreteHPLoss::hpLoss(unsigned int value, Unit* u)
 {
 	// on retire les hp
-	attacked->setHP(attacked->getHP()-value);
+	u->setHP(u->getHP()-value);
 
 	// on affiche les infos
-	attacked->afficher();
+	u->afficher();
 	cout << "---> perd : " << value << " hp" << endl;
-	cout << "---> hp : " << attacked->getHP() << "/" << attacked->getMaxHP() << endl;
+	cout << "---> hp : " << u->getHP() << "/" << u->getMaxHP() << endl;
+}
+
+void ConcreteHPLoss::hpLoss(unsigned int value, Base* b)
+{
+	// on retire les hp
+	b->setHP(b->getHP()-value);
+
+	// on affiche les infos
+	b->afficher();
+	cout << "---> perd : " << value << " hp" << endl;
+	cout << "---> hp : " << b->getHP() << "/" << b->getMaxHP() << endl;
 }

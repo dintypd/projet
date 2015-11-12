@@ -11,6 +11,7 @@
 #include "map.h"
 #include "position.h"
 #include "unit.h"
+#include "base.h"
 
 using namespace std;
 
@@ -20,16 +21,22 @@ ConcreteBaseAttack::ConcreteBaseAttack(unsigned int ap) : Attack(ap)
 void ConcreteBaseAttack::attack(Position position, Map* map, Unit* attacker)
 {
 	// on cherche l'unité
-	if(map->isUnitAt(position))
+	Unit* u = map->getUnitAt(position);
+	Base* b = map->getBaseAt(position);
+	
+	if(u != 0 || b != 0)
 	{
 		if(attacker->getAP() >= _ap)
 		{
 			// récupération des données
-			Unit *u = map->getUnitAt(position);
+			
 			unsigned int dmgs = attacker->getDmgs();
 
 			// perte d'hp de  l'attaqué
-			u->hpLoss(dmgs);
+			if(u != 0)
+				u->hpLoss(dmgs);
+			else if(b != 0)
+				b->hpLoss(dmgs);
 
 			// perte d'ap de  l'attaquant
 			attacker->setAP(attacker->getAP()-_ap);
@@ -48,7 +55,7 @@ void ConcreteBaseAttack::attack(Position position, Map* map, Unit* attacker)
 	else
 	{
 		// si on a pas trouvé d'unité à attaquer
-		cout << "Aucune unité en ";
+		cout << "Rien à attaquer en ";
 		position.afficher();
 		cout << endl;
 	}
