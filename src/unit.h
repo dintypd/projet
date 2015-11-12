@@ -11,18 +11,12 @@
 // #include "upgrade.h"
 // #include "specialisation.h"
 #include "position.h"
+#include "attackable.h"
 #include <string>
 
 class Map;
 class HPLoss;
 class Attack;
-class ConcreteBaseAttack;
-class ConcreteBaseAttackSpeTower;
-class ConcreteHPLoss;
-class ConcreteHPLossSpeDef;
-class ConcreteMove;
-class ConcreteNoBaseAttack;
-class ConcreteNoMove;
 class Move;
 class Path;
 /**
@@ -30,26 +24,25 @@ class Path;
  * 
  * @brief Classe permettant l'utilisation d'unités
  */
-class Unit
+class Unit : public Attackable
 {
 	protected:
-		unsigned int _id, 	// identifiant unique
-			_range,			// portée d'attaque
-			_ap,			// Action Points
-			_apMax, 		// Action Points Max
-			_mp,			// Move Points
-			_mpMax,		    // Move Points Max
-			_hp,			// Health Points
-			_hpMax,			// Health Points Max
-			_dmgs,			// Damages
-			_cost;			// Coût 
+		unsigned int _id, 		// identifiant unique
+					 _range,	// portée d'attaque
+					 _ap,		// Action Points
+					 _apMax, 	// Action Points Max
+					 _mp,		// Move Points
+					 _mpMax,    // Move Points Max
+					 _hp,		// Health Points
+					 _hpMax,	// Health Points Max
+					 _dmgs,		// Damages
+					 _cost;		// Coût 
 		static unsigned int _nextId; // le prochain objet aura cet identifiant + 1
 		Position _position;		// Position actuelle
 		// Upgrade *_upgrade;
 		// Specialisation *_specialisation;
-		Attack *_attack;
-		HPLoss *_hpLoss;
-		Move *_move;
+		Attack* _attack;
+		Move* _move;
 		bool _summoner;		// unité peut invoquer près d'elle?
 		bool _builder;		// unité peut construire?
 		
@@ -66,16 +59,16 @@ class Unit
 		 * @param summoner L'untié peut elle invoquer ?
 		 * @param builder L'unité peut elle construire ?
 		 */
-		 Unit(  unsigned int range,
-				unsigned int ap,
-				unsigned int mp,
-				unsigned int hp,
-				unsigned int dmgs,
-				unsigned int cost,
-				Attack* attack,
-				HPLoss* hpLoss,
-				Move* move,
-				Position position);
+		 Unit(unsigned int range,
+		      unsigned int ap,
+			  unsigned int mp,
+			  unsigned int hp,
+			  unsigned int dmgs,
+			  unsigned int cost,
+			  Attack* attack,
+			  HPLoss* hpLoss,
+			  Move* move,
+			  Position position);
 				
 		/**
 		 * @brief Accesseur de l'identifiant
@@ -101,6 +94,10 @@ class Unit
 		 */
 		unsigned int getAP() const;
 
+		/**
+		 * @brief Accesseur du maximum de points d'action
+		 * @return le nombre max de PA
+		 */
 		unsigned int getMaxAP() const;
 		
 		/**
@@ -109,6 +106,10 @@ class Unit
 		 */
 		unsigned int getMP() const;
 
+		/**
+		 * @brief Accesseur du maximum de points de mouvement
+		 * @return le nombre max de PM
+		 */
 		unsigned int getMaxMP() const;
 		
 		/**
@@ -117,6 +118,10 @@ class Unit
 		 */
 		unsigned int getHP() const;
 
+		/**
+		 * @brief Accesseur du maximum de points de vie
+		 * @return le nombre max de HP
+		 */
 		unsigned int getMaxHP() const;
 		
 		/**
@@ -229,6 +234,24 @@ class Unit
 		 * @brief Méthode qui éxécute les actions de fin de tour comme réinitialiser les pa et pm
 		 */
 		void endTurn();
+		
+		/**
+		 * @brief Test de l'appartenance à la sous-classe Tower
+		 * @return vrai si cette classe est une tour
+		 */
+		bool isTower() const;
+		
+		/**
+		 * @brief Test de l'appartenance à la sous-classe Unit
+		 * @return vrai si cette classe est une unité
+		 */
+		bool isUnit() const;
+		
+		/**
+		 * @brief Test de l'appartenance à la sous-classe Base
+		 * @return vrai si cette classe est une base
+		 */
+		bool isBase() const;
 };
 
 #endif // UNIT_H			

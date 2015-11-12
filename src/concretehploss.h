@@ -10,7 +10,8 @@
 
 #include "hploss.h"
 
-class Unit;
+class Attackable;
+
 /**
  * @class ConcreteConcreteHPLoss concretehploss.h
  * 
@@ -19,7 +20,7 @@ class Unit;
 class ConcreteHPLoss : public HPLoss
 {
 	public:
-		void hpLoss(unsigned int value, Unit* u);
+		void hpLoss(unsigned int value, Attackable* attacked);
 };
 
 #endif // CONCRETE_HP_LOSS_H

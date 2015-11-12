@@ -9,13 +9,6 @@
 #include <iostream>
 #include "unit.h"
 #include "attack.h"
-#include "concreteBaseAttack.h"
-#include "concreteBaseAttackSpeTower.h"
-#include "concretehploss.h"
-#include "concretehplossspedef.h"
-#include "concretemove.h"
-#include "concreteNoBaseAttack.h"
-#include "concretenomove.h"
 #include "move.h"
 #include "hploss.h"
 #include "path.h"
@@ -45,10 +38,10 @@ Unit::Unit( unsigned int range,
 							_cost(cost), 
 							_position(position), 
 							_attack(attack),
-							_hpLoss(hpLoss),
 							_move(move),
 							_summoner(false), 
-							_builder(false)
+							_builder(false),
+							Attackable(hpLoss)
 {}
 
 Position Unit::getPosition() const
@@ -182,4 +175,19 @@ void Unit::endTurn()
 {
 	_ap = _apMax;
 	_mp = _mpMax;
+}
+
+bool Unit::isTower() const
+{
+	return false;
+}
+
+bool Unit::isUnit() const
+{
+	return true;
+}
+
+bool Unit::isBase() const
+{
+	return false;
 }

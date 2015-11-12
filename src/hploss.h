@@ -8,7 +8,7 @@
 #ifndef HPLOSS_H
 #define HPLOSS_H
 
-class Unit;
+class Attackable;
 /**
  * @class HPLoss hploss.h
  * 
@@ -18,7 +18,7 @@ class Unit;
 class HPLoss
 {
 	public:
-		virtual void hpLoss(unsigned int value, Unit* u) = 0;
+		virtual void hpLoss(unsigned int value, Attackable* attacked) = 0;
 };
 
 
