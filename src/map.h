@@ -16,6 +16,8 @@ class Decor;
 class Player;
 class Unit;
 class Path;
+class Base;
+
 /**
  * @class Map map.h
  * 
@@ -26,7 +28,7 @@ class Map
 	private:
 		unsigned int _size;
 		std::vector<Decor*> _decors;
-		std::vector<std::vector<bool>> _tiles;
+		std::vector<std::vector<unsigned int>> _tiles;
 		std::vector<Position> _startingPositions;
 		std::map<unsigned int, Player*> _players;
 		//std::vector<Objective> objectives;
@@ -35,7 +37,7 @@ class Map
 		/**
 		 * @brief Constructeur
 		 */
-		Map(std::vector<std::vector<bool>> tiles, 
+		Map(std::vector<std::vector<unsigned int>> tiles, 
 			std::vector<Decor*> decors, 
 			std::vector<Position> startingPositions);
 		
@@ -106,6 +108,20 @@ class Map
 		bool isDecorAt(Position position) const;
 		
 		/**
+		 * @brief Méthode qui retourne la base à la position donnée
+		 * @param position la position
+		 * @return la base
+		 */
+		Base* getBaseAt(Position position) const;
+		
+		/**
+		 * @brief Méthode qui teste si une base est présente à la position donnée
+		 * @param position la position
+		 * @return vrai si il y a une base
+		 */
+		bool isBaseAt(Position position) const;
+		
+		/**
 		 * @brief Ajoute un joueur sur la map
 		 * @param player le joueur à ajouté
 		 */
@@ -121,10 +137,9 @@ class Map
 		 * @brief Accesseur de la taille de la map
 		 * @return un unsigned int
 		 */
-		unsigned int getSize() const
-		{
-			return _size;
-		}
+		unsigned int getSize() const;
+		
+		bool isBlocked(Position position) const;
 };
  
 #endif // MAP_H

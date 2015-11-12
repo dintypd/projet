@@ -8,6 +8,11 @@
 #ifndef BASE_H
 #define BASE_H
 
+#include "position.h"
+
+class Player;
+class HPLoss;
+
 /**
  * @class Base base.h
  * 
@@ -17,20 +22,18 @@ class Base
 {
 	private:
 		unsigned int _hp,
+					 _maxHP,
 					 _summonRange,
 					 _buildRange;
+		Player* _player;
+		HPLoss* _hpLoss;
+		Position _position;
 		
 	public:
 		/**
 		 * @brief Constructeur
 		 */
-		Base(unsigned int hp, unsigned int summonRange, unsigned int buildRange);
-		
-		/**
-		 * @brief Accesseur du nombre de points de vie
-		 * @return Le nombre de points de vie de la base
-		 */
-		unsigned int getHp() const;
+		Base(unsigned int hp, unsigned int summonRange, unsigned int buildRange, HPLoss* hpLoss, Position position);
 		
 		/**
 		 * @brief Accesseur de la portée d'invocation
@@ -43,6 +46,53 @@ class Base
 		 * @return La portée de construction de la base
 		 */
 		unsigned int getBuildRange() const;
+		
+		/**
+		 * @brief Affiche la base
+		 */
+		void afficher() const;
+		
+		/**
+		 * @brief Modificateur du nombre de points de vie
+		 * @param value la nouvelle valeur
+		 */
+		void setHP(unsigned int value);
+		
+		/**
+		 * @brief Accesseur des points de vie
+		 * @return le nombre de pdv
+		 */
+		unsigned int getHP() const;
+		
+		/**
+		 * @brief Accesseur des points de vie max
+		 * @return le nombre de pdv max
+		 */
+		unsigned int getMaxHP() const;
+		
+		/**
+		 * @brief Modificateur du joueur associé à la base
+		 * @param player le joueur
+		 */
+		void setPlayer(Player* player);
+		
+		/**
+		 * @brief Accesseur de la position de la base
+		 * @return la position
+		 */
+		Position getPosition() const;
+		
+		/**
+		 * @brief Modificateur de la position de la base
+		 * @param position la nouvelle position
+		 */
+		void setPosition(Position position);
+		
+		/**
+		 * @brief L'unité perd des points de vie
+		 * @param value Le nomdre d'HP perdus
+		 */
+		void hpLoss(unsigned int value);
 };
  
 #endif // BASE_H

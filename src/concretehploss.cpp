@@ -8,6 +8,7 @@
 
 #include "concretehploss.h"
 #include "unit.h"
+#include "base.h"
 #include <iostream>
 
 using namespace std;
@@ -21,4 +22,15 @@ void ConcreteHPLoss::hpLoss(unsigned int value, Unit* u)
 	u->afficher();
 	cout << "---> perd : " << value << " hp" << endl;
 	cout << "---> hp : " << u->getHP() << "/" << u->getMaxHP() << endl;
+}
+
+void ConcreteHPLoss::hpLoss(unsigned int value, Base* b)
+{
+	// on retire les hp
+	b->setHP(b->getHP()-value);
+
+	// on affiche les infos
+	b->afficher();
+	cout << "---> perd : " << value << " hp" << endl;
+	cout << "---> hp : " << b->getHP() << "/" << b->getMaxHP() << endl;
 }

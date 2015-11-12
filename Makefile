@@ -2,7 +2,7 @@
 EXEC=td
 
 # Compiler
-IDIR=lib/SFML-2.2/include
+IDIR=lib/SFML-2.3.2/include
 IDIRFLAG=$(foreach idir, $(IDIR), -I$(idir))
 CXXFLAGS=-std=c++0x -pthread -Ofast -W -Wall -Wextra -pedantic -Wno-sign-compare -Wno-unused-parameter $(IDIRFLAG)
 
@@ -55,7 +55,7 @@ clang-debug: CXXFLAGS += -g -stdlib=libc++
 clang-debug: $(BINDIR)/$(EXEC)
 
 $(BINDIR)/$(EXEC): $(OBJECTS)
-	@$(LINKER) $@ $(LFLAGS) $^ -L lib/SFML-2.2/lib -lsfml-graphics -lsfml-window -lsfml-system
+	@$(LINKER) $@ $(LFLAGS) $^ -L lib/SFML-2.3.2/lib -lsfml-graphics -lsfml-window -lsfml-system
 
 $(OBJDIR)/%.o: %.cpp
 	@$(CXX) $(CXXFLAGS) -c $< -o $@

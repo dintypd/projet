@@ -36,7 +36,7 @@ void ConcreteMove::move(Path* path, Map* map, Unit* u)
 	}
 	else
 	{
-		cout << "L'unité n'a plus assez de pm : " << u->getMP() << " pm" << endl;
+		cout << "L'unité n'a pas assez de pm : " << u->getMP() << " pm" << endl;
 	}
 }
 

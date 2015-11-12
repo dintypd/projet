@@ -11,6 +11,8 @@
 #include "hploss.h"
 
 class Unit;
+class Base;
+
 /**
  * @class ConcreteConcreteHPLossSpeDef concretehplossspedef.h
  * 
@@ -20,6 +22,7 @@ class ConcreteHPLossSpeDef : public HPLoss
 {
 	public:
 		void hpLoss(unsigned int value, Unit* u);
+		void hpLoss(unsigned int value, Base* b);
 };
 
 #endif

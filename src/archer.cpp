@@ -46,4 +46,5 @@ void Archer::afficherInfos()
 	cout << "PM : " << _mp << "/" << _mpMax << endl;
 	cout << "HP : " << _hp << "/" << _hpMax << endl;
 	cout << "Dommages : " << _dmgs << endl;
+	cout << "Portée : " << _range << endl;
 }

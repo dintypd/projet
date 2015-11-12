@@ -98,6 +98,11 @@ map<string, unsigned int> Data::getUnsignedIntData_Base()
 	return base;
 }
 
+HPLoss* Data::getHPLossBehavior_Base()
+{
+	return _hpLoss;
+}
+
 // Player
 unsigned int Data::getGolds_Player()
 {

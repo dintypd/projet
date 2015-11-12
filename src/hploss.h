@@ -9,6 +9,8 @@
 #define HPLOSS_H
 
 class Unit;
+class Base;
+
 /**
  * @class HPLoss hploss.h
  * 
@@ -19,6 +21,7 @@ class HPLoss
 {
 	public:
 		virtual void hpLoss(unsigned int value, Unit* u) = 0;
+		virtual void hpLoss(unsigned int value, Base* b) = 0;
 };
 
 

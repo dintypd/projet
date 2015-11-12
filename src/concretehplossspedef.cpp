@@ -8,6 +8,7 @@
 
 #include "concretehplossspedef.h"
 #include "unit.h"
+#include "base.h"
 #include <iostream>
 
 using namespace std;
@@ -15,5 +16,10 @@ using namespace std;
 void ConcreteHPLossSpeDef::hpLoss(unsigned int value, Unit* u)
 {
 	u->setHP(u->getHP()-(value/2));
+}
+
+void ConcreteHPLossSpeDef::hpLoss(unsigned int value, Base* b)
+{
+	b->setHP(b->getHP()-(value/2));
 }
 

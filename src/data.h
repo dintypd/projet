@@ -77,6 +77,11 @@ class Data
 		 */
 		std::map<std::string, unsigned int> getUnsignedIntData_Base();
 		
+		/**
+		 * Retourne le comportement de perte d'hp des bases
+		 */
+		HPLoss* getHPLossBehavior_Base();
+		
 		// Spawner
 		/**
 		 * Retourne le spawner associé à la classe en paramètre

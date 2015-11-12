@@ -119,6 +119,7 @@ class Unit
 		 */
 		unsigned int getHP() const;
 
+
 		unsigned int getMaxHP() const;
 		
 		/**

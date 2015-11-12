@@ -10,10 +10,11 @@
 #include "decor.h"
 #include "unit.h"
 #include "path.h"
+#include "base.h"
 
 using namespace std;
 
-Map::Map(std::vector<std::vector<bool>> tiles, 
+Map::Map(std::vector<std::vector<unsigned int>> tiles, 
 			std::vector<Decor*> decors, 
 			std::vector<Position> startingPositions) : _decors(decors), _tiles(tiles), _startingPositions(startingPositions)
 {
@@ -28,7 +29,9 @@ bool Map::isValidPath(Unit* unit, Path* path) const
 	
 	if((unit->getPosition().distance(path->getPosition(0)) != 1) || 
 	   (isDecorAt(path->getPosition(0))) || 
-	   (isUnitAt(path->getPosition(0))))
+	   (isUnitAt(path->getPosition(0))) ||
+	   (isBaseAt(path->getPosition(0))) ||
+	   (isBlocked(path->getPosition(0))))
 	{
 		valid = false;
 	}
@@ -38,7 +41,8 @@ bool Map::isValidPath(Unit* unit, Path* path) const
 		if((path->getPosition(i-1).distance(path->getPosition(i)) != 1) || 
 		   (isDecorAt(path->getPosition(i))) || 
 		   (isUnitAt(path->getPosition(i))) || 
-		   !_tiles[path->getPosition(i).getY()][path->getPosition(i).getX()])
+		   (isBaseAt(path->getPosition(0))) ||
+		   (isBlocked(path->getPosition(i))))
 		{
 			valid = false;
 		}
@@ -58,7 +62,10 @@ bool Map::isValidSummonPosition(Position position, Player* player) const
 	return position.getX() <= _size-1 &&
 		   position.getY() <= _size-1 && 
 		   !isUnitAt(position) &&
-		   !isDecorAt(position);
+		   !isDecorAt(position) && 
+		   !isBlocked(position) && 
+		   !isBaseAt(position) && 
+		   position.distance(player->getBase()->getPosition()) <= player->getBase()->getSummonRange();
 }
 
 Unit* Map::getUnitAt(Position position) const
@@ -174,4 +181,41 @@ bool Map::isUnit(unsigned int id) const
 	}
 	
 	return false;
+}
+
+bool Map::isBaseAt(Position position) const
+{
+	for(auto start : _startingPositions)
+	{
+		if(start == position)
+		{
+			return true;
+		}
+	}
+	
+	return false;
+}
+
+Base* Map::getBaseAt(Position position) const
+{
+	for(auto player : _players)
+	{
+		Base* b = player.second->getBase();
+		if(b->getPosition() == position)
+		{
+			return b;
+		}
+	}
+	
+	return 0;
+}
+
+unsigned int Map::getSize() const
+{
+	return _size;
+}
+
+bool Map::isBlocked(Position position) const
+{
+	return _tiles[position.getX()][position.getY()] == 0;
 }
