@@ -56,7 +56,7 @@ class Data
 		 * Méthode qui retourne un vector de vector qui correspond aux cases accessibles ou non de la map de base sans les décors
 		 * @return un tableau de tableau de booleen
 		 */
-		std::vector<std::vector<bool>> getTiles_Map();
+		std::vector<std::vector<unsigned int>> getTiles_Map();
 		
 		/**
 		 * Retourne un vector des décors de la map
