@@ -47,22 +47,22 @@ Data::Data()
 }
 
 // Map Data
-vector<vector<bool>> Data::getTiles_Map()
+vector<vector<unsigned int>> Data::getTiles_Map()
 {
-	vector<bool> l1  {true, true, true, true, true, true, true, true, true, true, true, true};
-	vector<bool> l2  {true, true, true, true, true, true, true, true, true, true, true, true};
-	vector<bool> l3  {true, true, true, true, true, true, true, true, true, true, true, true};
-	vector<bool> l4  {true, true, true, true, true, true, true, true, true, true, true, true};
-	vector<bool> l5  {true, true, true, true, true, true, true, true, true, true, true, true};
-	vector<bool> l6  {true, true, true, true, true, true, true, true, true, true, true, true};
-	vector<bool> l7  {true, true, true, true, true, true, true, true, true, true, true, true};
-	vector<bool> l8  {true, true, true, true, true, true, true, true, true, true, true, true};
-	vector<bool> l9  {true, true, true, true, true, true, true, true, true, true, true, true};
-	vector<bool> l10 {true, true, true, true, true, true, true, true, true, true, true, true};
-	vector<bool> l11 {true, true, true, true, true, true, true, true, true, true, true, true};
-	vector<bool> l12 {true, true, true, true, true, true, true, true, true, true, true, true};
+	vector<unsigned int> l1  {0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0};
+	vector<unsigned int> l2  {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0};
+	vector<unsigned int> l3  {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0};
+	vector<unsigned int> l4  {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+	vector<unsigned int> l5  {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+	vector<unsigned int> l6  {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+	vector<unsigned int> l7  {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+	vector<unsigned int> l8  {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+	vector<unsigned int> l9  {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
+	vector<unsigned int> l10 {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0};
+	vector<unsigned int> l11 {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0};
+	vector<unsigned int> l12 {0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0};
 	
-	vector<vector<bool>> tiles = {l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12};
+	vector<vector<unsigned int>> tiles = {l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12};
 	
 	return tiles;
 }
