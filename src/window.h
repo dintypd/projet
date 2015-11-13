@@ -9,9 +9,11 @@
 #define WINDOW_H
 
 #include "observer.h"
+#include <vector>
 #include <SFML/Graphics.hpp>
 
 class Subject;
+class Game;
 
 /**
  * @class Window window.h
@@ -21,14 +23,15 @@ class Subject;
 class Window : public Observer
 {
 	private:
+		Game * _g;
 		sf::RenderWindow _window;
-		vector<vector<unsigned int>> _tiles;
+		std::vector<std::vector<unsigned int>> _tiles;
 
 	public:
 		/**
 		 * @brief Constructeur qui lance la fenêtre
 		 */
-		Window();
+		Window(Game* g);
 
 		/**
 		 * @brief Méthode d'update du pattern obervateur, met à jour la couleur du cercle

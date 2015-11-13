@@ -6,11 +6,10 @@
 **/
 
 #include "tilemap.h"
-#include <vector>
 
 using namespace std;
 
-TileMap::virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const
+void TileMap::draw(sf::RenderTarget& target, sf::RenderStates states) const
 {
 	// on applique la transformation
 	states.transform *= getTransform();
@@ -23,7 +22,7 @@ TileMap::virtual void draw(sf::RenderTarget& target, sf::RenderStates states) co
 }
 
 
-TileMap::bool load(const std::string& tileset, sf::Vector2u tileSize, const int* tiles, unsigned int width, unsigned int height)
+bool TileMap::load(const std::string& tileset, sf::Vector2u tileSize, vector<vector<unsigned int>> tiles, unsigned int width, unsigned int height)
 {
 	// on charge la texture du tileset
 	if (!m_tileset.loadFromFile(tileset))

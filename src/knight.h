@@ -8,6 +8,7 @@
 #ifndef KNIGHT_H
 #define KNIGHT_H
 
+#include <string>
 #include "unit.h"
 
 /**
@@ -28,7 +29,7 @@ class Knight : public Unit
 				HPLoss* hpLoss,
 				Move* move,
 				Position position,
-				String image);
+				std::string image);
 				
 		std::string classe();
 		

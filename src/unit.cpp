@@ -34,7 +34,7 @@ Unit::Unit( unsigned int range,
 			HPLoss* hpLoss,
 			Move* move,
 			Position position,
-			String image) : _id(++_nextId), 
+			string image) : _id(++_nextId), 
 							_range(range), 
 							_ap(ap),
 							_apMax(ap),
@@ -108,7 +108,7 @@ unsigned int Unit::getCost() const
 	return _cost;
 }
 
-String Unit::getImage() const
+string Unit::getImage() const
 {
 	return _image;
 }
@@ -153,7 +153,7 @@ void Unit::setPosition( Position pos )
 	_position = pos;
 }
 
-void Unit::setImage( String image )
+void Unit::setImage( string image )
 {
 	_image = image;
 }

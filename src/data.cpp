@@ -37,11 +37,11 @@ Data::Data()
 	_noMove = new ConcreteNoMove();
 	
 	Position p(0, 0);
-	Knight* knightPrototype = new Knight(1, 8, 4, 160, 90, 100, _baseAttack, _hpLoss, _move, p);
+	Knight* knightPrototype = new Knight(1, 8, 4, 160, 90, 100, _baseAttack, _hpLoss, _move, p, "knight.png");
 	Spawner* knightSpawner = new Spawner(knightPrototype);
 	_spawnerList["knight"] = knightSpawner;
 	
-	Archer* archerPrototype = new Archer(6, 9, 3, 70, 150, 130, _baseAttack, _hpLoss, _move, p);
+	Archer* archerPrototype = new Archer(6, 9, 3, 70, 150, 130, _baseAttack, _hpLoss, _move, p, "archer.png");
 	Spawner* archerSpawner = new Spawner(archerPrototype);
 	_spawnerList["archer"] = archerSpawner;
 }

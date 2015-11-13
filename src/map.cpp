@@ -68,6 +68,12 @@ bool Map::isValidSummonPosition(Position position, Player* player) const
 		   position.distance(player->getBase()->getPosition()) <= player->getBase()->getSummonRange();
 }
 
+
+vector<vector<unsigned int>> Map::getTiles() const
+{
+	return _tiles;
+}
+
 Unit* Map::getUnitAt(Position position) const
 {
 	map<unsigned int, Unit*>* currentUnits = _players.at(1)->getUnits();

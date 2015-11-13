@@ -21,7 +21,7 @@
 #include "spawner.h"
 #include "path.h"
 #include "position.h"
-#include "observer.hpp"
+#include "observer.h"
 
 using namespace std;
 

@@ -66,6 +66,12 @@ class Map
 		bool isValidSummonPosition(Position position, Player* player) const;
 		
 		/**
+		 * @brief Méthode qui retourne le tableau de tiles
+		 * @return le tableau des tiles
+		 */		
+		std::vector<std::vector<unsigned int>> getTiles() const;
+		
+		/**
 		 * @brief Méthode qui retourne une unité présente à une position donnée
 		 * @param position la position à laquelle on va récupèrer l'unité
 		 * @return l'unité présente à la position donnée

@@ -8,7 +8,10 @@
 #ifndef GAME_H
 #define GAME_H
 
+#include "subject.h"
+#include <list>
 #include <vector>
+#include <iterator>
 #include <string>
 
 class Data;
@@ -21,7 +24,7 @@ class Position;
  * 
  * @brief Classe qui centralisera tout le jeu
  */
-class Game
+class Game : public Subject
 {
 	private: 
 		Data* _data;

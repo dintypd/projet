@@ -52,7 +52,7 @@ class Unit
 		Move *_move;
 		bool _summoner;		// unité peut invoquer près d'elle?
 		bool _builder;		// unité peut construire?
-		String _image;		// image de l'unité
+		std::string _image;		// image de l'unité
 		
 	public:
 		/**
@@ -77,7 +77,7 @@ class Unit
 				HPLoss* hpLoss,
 				Move* move,
 				Position position,
-				String image);
+				std::string image);
 				
 		/**
 		 * @brief Accesseur de l'identifiant
@@ -138,7 +138,7 @@ class Unit
 		 * @brief Accesseur de l'image
 		 * @return l'image
 		 */
-		String getImage() const;
+		std::string getImage() const;
 		
 		/**
 		 * @brief Accesseur de la capacité Summoner
@@ -185,7 +185,7 @@ class Unit
 		/**
 		 * @brief Setter d'image
 		 */
-		void setImage ( String image );		
+		void setImage ( std::string image );		
 		
 		/**
 		 * @brief Setter de capacité Summoner ( la rend TRUE )
