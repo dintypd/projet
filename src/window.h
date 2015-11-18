@@ -14,6 +14,7 @@
 
 class Subject;
 class Game;
+class Map;
 
 /**
  * @class Window window.h
@@ -23,7 +24,7 @@ class Game;
 class Window : public Observer
 {
 	private:
-		Game * _g;
+		Map * _m;
 		sf::RenderWindow _window;
 		std::vector<std::vector<unsigned int>> _tiles;
 
@@ -31,7 +32,7 @@ class Window : public Observer
 		/**
 		 * @brief Constructeur qui lance la fenêtre
 		 */
-		Window(Game* g);
+		Window(Map* m);
 
 		/**
 		 * @brief Méthode d'update du pattern obervateur, met à jour la couleur du cercle

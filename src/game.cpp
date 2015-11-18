@@ -14,6 +14,7 @@
 #include "game.h"
 #include "map.h"
 #include "base.h"
+#include "window.h"
 #include "player.h"
 #include "data.h"
 #include "unit.h"
@@ -52,6 +53,7 @@ Game::Game() : _turn(0)
 	player->setNext(previous);
 	_currentPlayer = player;
 	
+
 	// on lance le jeu
 	play();
 }
@@ -66,6 +68,9 @@ void Game::play()
 	vector<string> commandSplit;
 	
 	cin.ignore();
+	
+	Window* w = new Window(_map);
+	addObs(w);
 	// la boucle du jeu
 	while(!endGame)
 	{	

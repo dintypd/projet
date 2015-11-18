@@ -17,7 +17,7 @@ void TileMap::draw(sf::RenderTarget& target, sf::RenderStates states) const
 	// on applique la texture du tileset
 	states.texture = &m_tileset;
 
-	// et on dessine enfin le tableau de vertex
+	// on dessine le tableau de vertex
 	target.draw(m_vertices, states);
 }
 

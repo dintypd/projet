@@ -10,20 +10,48 @@
 #include "tilemap.h"
 #include "map.h"
 #include "game.h"
+#include <iostream>
 #include <vector>
 
 using namespace std;
 
-Window::Window(Game* g) : _g(g), _window(sf::VideoMode(g->getData()->getSize()*50, g->getData()->getSize()*50), "The Game")
+Window::Window(Map* m) : _m(m), _window(sf::VideoMode(m->getSize()*50, m->getSize()*50), "The Game")
 {
 	_window.clear();
-	_tiles = g->getData()->getTiles();
+	
+	//gestion de l'affichage de la map vide
+	_tiles = m->getTiles();
 	TileMap tileMap;
     if (!tileMap.load("tileset.png", sf::Vector2u(50, 50), _tiles, 12, 12))
     {
-		//error
+		cout << "Error : impossible de charger la map" << endl;
 	}
 	_window.draw(tileMap);
+	
+	//gestion des numéros de ligne/colone
+	sf::Font font;
+	if (!font.loadFromFile("monof55.ttf"))
+	{
+		cout << "Error : impossible de charger la police" << endl;
+	}
+	for (unsigned int i = 0; i < _m->getSize(); ++i)
+	{
+		sf::Text ti;
+		sf::Text tj;
+		ti.setFont(font);
+		tj.setFont(font);
+		string num = to_string(i);
+		ti.setString(num);
+		tj.setString(num);
+		ti.setCharacterSize(11);
+		tj.setCharacterSize(11);
+		ti.setPosition(50*i+25, 0);
+		tj.setPosition(0, 50*i+25);
+		_window.draw(ti);
+		_window.draw(tj);
+		
+	}
+		
 	_window.display();
 }
 
@@ -36,6 +64,38 @@ void Window::update(Subject* s)
 {
 	//Map* map = s->getData();
 	_window.clear();
+	
+	//gestion de l'affichage de la map vide
+	TileMap tileMap;
+    if (!tileMap.load("tileset.png", sf::Vector2u(50, 50), _tiles, 12, 12))
+    {
+		cout << "Error : impossible de charger la map" << endl;
+	}
+	_window.draw(tileMap);
+	
+	//gestion des numéros de ligne/colone
+	sf::Font font;
+	if (!font.loadFromFile("monof55.ttf"))
+	{
+		cout << "Error : impossible de charger la police" << endl;
+	}
+	for (unsigned int i = 0; i < _m->getSize(); ++i)
+	{
+		sf::Text ti;
+		sf::Text tj;
+		ti.setFont(font);
+		tj.setFont(font);
+		string num = to_string(i);
+		ti.setString(num);
+		tj.setString(num);
+		ti.setCharacterSize(11);
+		tj.setCharacterSize(11);
+		ti.setPosition(50*i+25, 0);
+		tj.setPosition(0, 50*i+25);
+		_window.draw(ti);
+		_window.draw(tj);
+		
+	}
 	_window.display();
 }
 
