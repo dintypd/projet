@@ -67,8 +67,8 @@ void Window::update(Subject* s)
 	_window.draw(srbase);
 	
 	//gestion de l'affichage des unités
-	map<unsigned int, Unit*> *blueUnits = players->at(0)->getUnits();
-	map<unsigned int, Unit*> *redUnits = players->at(1)->getUnits();
+	map<unsigned int, Unit*> *blueUnits = players->at(1)->getUnits();
+	map<unsigned int, Unit*> *redUnits = players->at(2)->getUnits();
 	if ( blueUnits->size() > 0 )
 	{
 		sf::Texture barcher;

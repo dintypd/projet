@@ -49,7 +49,7 @@ Game::Game() : _turn(0)
 	}
 	
 	// on boucle la boucle des joueurs
-	player = _map->getPlayers().at(1);
+	player = _map->getPlayers()->at(1);
 	player->setNext(previous);
 	_currentPlayer = player;
 	
@@ -236,10 +236,11 @@ void Game::summonCommand(vector<string> command)
 
 void Game::unitsCommand()
 {
-	for(auto player : _map->getPlayers())
+	map<unsigned int, Player*>::iterator it;
+	for (it = _map->getPlayers()->begin(); it != _map->getPlayers()->end(); ++it)
 	{
-		cout << player.second->getName() << " :" << endl;
-		player.second->afficheUnits();
+		cout << it->second->getName() << " :" << endl;
+		it->second->afficheUnits();
 	}
 }
 
