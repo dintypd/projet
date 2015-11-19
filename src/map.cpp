@@ -158,9 +158,9 @@ void Map::addPlayer(Player* player)
 	_players[player->getId()] = player;
 }
 
-map<unsigned int, Player*> & Map::getPlayers()
+map<unsigned int, Player*> * Map::getPlayers()
 {
-	return _players;
+	return &_players;
 }
 
 Unit* Map::getUnit(unsigned int id) const

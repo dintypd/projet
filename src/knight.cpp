@@ -21,7 +21,7 @@ Knight::Knight( unsigned int range,
 				HPLoss* hpLoss,
 				Move* move,
 				Position position,
-				string image) : Unit(range, ap, mp, hp, dmgs, cost, attack, hpLoss, move, position, image)
+				string image) : Unit(range, ap, mp, hp, dmgs, cost, attack, hpLoss, move, position, "knight.png")
 {
 	// rien à faire
 }

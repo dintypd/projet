@@ -9,10 +9,14 @@
 #include "subject.h"
 #include "tilemap.h"
 #include "map.h"
+#include "unit.h"
 #include "data.h"
+#include "player.h"
 #include "game.h"
+#include <iterator>
 #include <iostream>
 #include <vector>
+#include <map>
 
 using namespace std;
 
@@ -31,7 +35,7 @@ void Window::quit()
 void Window::update(Subject* s)
 {
 	vector<Position> startingPositions = s->getData()->getStartingPositions_Map();
-	map<unsigned int, Player*> players = s->getMap()->getPlayers();
+	map<unsigned int, Player*> *players = s->getMap()->getPlayers();
 	_window.clear();
 	
 	//gestion de l'affichage de la map vide
@@ -63,7 +67,65 @@ void Window::update(Subject* s)
 	_window.draw(srbase);
 	
 	//gestion de l'affichage des unités
-	
+	map<unsigned int, Unit*> *blueUnits = players->at(0)->getUnits();
+	map<unsigned int, Unit*> *redUnits = players->at(1)->getUnits();
+	if ( blueUnits->size() > 0 )
+	{
+		sf::Texture barcher;
+		sf::Texture bknight;
+		if (!barcher.loadFromFile("bluearcher.png"))
+		{
+			cout << "Error : impossible de charger le bluearcher" << endl;
+		}
+		if (!bknight.loadFromFile("blueknight.png"))
+		{
+			cout << "Error : impossible de charger le blueknight" << endl;
+		}
+		map<unsigned int, Unit*>::iterator it;
+		for (it = blueUnits->begin(); it != blueUnits->end(); ++it)
+		{
+			sf::Sprite sunit;
+			if ( it->second->getImage() == "archer.png" )
+			{
+				sunit.setTexture(barcher);
+			}
+			else
+			{
+				sunit.setTexture(bknight);
+			}
+			sunit.setPosition(it->second->getPosition().getX()*50, it->second->getPosition().getY()*50);
+			_window.draw(sunit);
+		}
+	}
+	if ( redUnits->size() > 0 )
+	{
+		sf::Texture rarcher;
+		sf::Texture rknight;
+		if (!rarcher.loadFromFile("redarcher.png"))
+		{
+			cout << "Error : impossible de charger le redarcher" << endl;
+		}
+		if (!rknight.loadFromFile("redknight.png"))
+		{
+			cout << "Error : impossible de charger le redknight" << endl;
+		}		
+		map<unsigned int, Unit*>::iterator it;
+		for (it = redUnits->begin(); it != redUnits->end(); ++it)
+		{
+			sf::Sprite sunit;
+			if ( it->second->getImage() == "archer.png" )
+			{
+				sunit.setTexture(rarcher);
+			}
+			else
+			{
+				sunit.setTexture(rknight);
+			}
+			sunit.setPosition(it->second->getPosition().getX()*50, it->second->getPosition().getY()*50);
+			_window.draw(sunit);
+			
+		}				
+	}
 	
 	//gestion des numéros de ligne/colone
 	sf::Font font;
