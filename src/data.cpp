@@ -80,7 +80,7 @@ vector<Decor*> Data::getDecors_Map()
 vector<Position> Data::getStartingPositions_Map()
 {
 	Position p1(0, 6);
-	Position p2(11, 7);
+	Position p2(11, 5);
 	
 	vector<Position> startingPositions = {p1, p2};
 	

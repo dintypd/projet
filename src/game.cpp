@@ -71,6 +71,7 @@ void Game::play()
 	
 	Window* w = new Window(_map);
 	addObs(w);
+	notifyObs();
 	// la boucle du jeu
 	while(!endGame)
 	{	
@@ -335,7 +336,12 @@ void Game::attackCommand(vector<string> command)
 	}
 }
 
-Map* Game::getData()
+Data* Game::getData()
+{
+	return _data;
+}
+
+Map* Game::getMap()
 {
 	return _map;
 }

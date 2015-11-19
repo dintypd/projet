@@ -109,9 +109,14 @@ class Game : public Subject
 		void notifyObs();
 		
 		/**
+		 * @brief Retourne les data pour l'observer Window
+		 */
+		 Data* getData();
+		 
+		 /**
 		 * @brief Retourne la map pour l'observer Window
 		 */
-		 Map* getData();
+		 Map* getMap();
 };		
 
 #endif // GAME_H
