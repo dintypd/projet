@@ -49,18 +49,18 @@ Data::Data()
 // Map Data
 vector<vector<unsigned int>> Data::getTiles_Map()
 {
-	vector<unsigned int> l1  {0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0};
-	vector<unsigned int> l2  {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0};
-	vector<unsigned int> l3  {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0};
+	vector<unsigned int> l1  {0, 0, 0, 1, 2, 2, 2, 2, 1, 0, 0, 0};
+	vector<unsigned int> l2  {0, 0, 1, 1, 2, 2, 2, 2, 1, 1, 0, 0};
+	vector<unsigned int> l3  {0, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 0};
 	vector<unsigned int> l4  {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 	vector<unsigned int> l5  {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 	vector<unsigned int> l6  {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 	vector<unsigned int> l7  {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 	vector<unsigned int> l8  {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
 	vector<unsigned int> l9  {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1};
-	vector<unsigned int> l10 {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0};
-	vector<unsigned int> l11 {0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0};
-	vector<unsigned int> l12 {0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 0, 0};
+	vector<unsigned int> l10 {0, 1, 1, 1, 1, 2, 2, 1, 1, 1, 1, 0};
+	vector<unsigned int> l11 {0, 0, 1, 1, 2, 2, 2, 2, 1, 1, 0, 0};
+	vector<unsigned int> l12 {0, 0, 0, 1, 2, 2, 2, 2, 1, 0, 0, 0};
 	
 	vector<vector<unsigned int>> tiles = {l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12};
 	

@@ -46,6 +46,7 @@ void Window::update(Subject* s)
 	}
 	_window.draw(tileMap);
 	
+	//chargement de la police
 	sf::Font font;
 	if (!font.loadFromFile("monof55.ttf"))
 	{
@@ -90,16 +91,21 @@ void Window::update(Subject* s)
 		map<unsigned int, Unit*>::iterator it;
 		for (it = blueUnits->begin(); it != blueUnits->end(); ++it)
 		{
+			//affichage ID
 			sf::Text id;
 			id.setFont(font);
 			string sid = to_string(it->second->getId());
 			id.setString(sid);
 			id.setCharacterSize(11);
+			
+			//affichage HP
 			sf::Text hp;
 			hp.setFont(font);
 			string shp = to_string(it->second->getHP()) + "/" + to_string(it->second->getMaxHP());
 			hp.setString(shp);
 			hp.setCharacterSize(11);
+			
+			//affichage unité
 			sf::Sprite sunit;
 			if ( it->second->getImage() == "archer.png" )
 			{
@@ -109,9 +115,9 @@ void Window::update(Subject* s)
 			{
 				sunit.setTexture(bknight);
 			}
-			id.setPosition(it->second->getPosition().getX()*50, it->second->getPosition().getY()*50);	
-			hp.setPosition(it->second->getPosition().getX()*50+25, it->second->getPosition().getY()*50+40);					
-			sunit.setPosition(it->second->getPosition().getX()*50, it->second->getPosition().getY()*50);
+			id.setPosition(it->second->getPosition().getX()*50, it->second->getPosition().getY()*50);		//position ID
+			hp.setPosition(it->second->getPosition().getX()*50+25, it->second->getPosition().getY()*50+40);	//position HP				
+			sunit.setPosition(it->second->getPosition().getX()*50, it->second->getPosition().getY()*50);	//position unité
 			_window.draw(sunit);
 			_window.draw(id);
 			_window.draw(hp);
@@ -132,16 +138,21 @@ void Window::update(Subject* s)
 		map<unsigned int, Unit*>::iterator it;
 		for (it = redUnits->begin(); it != redUnits->end(); ++it)
 		{
-						sf::Text id;
+			//affichage ID
+			sf::Text id;
 			id.setFont(font);
 			string sid = to_string(it->second->getId());
 			id.setString(sid);
 			id.setCharacterSize(11);
+			
+			//affichage HP
 			sf::Text hp;
 			hp.setFont(font);
 			string shp = to_string(it->second->getHP()) + "/" + to_string(it->second->getMaxHP());
 			hp.setString(shp);
 			hp.setCharacterSize(11);
+			
+			//affichage unité
 			sf::Sprite sunit;
 			if ( it->second->getImage() == "archer.png" )
 			{
@@ -151,9 +162,9 @@ void Window::update(Subject* s)
 			{
 				sunit.setTexture(rknight);
 			}
-			id.setPosition(it->second->getPosition().getX()*50, it->second->getPosition().getY()*50);	
-			hp.setPosition(it->second->getPosition().getX()*50+25, it->second->getPosition().getY()*50+40);										
-			sunit.setPosition(it->second->getPosition().getX()*50, it->second->getPosition().getY()*50);
+			id.setPosition(it->second->getPosition().getX()*50, it->second->getPosition().getY()*50);		//position ID
+			hp.setPosition(it->second->getPosition().getX()*50+25, it->second->getPosition().getY()*50+40);	//position HP									
+			sunit.setPosition(it->second->getPosition().getX()*50, it->second->getPosition().getY()*50);	//position unité
 			_window.draw(sunit);
 			_window.draw(id);
 			_window.draw(hp);
