@@ -46,6 +46,12 @@ void Window::update(Subject* s)
 	}
 	_window.draw(tileMap);
 	
+	sf::Font font;
+	if (!font.loadFromFile("monof55.ttf"))
+	{
+		cout << "Error : impossible de charger la police" << endl;
+	}
+	
 	//gestion de l'affichage des bases 
 	sf::Sprite sbbase;
 	sf::Texture bbase;
@@ -84,6 +90,16 @@ void Window::update(Subject* s)
 		map<unsigned int, Unit*>::iterator it;
 		for (it = blueUnits->begin(); it != blueUnits->end(); ++it)
 		{
+			sf::Text id;
+			id.setFont(font);
+			string sid = to_string(it->second->getId());
+			id.setString(sid);
+			id.setCharacterSize(11);
+			sf::Text hp;
+			hp.setFont(font);
+			string shp = to_string(it->second->getHP()) + "/" + to_string(it->second->getMaxHP());
+			hp.setString(shp);
+			hp.setCharacterSize(11);
 			sf::Sprite sunit;
 			if ( it->second->getImage() == "archer.png" )
 			{
@@ -93,8 +109,12 @@ void Window::update(Subject* s)
 			{
 				sunit.setTexture(bknight);
 			}
+			id.setPosition(it->second->getPosition().getX()*50, it->second->getPosition().getY()*50);	
+			hp.setPosition(it->second->getPosition().getX()*50+25, it->second->getPosition().getY()*50+40);					
 			sunit.setPosition(it->second->getPosition().getX()*50, it->second->getPosition().getY()*50);
 			_window.draw(sunit);
+			_window.draw(id);
+			_window.draw(hp);
 		}
 	}
 	if ( redUnits->size() > 0 )
@@ -112,6 +132,16 @@ void Window::update(Subject* s)
 		map<unsigned int, Unit*>::iterator it;
 		for (it = redUnits->begin(); it != redUnits->end(); ++it)
 		{
+						sf::Text id;
+			id.setFont(font);
+			string sid = to_string(it->second->getId());
+			id.setString(sid);
+			id.setCharacterSize(11);
+			sf::Text hp;
+			hp.setFont(font);
+			string shp = to_string(it->second->getHP()) + "/" + to_string(it->second->getMaxHP());
+			hp.setString(shp);
+			hp.setCharacterSize(11);
 			sf::Sprite sunit;
 			if ( it->second->getImage() == "archer.png" )
 			{
@@ -121,18 +151,17 @@ void Window::update(Subject* s)
 			{
 				sunit.setTexture(rknight);
 			}
+			id.setPosition(it->second->getPosition().getX()*50, it->second->getPosition().getY()*50);	
+			hp.setPosition(it->second->getPosition().getX()*50+25, it->second->getPosition().getY()*50+40);										
 			sunit.setPosition(it->second->getPosition().getX()*50, it->second->getPosition().getY()*50);
 			_window.draw(sunit);
+			_window.draw(id);
+			_window.draw(hp);
 			
 		}				
 	}
 	
 	//gestion des numéros de ligne/colone
-	sf::Font font;
-	if (!font.loadFromFile("monof55.ttf"))
-	{
-		cout << "Error : impossible de charger la police" << endl;
-	}
 	
 	for (unsigned int i = 0; i < _m->getSize(); ++i)
 	{
