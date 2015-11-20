@@ -11,6 +11,7 @@
 #include "map.h"
 #include "unit.h"
 #include "data.h"
+#include "base.h"
 #include "player.h"
 #include "game.h"
 #include <iterator>
@@ -171,6 +172,21 @@ void Window::update(Subject* s)
 			
 		}				
 	}
+	//gestion affichage nom des joueurs et HP bases
+	sf::Text blueside;
+	sf::Text redside;
+	blueside.setFont(font);
+	redside.setFont(font);
+	string sblueside = "J1 : " + players->at(1)->getName() + "\n" + "HP base : " + to_string(players->at(1)->getBase()->getHP()) + "/" + to_string(players->at(1)->getBase()->getMaxHP());
+	string sredside = "J2 : " + players->at(2)->getName() + "\n" + "HP base : " + to_string(players->at(2)->getBase()->getHP()) + "/" + to_string(players->at(2)->getBase()->getMaxHP());
+	blueside.setString(sblueside);
+	redside.setString(sredside);
+	blueside.setCharacterSize(14);
+	redside.setCharacterSize(14);
+	blueside.setPosition(20, 15);
+	redside.setPosition(450, 15);
+	_window.draw(blueside);
+	_window.draw(redside);
 	
 	//gestion des numéros de ligne/colone
 	
