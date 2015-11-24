@@ -7,36 +7,36 @@
 **/
 
 #include "archer.h"
+
 #include <iostream>
 
 using namespace std;
 
-Archer::Archer( unsigned int range, 
-				unsigned int ap, 
-				unsigned int mp, 
-				unsigned int hp,
-				unsigned int dmgs, 
-				unsigned int cost,
-				Attack* attack,
-				HPLoss* hpLoss,
-				Move* move,
-				Position position,
-				string image) : Unit(range, ap, mp, hp, dmgs, cost, attack, hpLoss, move, position, "archer.png")
-{
-	// rien à faire
-}
+Archer::Archer(unsigned int range, 
+			   unsigned int ap, 
+			   unsigned int mp, 
+			   unsigned int hp,
+			   unsigned int dmgs, 
+			   unsigned int cost,
+			   Attack* attack,
+			   HPLoss* hpLoss,
+			   Move* move,
+			   Position position,
+			   string image) 
+: Unit(range, ap, mp, hp, dmgs, cost, attack, hpLoss, move, position, "archer.png")
+{}
 
-Unit* Archer::clone(Position position)
+Unit* Archer::clone(Position position) const
 {
 	return new Archer(_range, _ap, _mp, _hp, _dmgs, _cost, _attack, _hpLoss, _move, position, _image);
 }
 
-string Archer::classe()
+string Archer::classe() const
 {
 	return "archer";
 }
 
-void Archer::afficherInfos()
+void Archer::afficherInfos() const
 {
 	cout << "Classe : archer" << endl;
 	cout << "Position : ";

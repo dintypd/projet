@@ -20,7 +20,23 @@ class Base;
 class HPLoss
 {
 	public:
+		/**
+		 * @brief destructeur (évite les warning)
+		 */
+		//virtual ~HPLoss();
+		
+		/**
+		 * @brief Méthode virtuelle pure de perte d'hp des unité
+		 * @param value un entier positif
+		 * @param u l'unité qui prend des dégats
+		 */
 		virtual void hpLoss(unsigned int value, Unit* u) = 0;
+		
+		/**
+		 * @brief Méthode virtuelle pure de perte d'hp des bases
+		 * @param value un entier positif
+		 * @param b la base qui prend des dégats
+		 */
 		virtual void hpLoss(unsigned int value, Base* b) = 0;
 };
 

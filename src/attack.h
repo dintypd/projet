@@ -11,6 +11,7 @@
 class Position;
 class Map;
 class Unit;
+
 /**
  * @class Attack attack.h
  * 
@@ -23,7 +24,22 @@ class Attack
 		unsigned int _ap;
 		
 	public:
+		/**
+		 * @brief Constructeur
+		 */
 		Attack(unsigned int ap);
+		
+		/**
+		 * @brief Destructeur (évite les warnings)
+		 */
+		//virtual ~Attack();
+		
+		/**
+		 * @brief Méthode virtuelle pure d'attaque
+		 * @param position une position
+		 * @param map une map
+		 * @param attacker l'unité qui attaque
+		 */
 		virtual void attack(Position position, Map* map, Unit* attacker) = 0;
 };
 

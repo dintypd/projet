@@ -8,11 +8,11 @@
 #ifndef MAP_H
 #define MAP_H
 
-#include <map>
-#include <vector>
 #include "position.h"
 
-class Decor;
+#include <map>
+#include <vector>
+
 class Player;
 class Unit;
 class Path;
@@ -27,19 +27,21 @@ class Map
 {
 	private:
 		unsigned int _size;
-		std::vector<Decor*> _decors;
 		std::vector<std::vector<unsigned int>> _tiles;
 		std::vector<Position> _startingPositions;
 		std::map<unsigned int, Player*> _players;
-		//std::vector<Objective> objectives;
 		
 	public:
 		/**
 		 * @brief Constructeur
 		 */
-		Map(std::vector<std::vector<unsigned int>> tiles, 
-			std::vector<Decor*> decors, 
+		Map(std::vector<std::vector<unsigned int>> tiles,
 			std::vector<Position> startingPositions);
+			
+		/**
+		 * @brief Destructeur
+		 */
+		 ~Map();
 		
 		/**
 		 * @brief Méthode qui teste si un chemin est valide pour une unité donnée
@@ -49,6 +51,7 @@ class Map
 		 */
 		bool isValidPath(Unit* unit, Path* path) const;
 		
+		// NON IMPLEMENTEE /////////////////////
 		/**
 		 * @brief Méthode qui teste si une ligne de vue est valide pour une unité donnée
 		 * @param unit l'unité permetant de savoir l'emplacement de départ de l'action
@@ -56,6 +59,7 @@ class Map
 		 * @return vrai si la ligne de vue est valide
 		 */
 		bool isValidViewLine(Unit* unit, Position position) const;
+		////////////////////////////////////////
 		
 		/**
 		 * @brief Méthode qui teste si une unité peut être invoquée à la position donnée
@@ -100,20 +104,6 @@ class Map
 		bool isUnitAt(Position position) const;
 		
 		/**
-		 * @brief Méthode qui retourne un décor présent à une position donnée
-		 * @param position la position à laquelle on va récupèrer le décor
-		 * @return le décor présent à la position donnée
-		 */
-		Decor* getDecorAt(Position position) const;
-		
-		/**
-		 * @brief Méthode testant la présence d'un décor à une position donnée
-		 * @param position la position a laquelle on veut savoir si un décor est présent
-		 * @return vrai s'il y a un décor à la position donnée
-		 */
-		bool isDecorAt(Position position) const;
-		
-		/**
 		 * @brief Méthode qui retourne la base à la position donnée
 		 * @param position la position
 		 * @return la base
@@ -145,12 +135,28 @@ class Map
 		 */
 		unsigned int getSize() const;
 		
+		/**
+		 * @brief Teste si la position donnée est bloquée
+		 * @param position une position
+		 * @return vrai si la position est bloquée, faux sinon
+		 */
 		bool isBlocked(Position position) const;
 		
+		/**
+		 * @brief Effectue les actions à la mort d'une unité
+		 * @param unit une unité
+		 */
 		void die(Unit* unit);
 		
+		/**
+		 * @brief Effectue les actions à la mort d'une base
+		 */
 		void baseBreak();
 		
+		/**
+		 * @brief Accesseur du gagnant de la partie
+		 * @return une joueur
+		 */
 		Player* getWinner();
 };
  

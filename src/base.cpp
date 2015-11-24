@@ -10,6 +10,7 @@
 #include "player.h"
 #include "hploss.h"
 #include "position.h"
+
 #include <iostream>
 
 using namespace std;
@@ -23,6 +24,12 @@ Base::Base(unsigned int hp, unsigned int summonRange, unsigned int buildRange, H
 , _hpLoss(hpLoss)
 , _position(position)
 {}
+
+Base::~Base()
+{
+	delete(_player);
+	delete(_hpLoss);
+}
 
 void Base::afficher() const
 {

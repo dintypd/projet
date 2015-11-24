@@ -13,6 +13,7 @@
 class Map;
 class Path;
 class Unit;
+
 /**
  * @class ConcreteMove conretemove.h
  * 
@@ -21,6 +22,12 @@ class Unit;
 class ConcreteMove : public Move
 {
 	public:
+		/**
+		 * @brief déplacement d'une unité
+		 * @param path un chemin
+		 * @param map une map
+		 * @param u une unité
+		 */
 		void move(Path* path, Map* map, Unit* u);
 };
 

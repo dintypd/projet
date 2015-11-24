@@ -11,7 +11,6 @@
 #include <map>
 #include <vector>
 
-class Decor;
 class Position;
 class HPLoss;
 class Attack;
@@ -22,6 +21,7 @@ class ConcreteHPLossSpeDef;
 class ConcreteMove;
 class Move;
 class Spawner;
+
 /**
  * @class Data data.h
  * 
@@ -46,19 +46,22 @@ class Data
 		std::map<std::string, Spawner*> _spawnerList;
 		
 	public:
+		/**
+		 * @brief Constructeur
+		 */
 		Data();
+		
+		/**
+		 * @brief Destructeur
+		 */
+		 ~Data();
+		 
 		// Map data
 		/**
 		 * Méthode qui retourne un vector de vector qui correspond aux cases accessibles ou non de la map de base sans les décors
 		 * @return un tableau de tableau de booleen
 		 */
 		std::vector<std::vector<unsigned int>> getTiles_Map();
-		
-		/**
-		 * Retourne un vector des décors de la map
-		 * @return un tableau de décors
-		 */
-		std::vector<Decor*> getDecors_Map();
 		
 		/**
 		 * Retourne un vector contenant les positions de départ de la map

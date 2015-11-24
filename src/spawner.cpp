@@ -16,6 +16,11 @@ Spawner::Spawner(Unit* prototype)
 : _prototype(prototype)
 {}
 
+Spawner::~Spawner()
+{
+	delete _prototype;
+}
+
 Unit* Spawner::spawnUnit(Position position)
 {
 	return _prototype->clone(position);

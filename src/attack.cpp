@@ -7,5 +7,6 @@
 
 #include "attack.h"
 
-Attack::Attack(unsigned int ap) : _ap(ap)
+Attack::Attack(unsigned int ap)
+: _ap(ap)
 {}

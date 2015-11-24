@@ -19,23 +19,38 @@
 class Knight : public Unit
 {
 	public:
-		Knight( unsigned int range,
-				unsigned int ap,
-				unsigned int mp,
-				unsigned int hp,
-				unsigned int dmgs,
-				unsigned int cost,
-				Attack* attack,
-				HPLoss* hpLoss,
-				Move* move,
-				Position position,
-				std::string image);
-				
-		std::string classe();
+		/**
+		 * @brief Constructeur
+		 */
+		Knight(unsigned int range,
+			   unsigned int ap,
+			   unsigned int mp,
+			   unsigned int hp,
+			   unsigned int dmgs,
+			   unsigned int cost,
+			   Attack* attack,
+			   HPLoss* hpLoss,
+			   Move* move,
+			   Position position,
+			   std::string image);
 		
-		Unit* clone(Position position);
+		/**
+		 * @brief Accesseur de la classe
+		 * @return "knight"
+		 */	
+		std::string classe() const;
 		
-		void afficherInfos();
+		/**
+		 * @brief construit un knight identique à la position donnée
+		 * @param position une position
+		 * @return un knight
+		 */
+		Unit* clone(Position position) const;
+		
+		/**
+		 * @brief affiche les différentes informations sur l'archer
+		 */
+		void afficherInfos() const;
 };
 
 #endif // KNIGHT_H

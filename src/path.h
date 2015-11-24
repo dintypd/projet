@@ -8,8 +8,9 @@
 #ifndef PATH_H
 #define PATH_H
 
-#include <vector>
 #include "position.h"
+
+#include <vector>
 
 /**
  * @class Path
@@ -23,12 +24,6 @@ class Path
 		std::vector<Position> _path; // tableau de position : la path
 		
 	public:
-		// méthodes
-		
-		/**
-		 * @brief Constructeur, crée une path
-		**/		
-		Path();
 		
 		/**
 		 * @brief ajoute une position au vector
@@ -53,7 +48,10 @@ class Path
 		 */
 		unsigned int size() const;
 		
+		/**
+		 * @brief redéfinition de l'accesseur aux case du tableau
+		 */
 		Position operator[](unsigned int const & i);
 };
 
-#endif
+#endif // PATH_H

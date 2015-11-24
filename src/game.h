@@ -9,6 +9,7 @@
 #define GAME_H
 
 #include "subject.h"
+
 #include <list>
 #include <vector>
 #include <iterator>
@@ -19,6 +20,7 @@ class Player;
 class Map;
 class Unit;
 class Position;
+
 /**
  * @class Game game.h
  * 
@@ -41,6 +43,11 @@ class Game : public Subject
 		 * @brief constructeur
 		 */
 		Game();
+		
+		/**
+		 * @brief destructeur
+		 */
+		 ~Game();
 
 		/**
 		 * @brief Boucle du jeu, fini lorsque la commande tapée est /quit

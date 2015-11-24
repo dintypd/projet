@@ -108,7 +108,7 @@ void Window::update(Subject* s)
 			
 			//affichage unité
 			sf::Sprite sunit;
-			if ( it->second->getImage() == "images/archer.png" )
+			if ( it->second->getImage() == "archer.png" )
 			{
 				sunit.setTexture(barcher);
 			}
@@ -155,7 +155,7 @@ void Window::update(Subject* s)
 			
 			//affichage unité
 			sf::Sprite sunit;
-			if ( it->second->getImage() == "images/archer.png" )
+			if ( it->second->getImage() == "archer.png" )
 			{
 				sunit.setTexture(rarcher);
 			}

@@ -8,7 +8,6 @@
 #include <iostream>
 #include "map.h"
 #include "player.h"
-#include "decor.h"
 #include "unit.h"
 #include "path.h"
 #include "base.h"
@@ -16,12 +15,19 @@
 using namespace std;
 
 Map::Map(std::vector<std::vector<unsigned int>> tiles, 
-			std::vector<Decor*> decors, 
-			std::vector<Position> startingPositions) : _decors(decors), _tiles(tiles), _startingPositions(startingPositions)
+			std::vector<Position> startingPositions) : _tiles(tiles), _startingPositions(startingPositions)
 {
 	// calcul de la taille : on suppose la map carrée
 	_size = _tiles.size();
 } 
+
+Map::~Map()
+{
+	for(auto player : _players)
+	{
+		delete(player.second);
+	}
+}
 
 bool Map::isValidPath(Unit* unit, Path* path) const
 {
@@ -29,7 +35,6 @@ bool Map::isValidPath(Unit* unit, Path* path) const
 	unsigned int i = 1;
 	
 	if((unit->getPosition().distance(path->getPosition(0)) != 1) || 
-	   (isDecorAt(path->getPosition(0))) || 
 	   (isUnitAt(path->getPosition(0))) ||
 	   (isBaseAt(path->getPosition(0))) ||
 	   (isBlocked(path->getPosition(0))))
@@ -40,7 +45,6 @@ bool Map::isValidPath(Unit* unit, Path* path) const
 	while(valid && i < path->size())
 	{
 		if((path->getPosition(i-1).distance(path->getPosition(i)) != 1) || 
-		   (isDecorAt(path->getPosition(i))) || 
 		   (isUnitAt(path->getPosition(i))) || 
 		   (isBaseAt(path->getPosition(0))) ||
 		   (isBlocked(path->getPosition(i))))
@@ -63,7 +67,6 @@ bool Map::isValidSummonPosition(Position position, Player* player) const
 	return position.getX() <= _size-1 &&
 		   position.getY() <= _size-1 && 
 		   !isUnitAt(position) &&
-		   !isDecorAt(position) && 
 		   !isBlocked(position) && 
 		   !isBaseAt(position) && 
 		   position.distance(player->getBase()->getPosition()) <= player->getBase()->getSummonRange();
@@ -116,42 +119,6 @@ bool Map::isUnitAt(Position position) const
 	}
 	
 	return false;
-}
-
-Decor* Map::getDecorAt(Position position) const
-{
-	unsigned int i = 0;
-	unsigned int taille = _decors.size();
-	bool trouve = false;
-	
-	while(i < taille && !trouve)
-	{
-		if(_decors[i]->getPosition() == position)
-		{
-			trouve = true;
-		}
-		++i;
-	}
-	
-	return _decors[i];
-}
-
-bool Map::isDecorAt(Position position) const
-{
-	unsigned int i = 0;
-	unsigned int taille = _decors.size();
-	bool trouve = false;
-	
-	while(i < taille && !trouve)
-	{
-		if(_decors[i]->getPosition() == position)
-		{
-			trouve = true;
-		}
-		++i;
-	}
-	
-	return trouve;
 }
 
 void Map::addPlayer(Player* player)
@@ -242,6 +209,7 @@ void Map::baseBreak()
 		if(player.second->getBase()->getHP() == 0)
 		{
 			cout << "La base de " << player.second->getName() << " est détruite, il a perdu." << endl;
+			delete(player.second);
 			_players.erase(player.first);
 		}
 	}

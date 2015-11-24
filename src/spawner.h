@@ -29,6 +29,11 @@ class Spawner
 		Spawner(Unit* prototype);
 		
 		/**
+		 * Destructeur
+		 */
+		 ~Spawner();
+		
+		/**
 		 * Méthode qui copie le prototype et retourne l'unité correspondante
 		 * @param position la position que prendra l'unité retournée
 		 * @return une unité correspondante au prototype

@@ -23,8 +23,6 @@ class Position
 		unsigned int _Y; 	//position axe Y
 		
 	public:
-		// méthodes
-		
 		/**
 		* @brief Constructeur, crée une position
 		* @param X
@@ -67,7 +65,9 @@ class Position
 		*/
 		bool operator==(Position const& position);
 
-		// TEMPORAIRE
+		/**
+		 * @brief affiche la position
+		 */
 		void afficher() const;
 
 		/**

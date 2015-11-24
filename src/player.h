@@ -13,6 +13,7 @@
 class Position;
 class Unit;
 class Base;
+
 /**
  * @class Player player.h
  * 
@@ -34,6 +35,11 @@ class Player
 		 * @brief Constructeur
 		 */
 		Player(std::string name, unsigned int golds, Base* base);
+		
+		/**
+		 * @brief Destructeur
+		 */
+		 ~Player();
 		
 		/**
 		 * @brief Accesseur de l'identifiant

@@ -17,33 +17,34 @@ using namespace std;
 
 unsigned int Unit::_nextId = 0;
 
-Unit::Unit( unsigned int range, 
-			unsigned int ap, 
-			unsigned int mp, 
-			unsigned int hp,
-			unsigned int dmgs, 
-			unsigned int cost,
-			Attack* attack,
-			HPLoss* hpLoss,
-			Move* move,
-			Position position,
-			string image) : _id(++_nextId), 
-							_range(range), 
-							_ap(ap),
-							_apMax(ap),
-							_mp(mp),
-							_mpMax(mp),
-							_hp(hp),
-							_hpMax(hp),
-							_dmgs(dmgs), 
-							_cost(cost), 
-							_position(position), 
-							_attack(attack),
-							_hpLoss(hpLoss),
-							_move(move),
-							_summoner(false), 
-							_builder(false),
-							_image(image)
+Unit::Unit(unsigned int range, 
+		   unsigned int ap, 
+		   unsigned int mp, 
+		   unsigned int hp,
+		   unsigned int dmgs, 
+		   unsigned int cost,
+		   Attack* attack,
+		   HPLoss* hpLoss,
+		   Move* move,
+		   Position position,
+		   string image) 
+: _id(++_nextId)
+, _range(range)
+, _ap(ap)
+, _apMax(ap)
+, _mp(mp)
+, _mpMax(mp)
+, _hp(hp) 
+, _hpMax(hp)
+, _dmgs(dmgs)
+, _cost(cost)
+, _position(position)
+, _attack(attack)
+, _hpLoss(hpLoss)
+, _move(move)
+, _summoner(false)
+, _builder(false)
+, _image(image)
 {}
 
 Position Unit::getPosition() const

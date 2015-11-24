@@ -11,6 +11,7 @@
 class Path;
 class Map;
 class Unit;
+
 /**
  * @class Move move.h
  * 
@@ -20,6 +21,17 @@ class Unit;
 class Move
 {
 	public:
+		/**
+		 * @brief Destructeur (évite les warnings)
+		 */
+		//virtual ~Move();
+	
+		/**
+		 * @brief méthode virtuelle pure de déplacement d'une unité
+		 * @param path un chemin
+		 * @param map une map
+		 * @param u une unité
+		 */
 		virtual void move(Path* path, Map* map, Unit* u) = 0;
 };
 

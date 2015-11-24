@@ -8,23 +8,16 @@
 #ifndef UNIT_H
 #define UNIT_H
 
-// #include "upgrade.h"
-// #include "specialisation.h"
 #include "position.h"
+
 #include <string>
 
 class Map;
 class HPLoss;
 class Attack;
-class ConcreteBaseAttack;
-class ConcreteBaseAttackSpeTower;
-class ConcreteHPLoss;
-class ConcreteHPLossSpeDef;
-class ConcreteMove;
-class ConcreteNoBaseAttack;
-class ConcreteNoMove;
 class Move;
 class Path;
+
 /**
  * @class Unit unit.h
  * 
@@ -33,16 +26,16 @@ class Path;
 class Unit
 {
 	protected:
-		unsigned int _id, 	// identifiant unique
-			_range,			// portée d'attaque
-			_ap,			// Action Points
-			_apMax, 		// Action Points Max
-			_mp,			// Move Points
-			_mpMax,		    // Move Points Max
-			_hp,			// Health Points
-			_hpMax,			// Health Points Max
-			_dmgs,			// Damages
-			_cost;			// Coût 
+		unsigned int _id, 		// identifiant unique
+					 _range,	// portée d'attaque
+					 _ap,		// Action Points
+					 _apMax, 	// Action Points Max
+					 _mp,		// Move Points
+					 _mpMax,    // Move Points Max
+					 _hp,		// Health Points
+					 _hpMax,	// Health Points Max
+					 _dmgs,		// Damages
+					 _cost;		// Coût 
 		static unsigned int _nextId; // le prochain objet aura cet identifiant + 1
 		Position _position;		// Position actuelle
 		// Upgrade *_upgrade;
@@ -67,17 +60,22 @@ class Unit
 		 * @param summoner L'untié peut elle invoquer ?
 		 * @param builder L'unité peut elle construire ?
 		 */
-		 Unit(  unsigned int range,
-				unsigned int ap,
-				unsigned int mp,
-				unsigned int hp,
-				unsigned int dmgs,
-				unsigned int cost,
-				Attack* attack,
-				HPLoss* hpLoss,
-				Move* move,
-				Position position,
-				std::string image);
+		 Unit(unsigned int range,
+			  unsigned int ap,
+			  unsigned int mp,
+			  unsigned int hp,
+			  unsigned int dmgs,
+			  unsigned int cost,
+			  Attack* attack,
+			  HPLoss* hpLoss,
+			  Move* move,
+			  Position position,
+			  std::string image);
+			  
+		/**
+		 * @brief Destructeur (évite les warnings)
+		 */
+		//virtual ~Unit();
 				
 		/**
 		 * @brief Accesseur de l'identifiant
@@ -220,7 +218,7 @@ class Unit
 		/**
 		 * @brief Méthode virtuelle qui affiche le nom de la classe de l'unité
 		 */
-		virtual std::string classe() = 0;
+		virtual std::string classe() const = 0;
 		
 		/**
 		 * @brief Méthode qui affiche la classe de l'unité et sa position
@@ -232,12 +230,12 @@ class Unit
 		 * @param position la position assignée à l'unité retournée
 		 * @return un clone de "this"
 		 */
-		virtual Unit* clone(Position position) = 0;
+		virtual Unit* clone(Position position) const = 0;
 
 		/**
 		 * @brief Affiche les infos de l'unité
 		 */
-		virtual void afficherInfos() = 0;
+		virtual void afficherInfos() const = 0;
 
 		/**
 		 * @brief Méthode qui éxécute les actions de fin de tour comme réinitialiser les pa et pm

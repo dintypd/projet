@@ -5,12 +5,7 @@
  * @brief implémentation des méthodes de la classe Game
  *
 **/
-#include <algorithm>
-#include <vector>
-#include <sstream>
-#include <iostream>
-#include <iterator>
-#include <map>
+
 #include "game.h"
 #include "map.h"
 #include "base.h"
@@ -24,12 +19,21 @@
 #include "position.h"
 #include "observer.h"
 
+#include <algorithm>
+#include <vector>
+#include <sstream>
+#include <iostream>
+#include <iterator>
+#include <map>
+
 using namespace std;
 
-Game::Game() : _turn(0), _end(false)
+Game::Game() 
+: _turn(0)
+, _end(false)
 {
 	_data = new Data;
-	_map = new Map(_data->getTiles_Map(), _data->getDecors_Map(), _data->getStartingPositions_Map());
+	_map = new Map(_data->getTiles_Map(), _data->getStartingPositions_Map());
 	Base* base;
 	Player* player;
 	Player* previous = 0;
@@ -56,6 +60,12 @@ Game::Game() : _turn(0), _end(false)
 
 	// on lance le jeu
 	play();
+}
+
+Game::~Game()
+{
+	delete(_data);
+	delete(_map);
 }
 
 void Game::play()

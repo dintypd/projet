@@ -5,8 +5,8 @@
  * @brief implémentation des méthodes de la classe Data
  *
 **/
+
 #include "data.h"
-#include "decor.h"
 #include "position.h"
 #include "attack.h"
 #include "concreteBaseAttack.h"
@@ -42,6 +42,15 @@ Data::Data()
 	_spawnerList["archer"] = archerSpawner;
 }
 
+Data::~Data()
+{
+	delete(_baseAttack);
+	delete(_baseAttackSpeBase);
+	delete(_hpLoss);
+	delete(_hpLossSpeDef);
+	delete(_move);
+}
+
 // Map Data
 vector<vector<unsigned int>> Data::getTiles_Map()
 {
@@ -61,16 +70,6 @@ vector<vector<unsigned int>> Data::getTiles_Map()
 	vector<vector<unsigned int>> tiles = {l1, l2, l3, l4, l5, l6, l7, l8, l9, l10, l11, l12};
 	
 	return tiles;
-}
-
-vector<Decor*> Data::getDecors_Map()
-{
-	Decor d1(Position(4, 5), true);
-	Decor d2(Position(7, 10), false);
-	
-	vector<Decor*> decors = {&d1, &d2};
-	
-	return decors;
 }
 
 vector<Position> Data::getStartingPositions_Map()

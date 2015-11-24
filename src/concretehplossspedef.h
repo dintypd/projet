@@ -21,8 +21,19 @@ class Base;
 class ConcreteHPLossSpeDef : public HPLoss
 {
 	public:
+		/**
+		 * @brief Perte d'hp des unité
+		 * @param value un entier positif
+		 * @param u l'unité qui prend des dégats
+		 */
 		void hpLoss(unsigned int value, Unit* u);
+		
+		/**
+		 * @brief Perte d'hp des bases
+		 * @param value un entier positif
+		 * @param b la base qui prend des dégats
+		 */
 		void hpLoss(unsigned int value, Base* b);
 };
 
-#endif
+#endif // CONCRETE_HP_LOSS_SPE_DEF_H

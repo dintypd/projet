@@ -36,6 +36,11 @@ class Base
 		Base(unsigned int hp, unsigned int summonRange, unsigned int buildRange, HPLoss* hpLoss, Position position);
 		
 		/**
+		 * @brief Destructeur
+		 */
+		 ~Base();
+		 
+		/**
 		 * @brief Accesseur de la portée d'invocation
 		 * @return La portée d'invocation de la base
 		 */

@@ -8,8 +8,9 @@
 #ifndef ARCHER_H
 #define ARCHER_H
 
-#include <string>
 #include "unit.h"
+
+#include <string>
 
 /**
  * @class Archer archer.h
@@ -19,24 +20,39 @@
 class Archer : public Unit
 {
 	public:
-		Archer( unsigned int range,
-				unsigned int ap,
-				unsigned int mp,
-				unsigned int hp,
-				unsigned int dmgs,
-				unsigned int cost,
-				Attack* attack,
-				HPLoss* hpLoss,
-				Move* move,
-				Position position,
-				std::string image);
-				
-		std::string classe();
+		/**
+		 * @brief Constructeur
+		 */
+		Archer(unsigned int range,
+			   unsigned int ap,
+			   unsigned int mp,
+			   unsigned int hp,
+			   unsigned int dmgs,
+			   unsigned int cost,
+			   Attack* attack,
+			   HPLoss* hpLoss,
+			   Move* move,
+			   Position position,
+			   std::string image);
 		
-		Unit* clone(Position position);
+		/**
+		 * @brief Accesseur de la classe
+		 * @return "archer"
+		 */
+		std::string classe() const;
 		
-		void afficherInfos();
+		/**
+		 * @brief construit un archer identique à la position donnée
+		 * @param position une position
+		 * @return un archer
+		 */
+		Unit* clone(Position position) const;
+		
+		/**
+		 * @brief affiche les différentes informations sur l'archer
+		 */
+		void afficherInfos() const;
 };
 
-#endif // KNIGHT_H
+#endif // ARCHER_H
 

@@ -2,7 +2,7 @@
  * @file concreteBaseAttack.h
  * @author B. Le Clère, A. Perhirin
  * @since 19/10/2015
- * @brief Définition de l'attaque de base
+ * @brief Définition de l'attaque de base normale
 **/
 
 #ifndef CONCRETE_BASE_ATTACK_H
@@ -13,6 +13,7 @@
 class Position;
 class Map;
 class Unit;
+
 /**
  * @class ConcreteBaseAttack concreteBaseAttack.h
  * 
@@ -21,8 +22,18 @@ class Unit;
 class ConcreteBaseAttack : public Attack
 {
 	public:
+		/**
+		 * @brief Constructeur
+		 */
 		ConcreteBaseAttack(unsigned int ap);
+		
+		/**
+		 * @brief Méthode d'attaque
+		 * @param position une position
+		 * @param map une map
+		 * @param attacker l'unité qui attaque
+		 */
 		void attack(Position position, Map* map, Unit* attacker);
 };
 
-#endif
+#endif // CONCRETE_BASE_ATTACK_H

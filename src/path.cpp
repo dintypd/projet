@@ -9,11 +9,6 @@
 #include "path.h"
 
 using namespace std;
-
-Path::Path()
-{
-	//rien a faire
-}
 	
 void Path::pushPos(Position pos)
 {

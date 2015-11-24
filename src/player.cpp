@@ -4,19 +4,31 @@
  * @since 12/10/2015
  * @brief Implémentation de la classe Player
 **/
-#include <iostream>
+
 #include "position.h"
 #include "player.h"
 #include "unit.h"
+
+#include <iostream>
 
 using namespace std;
 
 unsigned int Player::_nextId = 0;
 
-Player::Player(string name, unsigned int golds, Base* base) : _name(name), _id(++_nextId), _base(base), _golds(golds)
+Player::Player(string name, unsigned int golds, Base* base) 
+: _name(name)
+, _id(++_nextId)
+, _base(base)
+, _golds(golds)
+{} 
+
+Player::~Player()
 {
-	// rien à faire
-} 
+	for(auto unit : _units)
+	{
+		delete(unit.second);
+	}
+}
 
 unsigned int Player::getId() const
 {

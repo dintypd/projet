@@ -7,11 +7,12 @@
 **/
 
 #include "concreteBaseAttack.h"
-#include <iostream>
 #include "map.h"
 #include "position.h"
 #include "unit.h"
 #include "base.h"
+
+#include <iostream>
 
 using namespace std;
 

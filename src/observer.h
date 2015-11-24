@@ -18,6 +18,10 @@ class Subject;
 class Observer
 {
 	public:
+		/**
+		 * @brief méthode appelée lors de la mise a jour du sujet
+		 * @param s un sujet
+		 */
 		virtual void update(Subject* s) = 0;
 };
 
