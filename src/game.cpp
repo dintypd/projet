@@ -26,7 +26,7 @@
 
 using namespace std;
 
-Game::Game() : _turn(0)
+Game::Game() : _turn(0), _end(false)
 {
 	_data = new Data;
 	_map = new Map(_data->getTiles_Map(), _data->getDecors_Map(), _data->getStartingPositions_Map());
@@ -60,9 +60,7 @@ Game::Game() : _turn(0)
 
 void Game::play()
 {
-	// nous permet de savoir si la partie est terminée
 	bool endGame = false;
-	
 	// les variables utiles pour la gestion des commandes
 	string command;
 	vector<string> commandSplit;
@@ -96,7 +94,6 @@ void Game::play()
 			else if(commandSplit[0] == "/quit")
 			{
 				quitCommand();
-				endGame = true;
 				notifyObs();
 			}
 			else if(commandSplit[0] == "/summon" && (commandSplit.size() == 1 || commandSplit.size() == 4))
@@ -136,6 +133,10 @@ void Game::play()
 			// on réinitialise la commande
 			commandSplit.clear();
 				
+			_map->baseBreak();
+			
+			endGame = endOfGame();
+			
 			if(!endGame)
 			{
 				// on redemande une commande
@@ -148,6 +149,7 @@ void Game::play()
 		}
 		endTurn();
 		
+		
 		// on réinitialise la commande
 		commandSplit.clear();
 	}
@@ -158,6 +160,16 @@ void Game::endTurn()
 	++_turn;
 	_currentPlayer->endTurn();
 	_currentPlayer = _currentPlayer->getNext();
+}
+
+bool Game::endOfGame()
+{
+	if(_map->getPlayers()->size() == 1)
+	{
+		cout << _map->getWinner()->getName() << " a gagné la partie !" << endl;
+		return true;
+	}
+	return _end;
 }
 
 void Game::helpCommand()
@@ -180,6 +192,7 @@ void Game::helpCommand()
 void Game::quitCommand()
 {
 	cout << "Merci d'avoir joué !" << endl;
+	_end = true;
 }
 
 void Game::summonCommand(vector<string> command)

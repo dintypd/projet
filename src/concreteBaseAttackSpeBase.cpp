@@ -1,12 +1,12 @@
 /**
- * @file concreteBaseAttack.cpp
+ * @file concreteBaseAttackSpeBase.cpp
  * @author A. Perhirin B. Le Clère
  * @since 19/10/2015
- * @brief implémentation de l'attaque de base
+ * @brief implémentation de l'attaque de base 
  *
 **/
 
-#include "concreteBaseAttack.h"
+#include "concreteBaseAttackSpeBase.h"
 #include <iostream>
 #include "map.h"
 #include "position.h"
@@ -15,10 +15,10 @@
 
 using namespace std;
 
-ConcreteBaseAttack::ConcreteBaseAttack(unsigned int ap) : Attack(ap)
+ConcreteBaseAttackSpeBase::ConcreteBaseAttackSpeBase(unsigned int ap) : Attack(ap)
 {}
 
-void ConcreteBaseAttack::attack(Position position, Map* map, Unit* attacker)
+void ConcreteBaseAttackSpeBase::attack(Position position, Map* map, Unit* attacker)
 {
 	// on cherche l'unité
 	Unit* u = map->getUnitAt(position);
@@ -54,6 +54,7 @@ void ConcreteBaseAttack::attack(Position position, Map* map, Unit* attacker)
 			{
 				if(b->getPosition().distance(attacker->getPosition()) <= attacker->getRange())
 				{
+					dmgs *= 2;
 					b->hpLoss(dmgs);
 					attack = true;
 				}
@@ -88,3 +89,4 @@ void ConcreteBaseAttack::attack(Position position, Map* map, Unit* attacker)
 		cout << endl;
 	}
 }
+

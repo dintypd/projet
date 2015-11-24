@@ -41,7 +41,7 @@ void Window::update(Subject* s)
 	
 	//gestion de l'affichage de la map vide
 	TileMap tileMap;
-    if (!tileMap.load("tileset.png", sf::Vector2u(50, 50), _tiles, 12, 12))
+    if (!tileMap.load("images/tileset.png", sf::Vector2u(50, 50), _tiles, 12, 12))
     {
 		cout << "Error : impossible de charger la map" << endl;
 	}
@@ -49,7 +49,7 @@ void Window::update(Subject* s)
 	
 	//chargement de la police
 	sf::Font font;
-	if (!font.loadFromFile("monof55.ttf"))
+	if (!font.loadFromFile("font/monof55.ttf"))
 	{
 		cout << "Error : impossible de charger la police" << endl;
 	}
@@ -59,12 +59,12 @@ void Window::update(Subject* s)
 	sf::Texture bbase;
 	sf::Sprite srbase;
 	sf::Texture rbase;
-	if (!bbase.loadFromFile("bluebase.png"))
+	if (!bbase.loadFromFile("images/bluebase.png"))
 	{
 		cout << "Error : impossible de charger la bluebase" << endl;
 	}
 	sbbase.setTexture(bbase);
-	if (!rbase.loadFromFile("redbase.png"))
+	if (!rbase.loadFromFile("images/redbase.png"))
 	{
 		cout << "Error : impossible de charger la redbase" << endl;
 	}
@@ -81,11 +81,11 @@ void Window::update(Subject* s)
 	{
 		sf::Texture barcher;
 		sf::Texture bknight;
-		if (!barcher.loadFromFile("bluearcher.png"))
+		if (!barcher.loadFromFile("images/bluearcher.png"))
 		{
 			cout << "Error : impossible de charger le bluearcher" << endl;
 		}
-		if (!bknight.loadFromFile("blueknight.png"))
+		if (!bknight.loadFromFile("images/blueknight.png"))
 		{
 			cout << "Error : impossible de charger le blueknight" << endl;
 		}
@@ -108,7 +108,7 @@ void Window::update(Subject* s)
 			
 			//affichage unité
 			sf::Sprite sunit;
-			if ( it->second->getImage() == "archer.png" )
+			if ( it->second->getImage() == "images/archer.png" )
 			{
 				sunit.setTexture(barcher);
 			}
@@ -128,11 +128,11 @@ void Window::update(Subject* s)
 	{
 		sf::Texture rarcher;
 		sf::Texture rknight;
-		if (!rarcher.loadFromFile("redarcher.png"))
+		if (!rarcher.loadFromFile("images/redarcher.png"))
 		{
 			cout << "Error : impossible de charger le redarcher" << endl;
 		}
-		if (!rknight.loadFromFile("redknight.png"))
+		if (!rknight.loadFromFile("images/redknight.png"))
 		{
 			cout << "Error : impossible de charger le redknight" << endl;
 		}		
@@ -155,7 +155,7 @@ void Window::update(Subject* s)
 			
 			//affichage unité
 			sf::Sprite sunit;
-			if ( it->second->getImage() == "archer.png" )
+			if ( it->second->getImage() == "images/archer.png" )
 			{
 				sunit.setTexture(rarcher);
 			}

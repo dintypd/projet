@@ -49,6 +49,12 @@ void Player::summon(Unit* unit/*, Position position*/)
 	rmGolds(unit->getCost());
 }
 
+void Player::kill(Unit* unit)
+{
+	if(_units.count(unit->getId()))
+		_units.erase(unit->getId());
+}
+
 void Player::addGolds(unsigned int golds)
 {
 	_golds += golds;

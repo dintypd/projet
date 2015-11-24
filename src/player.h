@@ -73,6 +73,12 @@ class Player
 		void summon(Unit* unit/*, Position position*/);
 		
 		/**
+		 * @brief Retire l'unité de la liste des unité
+		 * @param l'unité
+		 */
+		void kill(Unit* unit);
+		
+		/**
 		 * @brief Méthode qui crédite l'argent d'un joueur de la somme donnée
 		 * @param golds la somme à créditer
 		 */

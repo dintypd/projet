@@ -29,6 +29,7 @@ class Game : public Subject
 	private: 
 		Data* _data;
 		unsigned int _turn;
+		bool _end;
 		Player* _currentPlayer;
 		Map* _map;
 		std::list<Observer*> _obs;
@@ -50,6 +51,11 @@ class Game : public Subject
 		 * @brief Méthode centralisant toutes les actions à effectuer à la fin du tour
 		 */
 		void endTurn();
+		 
+		/**
+		 * @brief Méthode qui vérifie si un des joueurs à gagné
+		 */
+		bool endOfGame();
 
 		/**
 		 * @brief Actions lors de la détection de /help

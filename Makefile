@@ -1,18 +1,24 @@
 # Project name
-EXEC=td
+EXEC=projet
 
 # Compiler
-IDIR=lib/SFML-2.3.2/include
+IDIR=include
 IDIRFLAG=$(foreach idir, $(IDIR), -I$(idir))
 CXXFLAGS=-std=c++0x -pthread -Ofast -W -Wall -Wextra -pedantic -Wno-sign-compare -Wno-unused-parameter $(IDIRFLAG)
 
-# Linker
-LFLAGS=$(IDIRFLAG)
-
 # Directories
 SRCDIR=src
+LIBDIR=lib
 OBJDIR=obj
 BINDIR=bin
+
+# Library
+LIB=-lsfml-graphics -lsfml-window -lsfml-system
+LIBDIRFLAG=$(foreach libdir, $(LIBDIR), -L$(libdir))
+LIBFLAGS=$(foreach lib, $(LIB), $(lib))
+
+# Linker
+LFLAGS=$(IDIRFLAG) $(LIBDIRFLAG)
 
 # Files
 SOURCES=$(foreach sdir, $(SRCDIR), $(wildcard $(sdir)/*.cpp))
@@ -55,7 +61,7 @@ clang-debug: CXXFLAGS += -g -stdlib=libc++
 clang-debug: $(BINDIR)/$(EXEC)
 
 $(BINDIR)/$(EXEC): $(OBJECTS)
-	@$(LINKER) $@ $(LFLAGS) $^ -L lib/SFML-2.3.2/lib -lsfml-graphics -lsfml-window -lsfml-system
+	@$(LINKER) $@ $(LFLAGS) $^ $(LIBFLAGS)
 
 $(OBJDIR)/%.o: %.cpp
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
@@ -64,4 +70,3 @@ $(OBJDIR)/%.o: %.cpp
 
 clean:
 	rm -fr core *~ $(OBJECTS) $(BINDIR)/$(EXEC) $(SOURCESTILDE) $(INCLUDESTILDE)
-

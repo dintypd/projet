@@ -10,12 +10,10 @@
 #include "position.h"
 #include "attack.h"
 #include "concreteBaseAttack.h"
-#include "concreteBaseAttackSpeTower.h"
+#include "concreteBaseAttackSpeBase.h"
 #include "concretehploss.h"
 #include "concretehplossspedef.h"
 #include "concretemove.h"
-#include "concreteNoBaseAttack.h"
-#include "concretenomove.h"
 #include "move.h"
 #include "hploss.h"
 #include "knight.h"
@@ -27,21 +25,19 @@ using namespace std;
 Data::Data()
 {
 	_baseAttack = new ConcreteBaseAttack(3);
-	_baseAttackSpeTower = new ConcreteBaseAttackSpeTower(3);
-	_noBaseAttack = new ConcreteNoBaseAttack(0);
+	_baseAttackSpeBase = new ConcreteBaseAttackSpeBase(3);
 	
 	_hpLoss = new ConcreteHPLoss();
 	_hpLossSpeDef = new ConcreteHPLossSpeDef();
 	
 	_move = new ConcreteMove();
-	_noMove = new ConcreteNoMove();
 	
 	Position p(0, 0);
-	Knight* knightPrototype = new Knight(1, 8, 4, 160, 90, 100, _baseAttack, _hpLoss, _move, p, "knight.png");
+	Knight* knightPrototype = new Knight(1, 8, 4, 160, 90, 100, _baseAttackSpeBase, _hpLoss, _move, p, "knight.png");
 	Spawner* knightSpawner = new Spawner(knightPrototype);
 	_spawnerList["knight"] = knightSpawner;
 	
-	Archer* archerPrototype = new Archer(6, 9, 3, 70, 150, 130, _baseAttack, _hpLoss, _move, p, "archer.png");
+	Archer* archerPrototype = new Archer(6, 9, 3, 70, 150, 130, _baseAttack, _hpLossSpeDef, _move, p, "archer.png");
 	Spawner* archerSpawner = new Spawner(archerPrototype);
 	_spawnerList["archer"] = archerSpawner;
 }

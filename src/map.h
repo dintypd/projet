@@ -146,6 +146,12 @@ class Map
 		unsigned int getSize() const;
 		
 		bool isBlocked(Position position) const;
+		
+		void die(Unit* unit);
+		
+		void baseBreak();
+		
+		Player* getWinner();
 };
  
 #endif // MAP_H

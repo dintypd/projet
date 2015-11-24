@@ -16,21 +16,43 @@ using namespace std;
 void ConcreteHPLoss::hpLoss(unsigned int value, Unit* u)
 {
 	// on retire les hp
-	u->setHP(u->getHP()-value);
+	if(value < u->getHP())
+	{
+		u->setHP(u->getHP()-value);
+	}
+	else
+	{
+		u->setHP(0);
+	}
 
 	// on affiche les infos
 	u->afficher();
 	cout << "---> perd : " << value << " hp" << endl;
 	cout << "---> hp : " << u->getHP() << "/" << u->getMaxHP() << endl;
+	if(u->getHP() == 0)
+	{
+		cout << "---> l'unité est morte." << endl;
+	}
 }
 
 void ConcreteHPLoss::hpLoss(unsigned int value, Base* b)
 {
 	// on retire les hp
-	b->setHP(b->getHP()-value);
+	if(value < b->getHP())
+	{
+		b->setHP(b->getHP()-value);
+	}
+	else
+	{
+		b->setHP(0);
+	}
 
 	// on affiche les infos
 	b->afficher();
 	cout << "---> perd : " << value << " hp" << endl;
 	cout << "---> hp : " << b->getHP() << "/" << b->getMaxHP() << endl;
+	if(b->getHP() == 0)
+	{
+		cout << "---> la base est détruite." << endl;
+	}
 }

@@ -16,12 +16,10 @@ class Position;
 class HPLoss;
 class Attack;
 class ConcreteBaseAttack;
-class ConcreteBaseAttackSpeTower;
+class ConcreteBaseAttackSpeBase;
 class ConcreteHPLoss;
 class ConcreteHPLossSpeDef;
 class ConcreteMove;
-class ConcreteNoBaseAttack;
-class ConcreteNoMove;
 class Move;
 class Spawner;
 /**
@@ -34,8 +32,7 @@ class Data
 	private: 
 		// Comportements d'attaque possibles
 		Attack* _baseAttack;
-		Attack* _baseAttackSpeTower;
-		Attack* _noBaseAttack;
+		Attack* _baseAttackSpeBase;
 		unsigned int _attackAP;
 		
 		// Comportement de perte d'hp possibles
@@ -44,7 +41,6 @@ class Data
 		
 		// Comportements de déplacements possibles
 		Move* _move;
-		Move* _noMove;
 		
 		// Liste des spawner
 		std::map<std::string, Spawner*> _spawnerList;

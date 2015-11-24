@@ -5,6 +5,7 @@
  * @brief Implémentation de la classe Map
 **/
 
+#include <iostream>
 #include "map.h"
 #include "player.h"
 #include "decor.h"
@@ -224,4 +225,33 @@ unsigned int Map::getSize() const
 bool Map::isBlocked(Position position) const
 {
 	return _tiles[position.getX()][position.getY()] == 0;
+}
+
+void Map::die(Unit* unit)
+{
+	for(auto player : _players)
+	{
+		player.second->kill(unit);
+	}
+}
+
+void Map::baseBreak()
+{
+	for(auto player : _players)
+	{
+		if(player.second->getBase()->getHP() == 0)
+		{
+			cout << "La base de " << player.second->getName() << " est détruite, il a perdu." << endl;
+			_players.erase(player.first);
+		}
+	}
+}
+
+Player* Map::getWinner()
+{
+	for(auto player : _players)
+	{
+		return player.second;
+	}
+	return 0;
 }

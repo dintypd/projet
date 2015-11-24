@@ -9,13 +9,6 @@
 #include <iostream>
 #include "unit.h"
 #include "attack.h"
-#include "concreteBaseAttack.h"
-#include "concreteBaseAttackSpeTower.h"
-#include "concretehploss.h"
-#include "concretehplossspedef.h"
-#include "concretemove.h"
-#include "concreteNoBaseAttack.h"
-#include "concretenomove.h"
 #include "move.h"
 #include "hploss.h"
 #include "path.h"
