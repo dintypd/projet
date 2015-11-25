@@ -1,0 +1,192 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>Projet Design Pattern:  Fichier source de src/game.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Projet Design Pattern
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">game.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="game_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef GAME_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define GAME_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="subject_8hpp.html">subject.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;iterator&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span><a class="code" href="classData.html">Data</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span><a class="code" href="classPlayer.html">Player</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">class </span><a class="code" href="classMap.html">Map</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">class </span><a class="code" href="classUnit.html">Unit</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">class </span><a class="code" href="classPosition.html">Position</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classGame.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGame.html">Game</a> : <span class="keyword">public</span> <a class="code" href="classSubject.html">Subject</a></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;{</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">private</span>: </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="classData.html">Data</a>* _data;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _turn;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">bool</span> _end;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="classPlayer.html">Player</a>* _currentPlayer;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classMap.html">Map</a>* _map;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        std::list&lt;Observer*&gt; _obs;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">typedef</span> std::list&lt;Observer*&gt;::iterator iterator; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">typedef</span> std::list&lt;Observer*&gt;::const_iterator const_iterator;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classGame.html#ad59df6562a58a614fda24622d3715b65">Game</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;         <a class="code" href="classGame.html#ae3d112ca6e0e55150d2fdbc704474530">~Game</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classGame.html#aa333825d0bca80e91e53c7e23f053405">play</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classGame.html#a987b5442cddbc9376b7fe55a9fcbd42e">endTurn</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;         </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classGame.html#a217c5bd3b04bcf146b312cb17e2621e3">endOfGame</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classGame.html#a2f6be379e2d5bc1cce58f1ec96422ba8">helpCommand</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classGame.html#a2be014c3f87a1a6f9169ee0c3d002360">quitCommand</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classGame.html#a762c24a729cfdc357acbd5c6ecc4c4f8">summonCommand</a>(std::vector&lt;std::string&gt; command);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classGame.html#af22614489ceb0cf9a0081016314c75df">unitsCommand</a>();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classGame.html#a470d2a7a0da91c8287276d6135840dfd">goldsCommand</a>();</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classGame.html#acea1269edf0a00ada8e765e385ab5df1">infosCommand</a>(std::vector&lt;std::string&gt; command);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classGame.html#a3b1e53d7df15b62d651830bbd47a7516">moveCommand</a>(std::vector&lt;std::string&gt; command);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classGame.html#a27e73a42585e02a6c375413f803b0032">attackCommand</a>(std::vector&lt;std::string&gt; command);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classGame.html#a7c81b1033a3a8d6758ab0bf1c10a451c">addObs</a>(<a class="code" href="classObserver.html">Observer</a>* o);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classGame.html#a759618d920dd0e0f74f4bba89d35e56e">rmObs</a>(<a class="code" href="classObserver.html">Observer</a>* o);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classGame.html#a3ac1bb304b96d6df0d350d39dc651cd2">notifyObs</a>();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;         <a class="code" href="classData.html">Data</a>* <a class="code" href="classGame.html#af36ccea6518e85542e7efc07ba425de0">getData</a>();</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;         </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;         <a class="code" href="classMap.html">Map</a>* <a class="code" href="classGame.html#af2a02d3d8e78f4246c97ae06dd74f04f">getMap</a>();</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;};      </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#endif // GAME_HPP</span></div>
+<div class="ttc" id="subject_8hpp_html"><div class="ttname"><a href="subject_8hpp.html">subject.hpp</a></div><div class="ttdoc">Définition de la classe abstraite sujet. </div></div>
+<div class="ttc" id="classGame_html_a762c24a729cfdc357acbd5c6ecc4c4f8"><div class="ttname"><a href="classGame.html#a762c24a729cfdc357acbd5c6ecc4c4f8">Game::summonCommand</a></div><div class="ttdeci">void summonCommand(std::vector&lt; std::string &gt; command)</div><div class="ttdoc">Actions lors de la détection de /summon. </div></div>
+<div class="ttc" id="classGame_html_acea1269edf0a00ada8e765e385ab5df1"><div class="ttname"><a href="classGame.html#acea1269edf0a00ada8e765e385ab5df1">Game::infosCommand</a></div><div class="ttdeci">void infosCommand(std::vector&lt; std::string &gt; command)</div><div class="ttdoc">Actions lors de la détection de /infos. </div></div>
+<div class="ttc" id="classGame_html_a987b5442cddbc9376b7fe55a9fcbd42e"><div class="ttname"><a href="classGame.html#a987b5442cddbc9376b7fe55a9fcbd42e">Game::endTurn</a></div><div class="ttdeci">void endTurn()</div><div class="ttdoc">Méthode centralisant toutes les actions à effectuer à la fin du tour. </div></div>
+<div class="ttc" id="classPosition_html"><div class="ttname"><a href="classPosition.html">Position</a></div><div class="ttdoc">Classe implémentant une position sur la map. </div><div class="ttdef"><b>Definition:</b> <a href="position_8hpp_source.html#l00019">position.hpp:19</a></div></div>
+<div class="ttc" id="classGame_html_af22614489ceb0cf9a0081016314c75df"><div class="ttname"><a href="classGame.html#af22614489ceb0cf9a0081016314c75df">Game::unitsCommand</a></div><div class="ttdeci">void unitsCommand()</div><div class="ttdoc">Actions lors de la détection de /units. </div></div>
+<div class="ttc" id="classGame_html_a3b1e53d7df15b62d651830bbd47a7516"><div class="ttname"><a href="classGame.html#a3b1e53d7df15b62d651830bbd47a7516">Game::moveCommand</a></div><div class="ttdeci">void moveCommand(std::vector&lt; std::string &gt; command)</div><div class="ttdoc">Actions lors de la détection de /move. </div></div>
+<div class="ttc" id="classGame_html_ae3d112ca6e0e55150d2fdbc704474530"><div class="ttname"><a href="classGame.html#ae3d112ca6e0e55150d2fdbc704474530">Game::~Game</a></div><div class="ttdeci">~Game()</div><div class="ttdoc">destructeur </div></div>
+<div class="ttc" id="classGame_html_af36ccea6518e85542e7efc07ba425de0"><div class="ttname"><a href="classGame.html#af36ccea6518e85542e7efc07ba425de0">Game::getData</a></div><div class="ttdeci">Data * getData()</div><div class="ttdoc">Retourne les data pour l&#39;observer Window. </div></div>
+<div class="ttc" id="classGame_html"><div class="ttname"><a href="classGame.html">Game</a></div><div class="ttdoc">Classe qui centralisera tout le jeu. </div><div class="ttdef"><b>Definition:</b> <a href="game_8hpp_source.html#l00029">game.hpp:29</a></div></div>
+<div class="ttc" id="classGame_html_a7c81b1033a3a8d6758ab0bf1c10a451c"><div class="ttname"><a href="classGame.html#a7c81b1033a3a8d6758ab0bf1c10a451c">Game::addObs</a></div><div class="ttdeci">void addObs(Observer *o)</div><div class="ttdoc">Ajout d&#39;un poiteur vers observateur à la liste obs. </div></div>
+<div class="ttc" id="classGame_html_a3ac1bb304b96d6df0d350d39dc651cd2"><div class="ttname"><a href="classGame.html#a3ac1bb304b96d6df0d350d39dc651cd2">Game::notifyObs</a></div><div class="ttdeci">void notifyObs()</div><div class="ttdoc">Notifie à tous les observateurs de la liste obs que cette classe a changé </div></div>
+<div class="ttc" id="classGame_html_ad59df6562a58a614fda24622d3715b65"><div class="ttname"><a href="classGame.html#ad59df6562a58a614fda24622d3715b65">Game::Game</a></div><div class="ttdeci">Game()</div><div class="ttdoc">constructeur </div></div>
+<div class="ttc" id="classObserver_html"><div class="ttname"><a href="classObserver.html">Observer</a></div><div class="ttdef"><b>Definition:</b> <a href="observer_8hpp_source.html#l00018">observer.hpp:18</a></div></div>
+<div class="ttc" id="classGame_html_a759618d920dd0e0f74f4bba89d35e56e"><div class="ttname"><a href="classGame.html#a759618d920dd0e0f74f4bba89d35e56e">Game::rmObs</a></div><div class="ttdeci">void rmObs(Observer *o)</div><div class="ttdoc">La suppression d&#39;un pointeur vers observateur de la liste obs, s&#39;il existe. </div></div>
+<div class="ttc" id="classMap_html"><div class="ttname"><a href="classMap.html">Map</a></div><div class="ttdoc">Classe permettant l&#39;utilisation d&#39;une map. </div><div class="ttdef"><b>Definition:</b> <a href="map_8hpp_source.html#l00026">map.hpp:26</a></div></div>
+<div class="ttc" id="classGame_html_af2a02d3d8e78f4246c97ae06dd74f04f"><div class="ttname"><a href="classGame.html#af2a02d3d8e78f4246c97ae06dd74f04f">Game::getMap</a></div><div class="ttdeci">Map * getMap()</div><div class="ttdoc">Retourne la map pour l&#39;observer Window. </div></div>
+<div class="ttc" id="classSubject_html"><div class="ttname"><a href="classSubject.html">Subject</a></div><div class="ttdoc">Classe abstraite définissant le comportement des toutes les classes sujets. </div><div class="ttdef"><b>Definition:</b> <a href="subject_8hpp_source.html#l00022">subject.hpp:22</a></div></div>
+<div class="ttc" id="classGame_html_a217c5bd3b04bcf146b312cb17e2621e3"><div class="ttname"><a href="classGame.html#a217c5bd3b04bcf146b312cb17e2621e3">Game::endOfGame</a></div><div class="ttdeci">bool endOfGame()</div><div class="ttdoc">Méthode qui vérifie si un des joueurs à gagné </div></div>
+<div class="ttc" id="classGame_html_a27e73a42585e02a6c375413f803b0032"><div class="ttname"><a href="classGame.html#a27e73a42585e02a6c375413f803b0032">Game::attackCommand</a></div><div class="ttdeci">void attackCommand(std::vector&lt; std::string &gt; command)</div><div class="ttdoc">Actions lors de la détection de /attack. </div></div>
+<div class="ttc" id="classGame_html_aa333825d0bca80e91e53c7e23f053405"><div class="ttname"><a href="classGame.html#aa333825d0bca80e91e53c7e23f053405">Game::play</a></div><div class="ttdeci">void play()</div><div class="ttdoc">Boucle du jeu, fini lorsque la commande tapée est /quit. </div></div>
+<div class="ttc" id="classGame_html_a2f6be379e2d5bc1cce58f1ec96422ba8"><div class="ttname"><a href="classGame.html#a2f6be379e2d5bc1cce58f1ec96422ba8">Game::helpCommand</a></div><div class="ttdeci">void helpCommand()</div><div class="ttdoc">Actions lors de la détection de /help. </div></div>
+<div class="ttc" id="classGame_html_a470d2a7a0da91c8287276d6135840dfd"><div class="ttname"><a href="classGame.html#a470d2a7a0da91c8287276d6135840dfd">Game::goldsCommand</a></div><div class="ttdeci">void goldsCommand()</div><div class="ttdoc">Actions lors de la détection de /golds. </div></div>
+<div class="ttc" id="classData_html"><div class="ttname"><a href="classData.html">Data</a></div><div class="ttdoc">Classe qui centralise toute les données du jeu. </div><div class="ttdef"><b>Definition:</b> <a href="data_8hpp_source.html#l00030">data.hpp:30</a></div></div>
+<div class="ttc" id="classUnit_html"><div class="ttname"><a href="classUnit.html">Unit</a></div><div class="ttdoc">Classe permettant l&#39;utilisation d&#39;unités. </div><div class="ttdef"><b>Definition:</b> <a href="unit_8hpp_source.html#l00026">unit.hpp:26</a></div></div>
+<div class="ttc" id="classGame_html_a2be014c3f87a1a6f9169ee0c3d002360"><div class="ttname"><a href="classGame.html#a2be014c3f87a1a6f9169ee0c3d002360">Game::quitCommand</a></div><div class="ttdeci">void quitCommand()</div><div class="ttdoc">Actions lors de la détection de /quit. </div></div>
+<div class="ttc" id="classPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdoc">Classe définissant un joueur. </div><div class="ttdef"><b>Definition:</b> <a href="player_8hpp_source.html#l00022">player.hpp:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mercredi 25 Novembre 2015 11:58:57 pour Projet Design Pattern par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

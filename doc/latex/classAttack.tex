@@ -1,0 +1,73 @@
+\hypertarget{classAttack}{\section{Référence de la classe Attack}
+\label{classAttack}\index{Attack@{Attack}}
+}
+
+
+Classe virtuelle pure permettant l'utilisation de différents comportement d'attaque selon l'unité. Elle est utilisée dans le cadre du pattern Strategy.  
+
+
+
+
+{\ttfamily \#include $<$attack.\+hpp$>$}
+
+Graphe d'héritage de Attack\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAttack}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAttack_ab7a4ca023e07dd3c94ea31c081046f9e}{\hyperlink{classAttack_ab7a4ca023e07dd3c94ea31c081046f9e}{Attack} (unsigned int ap)}\label{classAttack_ab7a4ca023e07dd3c94ea31c081046f9e}
+
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+virtual void \hyperlink{classAttack_aa741caafef0d80bb0a00ce39e5bf6e2d}{attack} (\hyperlink{classPosition}{Position} position, \hyperlink{classMap}{Map} $\ast$map, \hyperlink{classUnit}{Unit} $\ast$attacker)=0
+\begin{DoxyCompactList}\small\item\em Destructeur (évite les warnings) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classAttack_a33e2aea32bc58913dbde9f66bcadf981}{unsigned int {\bfseries \+\_\+ap}}\label{classAttack_a33e2aea32bc58913dbde9f66bcadf981}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe virtuelle pure permettant l'utilisation de différents comportement d'attaque selon l'unité. Elle est utilisée dans le cadre du pattern Strategy. 
+
+Définition à la ligne 21 du fichier attack.\+hpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classAttack_aa741caafef0d80bb0a00ce39e5bf6e2d}{\index{Attack@{Attack}!attack@{attack}}
+\index{attack@{attack}!Attack@{Attack}}
+\subsubsection[{attack}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Attack\+::attack (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position, }
+\item[{{\bf Map} $\ast$}]{map, }
+\item[{{\bf Unit} $\ast$}]{attacker}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classAttack_aa741caafef0d80bb0a00ce39e5bf6e2d}
+
+
+Destructeur (évite les warnings) 
+
+Méthode virtuelle pure d'attaque 
+\begin{DoxyParams}{Paramètres}
+{\em position} & une position \\
+\hline
+{\em map} & une map \\
+\hline
+{\em attacker} & l'unité qui attaque \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{classConcreteBaseAttack_a35cf2248ae6a719ba6041f95ea1428a2}{Concrete\+Base\+Attack}, et \hyperlink{classConcreteBaseAttackSpeBase_a4b215e51d3146516ecf77e23d19a92de}{Concrete\+Base\+Attack\+Spe\+Base}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{attack_8hpp}{attack.\+hpp}\end{DoxyCompactItemize}

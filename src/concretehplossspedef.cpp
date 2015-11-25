@@ -6,9 +6,9 @@
  *
 **/
 
-#include "concretehplossspedef.h"
-#include "unit.h"
-#include "base.h"
+#include "concretehplossspedef.hpp"
+#include "unit.hpp"
+#include "base.hpp"
 
 #include <iostream>
 

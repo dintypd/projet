@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>Projet Design Pattern:  Fichier source de src/position.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Projet Design Pattern
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">position.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="position_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef POSITION_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define POSITION_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classPosition.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPosition.html">Position</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _X;    <span class="comment">//position axe X</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _Y;    <span class="comment">//position axe Y</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classPosition.html#a3b1b8f105448a2d70dcc622ba475d13f">Position</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> X, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> Y);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classPosition.html#a175e80a49f22b64fd5adee597d996f12">getX</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classPosition.html#ab4200021493a42e7f6755231ad98bece">getY</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPosition.html#aed892c6444ea8f9cf0b03490306d3382">setX</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> x);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPosition.html#a557e6df4fac8167f3dd287889d2e1c0a">setY</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> y);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classPosition.html#a917de1eeb8ba5056636b4274d7444a20">distance</a>(<a class="code" href="classPosition.html">Position</a> position) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classPosition.html#ab3245f578d0c01b1c4a39a8e5df5a82c">operator==</a>(<a class="code" href="classPosition.html">Position</a> <span class="keyword">const</span>&amp; position);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classPosition.html#a93014db59c98c0f95eb2056bf546f956">afficher</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="classPosition.html">Position</a> <a class="code" href="classPosition.html#a429c01611d2b0d7dfb06d182ad60928c">up</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="classPosition.html">Position</a> <a class="code" href="classPosition.html#a20fbdadf072a7f285e8181f339776c0c">down</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="classPosition.html">Position</a> <a class="code" href="classPosition.html#ad90cc325cca474c6c140b63c9bc69ddd">left</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="classPosition.html">Position</a> <a class="code" href="classPosition.html#a5dff15ebfa9df6de047e0268c9e29728">right</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif // POSITION_HPP</span></div>
+<div class="ttc" id="classPosition_html_a5dff15ebfa9df6de047e0268c9e29728"><div class="ttname"><a href="classPosition.html#a5dff15ebfa9df6de047e0268c9e29728">Position::right</a></div><div class="ttdeci">Position right() const </div><div class="ttdoc">méthode qui calcule la position a droite de "this" </div></div>
+<div class="ttc" id="classPosition_html_a429c01611d2b0d7dfb06d182ad60928c"><div class="ttname"><a href="classPosition.html#a429c01611d2b0d7dfb06d182ad60928c">Position::up</a></div><div class="ttdeci">Position up() const </div><div class="ttdoc">méthode qui calcule la position au dessus de "this" </div></div>
+<div class="ttc" id="classPosition_html_a175e80a49f22b64fd5adee597d996f12"><div class="ttname"><a href="classPosition.html#a175e80a49f22b64fd5adee597d996f12">Position::getX</a></div><div class="ttdeci">unsigned int getX()</div><div class="ttdoc">getter de X </div></div>
+<div class="ttc" id="classPosition_html_aed892c6444ea8f9cf0b03490306d3382"><div class="ttname"><a href="classPosition.html#aed892c6444ea8f9cf0b03490306d3382">Position::setX</a></div><div class="ttdeci">void setX(unsigned int x)</div><div class="ttdoc">setter de X </div></div>
+<div class="ttc" id="classPosition_html_ad90cc325cca474c6c140b63c9bc69ddd"><div class="ttname"><a href="classPosition.html#ad90cc325cca474c6c140b63c9bc69ddd">Position::left</a></div><div class="ttdeci">Position left() const </div><div class="ttdoc">méthode qui calcule la position a gauche de "this" </div></div>
+<div class="ttc" id="classPosition_html"><div class="ttname"><a href="classPosition.html">Position</a></div><div class="ttdoc">Classe implémentant une position sur la map. </div><div class="ttdef"><b>Definition:</b> <a href="position_8hpp_source.html#l00019">position.hpp:19</a></div></div>
+<div class="ttc" id="classPosition_html_a557e6df4fac8167f3dd287889d2e1c0a"><div class="ttname"><a href="classPosition.html#a557e6df4fac8167f3dd287889d2e1c0a">Position::setY</a></div><div class="ttdeci">void setY(unsigned int y)</div><div class="ttdoc">setter de Y </div></div>
+<div class="ttc" id="classPosition_html_a93014db59c98c0f95eb2056bf546f956"><div class="ttname"><a href="classPosition.html#a93014db59c98c0f95eb2056bf546f956">Position::afficher</a></div><div class="ttdeci">void afficher() const </div><div class="ttdoc">affiche la position </div></div>
+<div class="ttc" id="classPosition_html_ab3245f578d0c01b1c4a39a8e5df5a82c"><div class="ttname"><a href="classPosition.html#ab3245f578d0c01b1c4a39a8e5df5a82c">Position::operator==</a></div><div class="ttdeci">bool operator==(Position const &amp;position)</div><div class="ttdoc">surcharge de l&#39;opérateur == </div></div>
+<div class="ttc" id="classPosition_html_a20fbdadf072a7f285e8181f339776c0c"><div class="ttname"><a href="classPosition.html#a20fbdadf072a7f285e8181f339776c0c">Position::down</a></div><div class="ttdeci">Position down() const </div><div class="ttdoc">méthode qui calcule la position en dessous de "this" </div></div>
+<div class="ttc" id="classPosition_html_a917de1eeb8ba5056636b4274d7444a20"><div class="ttname"><a href="classPosition.html#a917de1eeb8ba5056636b4274d7444a20">Position::distance</a></div><div class="ttdeci">unsigned int distance(Position position) const </div><div class="ttdoc">renvoie la distance entre la position actuelle et une autre position </div></div>
+<div class="ttc" id="classPosition_html_a3b1b8f105448a2d70dcc622ba475d13f"><div class="ttname"><a href="classPosition.html#a3b1b8f105448a2d70dcc622ba475d13f">Position::Position</a></div><div class="ttdeci">Position(unsigned int X, unsigned int Y)</div><div class="ttdoc">Constructeur, crée une position. </div></div>
+<div class="ttc" id="classPosition_html_ab4200021493a42e7f6755231ad98bece"><div class="ttname"><a href="classPosition.html#ab4200021493a42e7f6755231ad98bece">Position::getY</a></div><div class="ttdeci">unsigned int getY()</div><div class="ttdoc">getter de Y </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mercredi 25 Novembre 2015 11:58:57 pour Projet Design Pattern par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

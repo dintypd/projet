@@ -1,0 +1,88 @@
+\hypertarget{classArcher}{\section{Référence de la classe Archer}
+\label{classArcher}\index{Archer@{Archer}}
+}
+
+
+Classe définissant un archer.  
+
+
+
+
+{\ttfamily \#include $<$archer.\+hpp$>$}
+
+Graphe d'héritage de Archer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classArcher}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classArcher_a339791774caa50d6a8d3a5b7a10fb228}{\hyperlink{classArcher_a339791774caa50d6a8d3a5b7a10fb228}{Archer} (unsigned int range, unsigned int ap, unsigned int mp, unsigned int hp, unsigned int dmgs, unsigned int cost, \hyperlink{classAttack}{Attack} $\ast$\hyperlink{classUnit_ac06b8f6e30f851f15a42d8a1d951034a}{attack}, \hyperlink{classHPLoss}{H\+P\+Loss} $\ast$\hyperlink{classUnit_a3090f43e2ee6a08587a160afaa26e7cd}{hp\+Loss}, \hyperlink{classMove}{Move} $\ast$\hyperlink{classUnit_a8c6bfbaf9bf204baec6ba3c11468ec2f}{move}, \hyperlink{classPosition}{Position} position, std\+::string image)}\label{classArcher_a339791774caa50d6a8d3a5b7a10fb228}
+
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classArcher_a41ff30d3d1eac71a13bd5b5cc86a2d6b}{classe} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur de la classe. \end{DoxyCompactList}\item 
+\hyperlink{classUnit}{Unit} $\ast$ \hyperlink{classArcher_a898839f83f972b3e2c000c9dfb92487c}{clone} (\hyperlink{classPosition}{Position} position) const 
+\begin{DoxyCompactList}\small\item\em construit un archer identique à la position donnée \end{DoxyCompactList}\item 
+\hypertarget{classArcher_a711fbb1d20af0d71b68e35b41507615b}{void \hyperlink{classArcher_a711fbb1d20af0d71b68e35b41507615b}{afficher\+Infos} () const }\label{classArcher_a711fbb1d20af0d71b68e35b41507615b}
+
+\begin{DoxyCompactList}\small\item\em affiche les différentes informations sur l'archer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Classe définissant un archer. 
+
+Définition à la ligne 20 du fichier archer.\+hpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classArcher_a41ff30d3d1eac71a13bd5b5cc86a2d6b}{\index{Archer@{Archer}!classe@{classe}}
+\index{classe@{classe}!Archer@{Archer}}
+\subsubsection[{classe}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Archer\+::classe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classArcher_a41ff30d3d1eac71a13bd5b5cc86a2d6b}
+
+
+Accesseur de la classe. 
+
+\begin{DoxyReturn}{Renvoie}
+\char`\"{}archer\char`\"{} 
+\end{DoxyReturn}
+
+
+Implémente \hyperlink{classUnit_adac07557f9c0b9005709c62263625c2d}{Unit}.
+
+\hypertarget{classArcher_a898839f83f972b3e2c000c9dfb92487c}{\index{Archer@{Archer}!clone@{clone}}
+\index{clone@{clone}!Archer@{Archer}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unit}$\ast$ Archer\+::clone (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classArcher_a898839f83f972b3e2c000c9dfb92487c}
+
+
+construit un archer identique à la position donnée 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position} & une position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un archer 
+\end{DoxyReturn}
+
+
+Implémente \hyperlink{classUnit_a90304713be4b7cc73f59358190dd39d4}{Unit}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{archer_8hpp}{archer.\+hpp}\end{DoxyCompactItemize}

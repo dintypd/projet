@@ -5,9 +5,9 @@
  * @brief Implémentation de la classe Player
 **/
 
-#include "position.h"
-#include "player.h"
-#include "unit.h"
+#include "position.hpp"
+#include "player.hpp"
+#include "unit.hpp"
 
 #include <iostream>
 

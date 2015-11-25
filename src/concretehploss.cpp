@@ -6,9 +6,9 @@
  *
 **/
 
-#include "concretehploss.h"
-#include "unit.h"
-#include "base.h"
+#include "concretehploss.hpp"
+#include "unit.hpp"
+#include "base.hpp"
 
 #include <iostream>
 

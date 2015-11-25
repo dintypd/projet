@@ -5,12 +5,13 @@
  * @brief Implémentation de la classe Map
 **/
 
+#include "map.hpp"
+#include "player.hpp"
+#include "unit.hpp"
+#include "path.hpp"
+#include "base.hpp"
+
 #include <iostream>
-#include "map.h"
-#include "player.h"
-#include "unit.h"
-#include "path.h"
-#include "base.h"
 
 using namespace std;
 

@@ -6,7 +6,7 @@
  *
 **/
 
-#include "path.h"
+#include "path.hpp"
 
 using namespace std;
 	

@@ -6,10 +6,10 @@
  *
 **/
 
-#include "base.h"
-#include "player.h"
-#include "hploss.h"
-#include "position.h"
+#include "base.hpp"
+#include "player.hpp"
+#include "hploss.hpp"
+#include "position.hpp"
 
 #include <iostream>
 

@@ -1,0 +1,64 @@
+\hypertarget{classMove}{\section{Référence de la classe Move}
+\label{classMove}\index{Move@{Move}}
+}
+
+
+Classe virtuelle pure permettant l'utilisation de différents comportement de déplacements selon l'unité. Elle est utilisée dans le cadre du pattern Strategy.  
+
+
+
+
+{\ttfamily \#include $<$move.\+hpp$>$}
+
+Graphe d'héritage de Move\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classMove}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classMove_ace4540308f0bbd21d71a18b2ff7c972d}{move} (\hyperlink{classPath}{Path} $\ast$path, \hyperlink{classMap}{Map} $\ast$map, \hyperlink{classUnit}{Unit} $\ast$u)=0
+\begin{DoxyCompactList}\small\item\em Destructeur (évite les warnings) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe virtuelle pure permettant l'utilisation de différents comportement de déplacements selon l'unité. Elle est utilisée dans le cadre du pattern Strategy. 
+
+Définition à la ligne 21 du fichier move.\+hpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classMove_ace4540308f0bbd21d71a18b2ff7c972d}{\index{Move@{Move}!move@{move}}
+\index{move@{move}!Move@{Move}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}virtual void Move\+::move (
+\begin{DoxyParamCaption}
+\item[{{\bf Path} $\ast$}]{path, }
+\item[{{\bf Map} $\ast$}]{map, }
+\item[{{\bf Unit} $\ast$}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classMove_ace4540308f0bbd21d71a18b2ff7c972d}
+
+
+Destructeur (évite les warnings) 
+
+méthode virtuelle pure de déplacement d'une unité 
+\begin{DoxyParams}{Paramètres}
+{\em path} & un chemin \\
+\hline
+{\em map} & une map \\
+\hline
+{\em u} & une unité \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{classConcreteMove_adbbcf93faa6dad1660a922618b905ff1}{Concrete\+Move}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{move_8hpp}{move.\+hpp}\end{DoxyCompactItemize}

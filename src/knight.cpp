@@ -6,7 +6,7 @@
  *
 **/
 
-#include "knight.h"
+#include "knight.hpp"
 
 #include <iostream>
 

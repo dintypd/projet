@@ -1,0 +1,191 @@
+\hypertarget{classBase}{\section{Référence de la classe Base}
+\label{classBase}\index{Base@{Base}}
+}
+
+
+Classe définissant une base.  
+
+
+
+
+{\ttfamily \#include $<$base.\+hpp$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classBase_a32aefb7f04339edda2e2517502dd27b2}{\hyperlink{classBase_a32aefb7f04339edda2e2517502dd27b2}{Base} (unsigned int hp, unsigned int summon\+Range, unsigned int build\+Range, \hyperlink{classHPLoss}{H\+P\+Loss} $\ast$\hyperlink{classBase_a3f6ba779a531b048daa9cec42c945b91}{hp\+Loss}, \hyperlink{classPosition}{Position} position)}\label{classBase_a32aefb7f04339edda2e2517502dd27b2}
+
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hypertarget{classBase_a722da881b6c70cfcbde9243abcfbf334}{\hyperlink{classBase_a722da881b6c70cfcbde9243abcfbf334}{$\sim$\+Base} ()}\label{classBase_a722da881b6c70cfcbde9243abcfbf334}
+
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classBase_a7f6a0b45ce6331d7bfb0d6f716d5ba60}{get\+Summon\+Range} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur de la portée d'invocation. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classBase_a1bd08f26289caa9aa0028efd9dae8d9e}{get\+Build\+Range} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur de la portée de construction. \end{DoxyCompactList}\item 
+\hypertarget{classBase_a1a3daeb406afce579a88debf4424b0a0}{void \hyperlink{classBase_a1a3daeb406afce579a88debf4424b0a0}{afficher} () const }\label{classBase_a1a3daeb406afce579a88debf4424b0a0}
+
+\begin{DoxyCompactList}\small\item\em Affiche la base. \end{DoxyCompactList}\item 
+void \hyperlink{classBase_a0e05c8081bb85324b884abfa6712f6fb}{set\+H\+P} (unsigned int value)
+\begin{DoxyCompactList}\small\item\em Modificateur du nombre de points de vie. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classBase_a8fd6606cff73e39cd05225bd7b395218}{get\+H\+P} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur des points de vie. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classBase_a8599d1b3c4d1b744d5e3d42abfb47361}{get\+Max\+H\+P} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur des points de vie max. \end{DoxyCompactList}\item 
+void \hyperlink{classBase_a0e2dd85f633ed25b9ab144fb7c769b7b}{set\+Player} (\hyperlink{classPlayer}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Modificateur du joueur associé à la base. \end{DoxyCompactList}\item 
+\hyperlink{classPosition}{Position} \hyperlink{classBase_ae2abb880ce9543ac70419714f8c1181f}{get\+Position} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur de la position de la base. \end{DoxyCompactList}\item 
+void \hyperlink{classBase_a17fc3f12f7aedbf5a8be8f0f271a3f62}{set\+Position} (\hyperlink{classPosition}{Position} position)
+\begin{DoxyCompactList}\small\item\em Modificateur de la position de la base. \end{DoxyCompactList}\item 
+void \hyperlink{classBase_a3f6ba779a531b048daa9cec42c945b91}{hp\+Loss} (unsigned int value)
+\begin{DoxyCompactList}\small\item\em L'unité perd des points de vie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe définissant une base. 
+
+Définition à la ligne 21 du fichier base.\+hpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classBase_a1bd08f26289caa9aa0028efd9dae8d9e}{\index{Base@{Base}!get\+Build\+Range@{get\+Build\+Range}}
+\index{get\+Build\+Range@{get\+Build\+Range}!Base@{Base}}
+\subsubsection[{get\+Build\+Range}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Base\+::get\+Build\+Range (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBase_a1bd08f26289caa9aa0028efd9dae8d9e}
+
+
+Accesseur de la portée de construction. 
+
+\begin{DoxyReturn}{Renvoie}
+La portée de construction de la base 
+\end{DoxyReturn}
+\hypertarget{classBase_a8fd6606cff73e39cd05225bd7b395218}{\index{Base@{Base}!get\+H\+P@{get\+H\+P}}
+\index{get\+H\+P@{get\+H\+P}!Base@{Base}}
+\subsubsection[{get\+H\+P}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Base\+::get\+H\+P (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBase_a8fd6606cff73e39cd05225bd7b395218}
+
+
+Accesseur des points de vie. 
+
+\begin{DoxyReturn}{Renvoie}
+le nombre de pdv 
+\end{DoxyReturn}
+\hypertarget{classBase_a8599d1b3c4d1b744d5e3d42abfb47361}{\index{Base@{Base}!get\+Max\+H\+P@{get\+Max\+H\+P}}
+\index{get\+Max\+H\+P@{get\+Max\+H\+P}!Base@{Base}}
+\subsubsection[{get\+Max\+H\+P}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Base\+::get\+Max\+H\+P (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBase_a8599d1b3c4d1b744d5e3d42abfb47361}
+
+
+Accesseur des points de vie max. 
+
+\begin{DoxyReturn}{Renvoie}
+le nombre de pdv max 
+\end{DoxyReturn}
+\hypertarget{classBase_ae2abb880ce9543ac70419714f8c1181f}{\index{Base@{Base}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Base@{Base}}
+\subsubsection[{get\+Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Base\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBase_ae2abb880ce9543ac70419714f8c1181f}
+
+
+Accesseur de la position de la base. 
+
+\begin{DoxyReturn}{Renvoie}
+la position 
+\end{DoxyReturn}
+\hypertarget{classBase_a7f6a0b45ce6331d7bfb0d6f716d5ba60}{\index{Base@{Base}!get\+Summon\+Range@{get\+Summon\+Range}}
+\index{get\+Summon\+Range@{get\+Summon\+Range}!Base@{Base}}
+\subsubsection[{get\+Summon\+Range}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Base\+::get\+Summon\+Range (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classBase_a7f6a0b45ce6331d7bfb0d6f716d5ba60}
+
+
+Accesseur de la portée d'invocation. 
+
+\begin{DoxyReturn}{Renvoie}
+La portée d'invocation de la base 
+\end{DoxyReturn}
+\hypertarget{classBase_a3f6ba779a531b048daa9cec42c945b91}{\index{Base@{Base}!hp\+Loss@{hp\+Loss}}
+\index{hp\+Loss@{hp\+Loss}!Base@{Base}}
+\subsubsection[{hp\+Loss}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+::hp\+Loss (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{value}
+\end{DoxyParamCaption}
+)}}\label{classBase_a3f6ba779a531b048daa9cec42c945b91}
+
+
+L'unité perd des points de vie. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em value} & Le nomdre d'H\+P perdus \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBase_a0e05c8081bb85324b884abfa6712f6fb}{\index{Base@{Base}!set\+H\+P@{set\+H\+P}}
+\index{set\+H\+P@{set\+H\+P}!Base@{Base}}
+\subsubsection[{set\+H\+P}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+::set\+H\+P (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{value}
+\end{DoxyParamCaption}
+)}}\label{classBase_a0e05c8081bb85324b884abfa6712f6fb}
+
+
+Modificateur du nombre de points de vie. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em value} & la nouvelle valeur \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBase_a0e2dd85f633ed25b9ab144fb7c769b7b}{\index{Base@{Base}!set\+Player@{set\+Player}}
+\index{set\+Player@{set\+Player}!Base@{Base}}
+\subsubsection[{set\+Player}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+::set\+Player (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{classBase_a0e2dd85f633ed25b9ab144fb7c769b7b}
+
+
+Modificateur du joueur associé à la base. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em player} & le joueur \\
+\hline
+\end{DoxyParams}
+\hypertarget{classBase_a17fc3f12f7aedbf5a8be8f0f271a3f62}{\index{Base@{Base}!set\+Position@{set\+Position}}
+\index{set\+Position@{set\+Position}!Base@{Base}}
+\subsubsection[{set\+Position}]{\setlength{\rightskip}{0pt plus 5cm}void Base\+::set\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position}
+\end{DoxyParamCaption}
+)}}\label{classBase_a17fc3f12f7aedbf5a8be8f0f271a3f62}
+
+
+Modificateur de la position de la base. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position} & la nouvelle position \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{base_8hpp}{base.\+hpp}\end{DoxyCompactItemize}

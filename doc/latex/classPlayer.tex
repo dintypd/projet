@@ -1,0 +1,254 @@
+\hypertarget{classPlayer}{\section{Référence de la classe Player}
+\label{classPlayer}\index{Player@{Player}}
+}
+
+
+Classe définissant un joueur.  
+
+
+
+
+{\ttfamily \#include $<$player.\+hpp$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classPlayer_a64124cbd4f373c5b7ebec1aaee471e06}{\hyperlink{classPlayer_a64124cbd4f373c5b7ebec1aaee471e06}{Player} (std\+::string name, unsigned int golds, \hyperlink{classBase}{Base} $\ast$base)}\label{classPlayer_a64124cbd4f373c5b7ebec1aaee471e06}
+
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hypertarget{classPlayer_a749d2c00e1fe0f5c2746f7505a58c062}{\hyperlink{classPlayer_a749d2c00e1fe0f5c2746f7505a58c062}{$\sim$\+Player} ()}\label{classPlayer_a749d2c00e1fe0f5c2746f7505a58c062}
+
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classPlayer_a6e7e67674bf8f2896cff3ef7f4fa7e0d}{get\+Id} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur de l'identifiant. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classPlayer_ad4c6a95f1cf69c44d0c585465b101c70}{get\+Name} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur du nom. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classPlayer_a5a300fd8e477c6d9f19266763970daaf}{get\+Golds} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur du nombre de golds. \end{DoxyCompactList}\item 
+std\+::map$<$ unsigned int, \hyperlink{classUnit}{Unit} $\ast$ $>$ $\ast$ \hyperlink{classPlayer_a1184d2d25acc16958d0e7710fe0f00ec}{get\+Units} ()
+\begin{DoxyCompactList}\small\item\em Accesseur du tableau des unités. \end{DoxyCompactList}\item 
+\hyperlink{classBase}{Base} $\ast$ \hyperlink{classPlayer_a1a3f0608b817489ecce50a53da619270}{get\+Base} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur de la base. \end{DoxyCompactList}\item 
+void \hyperlink{classPlayer_a8963d12d2c4e47cd073ed9829dd86c79}{summon} (\hyperlink{classUnit}{Unit} $\ast$unit)
+\begin{DoxyCompactList}\small\item\em Méthode qui permet à un joueur d'invoquer une unité donnée à une position donnée. \end{DoxyCompactList}\item 
+void \hyperlink{classPlayer_a96a07d17d57a83a43c7f639803e02f49}{kill} (\hyperlink{classUnit}{Unit} $\ast$unit)
+\begin{DoxyCompactList}\small\item\em Retire l'unité de la liste des unité \end{DoxyCompactList}\item 
+void \hyperlink{classPlayer_a3b8380f4cd58fe75a985c0c2e3f32c8a}{add\+Golds} (unsigned int golds)
+\begin{DoxyCompactList}\small\item\em Méthode qui crédite l'argent d'un joueur de la somme donnée. \end{DoxyCompactList}\item 
+void \hyperlink{classPlayer_a375e40b8080b58b5fe5296d44ab74f8e}{rm\+Golds} (unsigned int golds)
+\begin{DoxyCompactList}\small\item\em Méthode qui débite l'argent d'un joueur de la somme donnée. \end{DoxyCompactList}\item 
+\hypertarget{classPlayer_a93eb96604ac6b679bda65a8bb18083ee}{void \hyperlink{classPlayer_a93eb96604ac6b679bda65a8bb18083ee}{affiche\+Golds} ()}\label{classPlayer_a93eb96604ac6b679bda65a8bb18083ee}
+
+\begin{DoxyCompactList}\small\item\em Méthode qui affiche la quantité d'argent du joueur. \end{DoxyCompactList}\item 
+void \hyperlink{classPlayer_aa25996d64c6b562ac737c548bdc687a6}{set\+Next} (\hyperlink{classPlayer}{Player} $\ast$next)
+\begin{DoxyCompactList}\small\item\em Modifie le joueur suivant dans l'ordre du jeu. \end{DoxyCompactList}\item 
+\hyperlink{classPlayer}{Player} $\ast$ \hyperlink{classPlayer_a6f9f2357bacaeb64a926b98da355afd7}{get\+Next} () const 
+\begin{DoxyCompactList}\small\item\em Retourne le joueur suivant dans l'ordre du jeu. \end{DoxyCompactList}\item 
+\hyperlink{classUnit}{Unit} $\ast$ \hyperlink{classPlayer_af8d6f506784f7dc1c1dd49db84f31831}{get\+Unit} (unsigned int id) const 
+\begin{DoxyCompactList}\small\item\em Retourne l'unité du joueur en fonction du paramètre. \end{DoxyCompactList}\item 
+\hypertarget{classPlayer_a2e72d8952b9fa896bd750e24ec5c6497}{void \hyperlink{classPlayer_a2e72d8952b9fa896bd750e24ec5c6497}{affiche\+Units} ()}\label{classPlayer_a2e72d8952b9fa896bd750e24ec5c6497}
+
+\begin{DoxyCompactList}\small\item\em Affiche toutes les unité du joueur. \end{DoxyCompactList}\item 
+\hypertarget{classPlayer_a8a6677e3a5b23a764ee224336fc61dba}{void \hyperlink{classPlayer_a8a6677e3a5b23a764ee224336fc61dba}{end\+Turn} ()}\label{classPlayer_a8a6677e3a5b23a764ee224336fc61dba}
+
+\begin{DoxyCompactList}\small\item\em Méthode qui appelle \hyperlink{classPlayer_a8a6677e3a5b23a764ee224336fc61dba}{end\+Turn()} de chaque unité \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe définissant un joueur. 
+
+Définition à la ligne 22 du fichier player.\+hpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classPlayer_a3b8380f4cd58fe75a985c0c2e3f32c8a}{\index{Player@{Player}!add\+Golds@{add\+Golds}}
+\index{add\+Golds@{add\+Golds}!Player@{Player}}
+\subsubsection[{add\+Golds}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::add\+Golds (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{golds}
+\end{DoxyParamCaption}
+)}}\label{classPlayer_a3b8380f4cd58fe75a985c0c2e3f32c8a}
+
+
+Méthode qui crédite l'argent d'un joueur de la somme donnée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em golds} & la somme à créditer \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPlayer_a1a3f0608b817489ecce50a53da619270}{\index{Player@{Player}!get\+Base@{get\+Base}}
+\index{get\+Base@{get\+Base}!Player@{Player}}
+\subsubsection[{get\+Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base}$\ast$ Player\+::get\+Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classPlayer_a1a3f0608b817489ecce50a53da619270}
+
+
+Accesseur de la base. 
+
+\begin{DoxyReturn}{Renvoie}
+la base du joueur 
+\end{DoxyReturn}
+\hypertarget{classPlayer_a5a300fd8e477c6d9f19266763970daaf}{\index{Player@{Player}!get\+Golds@{get\+Golds}}
+\index{get\+Golds@{get\+Golds}!Player@{Player}}
+\subsubsection[{get\+Golds}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Player\+::get\+Golds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classPlayer_a5a300fd8e477c6d9f19266763970daaf}
+
+
+Accesseur du nombre de golds. 
+
+\begin{DoxyReturn}{Renvoie}
+le nombre de golds du joueur 
+\end{DoxyReturn}
+\hypertarget{classPlayer_a6e7e67674bf8f2896cff3ef7f4fa7e0d}{\index{Player@{Player}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Player@{Player}}
+\subsubsection[{get\+Id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Player\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classPlayer_a6e7e67674bf8f2896cff3ef7f4fa7e0d}
+
+
+Accesseur de l'identifiant. 
+
+\begin{DoxyReturn}{Renvoie}
+l'identifiant du joueur 
+\end{DoxyReturn}
+\hypertarget{classPlayer_ad4c6a95f1cf69c44d0c585465b101c70}{\index{Player@{Player}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Player@{Player}}
+\subsubsection[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Player\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classPlayer_ad4c6a95f1cf69c44d0c585465b101c70}
+
+
+Accesseur du nom. 
+
+\begin{DoxyReturn}{Renvoie}
+le nom du joueur 
+\end{DoxyReturn}
+\hypertarget{classPlayer_a6f9f2357bacaeb64a926b98da355afd7}{\index{Player@{Player}!get\+Next@{get\+Next}}
+\index{get\+Next@{get\+Next}!Player@{Player}}
+\subsubsection[{get\+Next}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player}$\ast$ Player\+::get\+Next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classPlayer_a6f9f2357bacaeb64a926b98da355afd7}
+
+
+Retourne le joueur suivant dans l'ordre du jeu. 
+
+\begin{DoxyReturn}{Renvoie}
+le joueur qui jouera après \char`\"{}this\char`\"{} 
+\end{DoxyReturn}
+\hypertarget{classPlayer_af8d6f506784f7dc1c1dd49db84f31831}{\index{Player@{Player}!get\+Unit@{get\+Unit}}
+\index{get\+Unit@{get\+Unit}!Player@{Player}}
+\subsubsection[{get\+Unit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unit}$\ast$ Player\+::get\+Unit (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id}
+\end{DoxyParamCaption}
+) const}}\label{classPlayer_af8d6f506784f7dc1c1dd49db84f31831}
+
+
+Retourne l'unité du joueur en fonction du paramètre. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & l'identifiant de l'unité choisie \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPlayer_a1184d2d25acc16958d0e7710fe0f00ec}{\index{Player@{Player}!get\+Units@{get\+Units}}
+\index{get\+Units@{get\+Units}!Player@{Player}}
+\subsubsection[{get\+Units}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$unsigned int, {\bf Unit}$\ast$$>$$\ast$ Player\+::get\+Units (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPlayer_a1184d2d25acc16958d0e7710fe0f00ec}
+
+
+Accesseur du tableau des unités. 
+
+\begin{DoxyReturn}{Renvoie}
+le tableau des unités du joueur 
+\end{DoxyReturn}
+\hypertarget{classPlayer_a96a07d17d57a83a43c7f639803e02f49}{\index{Player@{Player}!kill@{kill}}
+\index{kill@{kill}!Player@{Player}}
+\subsubsection[{kill}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::kill (
+\begin{DoxyParamCaption}
+\item[{{\bf Unit} $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{classPlayer_a96a07d17d57a83a43c7f639803e02f49}
+
+
+Retire l'unité de la liste des unité 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em l'unité} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPlayer_a375e40b8080b58b5fe5296d44ab74f8e}{\index{Player@{Player}!rm\+Golds@{rm\+Golds}}
+\index{rm\+Golds@{rm\+Golds}!Player@{Player}}
+\subsubsection[{rm\+Golds}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::rm\+Golds (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{golds}
+\end{DoxyParamCaption}
+)}}\label{classPlayer_a375e40b8080b58b5fe5296d44ab74f8e}
+
+
+Méthode qui débite l'argent d'un joueur de la somme donnée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em golds} & la somme à débiter\\
+\hline
+\end{DoxyParams}
+\begin{DoxyPrecond}{Précondition}
+(\+\_\+golds -\/ golds $>$= 0) 
+\end{DoxyPrecond}
+\hypertarget{classPlayer_aa25996d64c6b562ac737c548bdc687a6}{\index{Player@{Player}!set\+Next@{set\+Next}}
+\index{set\+Next@{set\+Next}!Player@{Player}}
+\subsubsection[{set\+Next}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::set\+Next (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{next}
+\end{DoxyParamCaption}
+)}}\label{classPlayer_aa25996d64c6b562ac737c548bdc687a6}
+
+
+Modifie le joueur suivant dans l'ordre du jeu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em next} & le joueur qui jouera après \char`\"{}this\char`\"{} \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPlayer_a8963d12d2c4e47cd073ed9829dd86c79}{\index{Player@{Player}!summon@{summon}}
+\index{summon@{summon}!Player@{Player}}
+\subsubsection[{summon}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::summon (
+\begin{DoxyParamCaption}
+\item[{{\bf Unit} $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{classPlayer_a8963d12d2c4e47cd073ed9829dd86c79}
+
+
+Méthode qui permet à un joueur d'invoquer une unité donnée à une position donnée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unit} & l'unité \\
+\hline
+{\em position} & la position voulue \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{player_8hpp}{player.\+hpp}\end{DoxyCompactItemize}

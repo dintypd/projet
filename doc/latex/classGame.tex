@@ -1,0 +1,128 @@
+\hypertarget{classGame}{\section{Référence de la classe Game}
+\label{classGame}\index{Game@{Game}}
+}
+
+
+Classe qui centralisera tout le jeu.  
+
+
+
+
+{\ttfamily \#include $<$game.\+hpp$>$}
+
+Graphe d'héritage de Game\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classGame}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classGame_ad59df6562a58a614fda24622d3715b65}{\hyperlink{classGame_ad59df6562a58a614fda24622d3715b65}{Game} ()}\label{classGame_ad59df6562a58a614fda24622d3715b65}
+
+\begin{DoxyCompactList}\small\item\em constructeur \end{DoxyCompactList}\item 
+\hypertarget{classGame_ae3d112ca6e0e55150d2fdbc704474530}{\hyperlink{classGame_ae3d112ca6e0e55150d2fdbc704474530}{$\sim$\+Game} ()}\label{classGame_ae3d112ca6e0e55150d2fdbc704474530}
+
+\begin{DoxyCompactList}\small\item\em destructeur \end{DoxyCompactList}\item 
+\hypertarget{classGame_aa333825d0bca80e91e53c7e23f053405}{void \hyperlink{classGame_aa333825d0bca80e91e53c7e23f053405}{play} ()}\label{classGame_aa333825d0bca80e91e53c7e23f053405}
+
+\begin{DoxyCompactList}\small\item\em Boucle du jeu, fini lorsque la commande tapée est /quit. \end{DoxyCompactList}\item 
+\hypertarget{classGame_a987b5442cddbc9376b7fe55a9fcbd42e}{void \hyperlink{classGame_a987b5442cddbc9376b7fe55a9fcbd42e}{end\+Turn} ()}\label{classGame_a987b5442cddbc9376b7fe55a9fcbd42e}
+
+\begin{DoxyCompactList}\small\item\em Méthode centralisant toutes les actions à effectuer à la fin du tour. \end{DoxyCompactList}\item 
+\hypertarget{classGame_a217c5bd3b04bcf146b312cb17e2621e3}{bool \hyperlink{classGame_a217c5bd3b04bcf146b312cb17e2621e3}{end\+Of\+Game} ()}\label{classGame_a217c5bd3b04bcf146b312cb17e2621e3}
+
+\begin{DoxyCompactList}\small\item\em Méthode qui vérifie si un des joueurs à gagné \end{DoxyCompactList}\item 
+\hypertarget{classGame_a2f6be379e2d5bc1cce58f1ec96422ba8}{void \hyperlink{classGame_a2f6be379e2d5bc1cce58f1ec96422ba8}{help\+Command} ()}\label{classGame_a2f6be379e2d5bc1cce58f1ec96422ba8}
+
+\begin{DoxyCompactList}\small\item\em Actions lors de la détection de /help. \end{DoxyCompactList}\item 
+\hypertarget{classGame_a2be014c3f87a1a6f9169ee0c3d002360}{void \hyperlink{classGame_a2be014c3f87a1a6f9169ee0c3d002360}{quit\+Command} ()}\label{classGame_a2be014c3f87a1a6f9169ee0c3d002360}
+
+\begin{DoxyCompactList}\small\item\em Actions lors de la détection de /quit. \end{DoxyCompactList}\item 
+\hypertarget{classGame_a762c24a729cfdc357acbd5c6ecc4c4f8}{void \hyperlink{classGame_a762c24a729cfdc357acbd5c6ecc4c4f8}{summon\+Command} (std\+::vector$<$ std\+::string $>$ command)}\label{classGame_a762c24a729cfdc357acbd5c6ecc4c4f8}
+
+\begin{DoxyCompactList}\small\item\em Actions lors de la détection de /summon. \end{DoxyCompactList}\item 
+\hypertarget{classGame_af22614489ceb0cf9a0081016314c75df}{void \hyperlink{classGame_af22614489ceb0cf9a0081016314c75df}{units\+Command} ()}\label{classGame_af22614489ceb0cf9a0081016314c75df}
+
+\begin{DoxyCompactList}\small\item\em Actions lors de la détection de /units. \end{DoxyCompactList}\item 
+\hypertarget{classGame_a470d2a7a0da91c8287276d6135840dfd}{void \hyperlink{classGame_a470d2a7a0da91c8287276d6135840dfd}{golds\+Command} ()}\label{classGame_a470d2a7a0da91c8287276d6135840dfd}
+
+\begin{DoxyCompactList}\small\item\em Actions lors de la détection de /golds. \end{DoxyCompactList}\item 
+\hypertarget{classGame_acea1269edf0a00ada8e765e385ab5df1}{void \hyperlink{classGame_acea1269edf0a00ada8e765e385ab5df1}{infos\+Command} (std\+::vector$<$ std\+::string $>$ command)}\label{classGame_acea1269edf0a00ada8e765e385ab5df1}
+
+\begin{DoxyCompactList}\small\item\em Actions lors de la détection de /infos. \end{DoxyCompactList}\item 
+\hypertarget{classGame_a3b1e53d7df15b62d651830bbd47a7516}{void \hyperlink{classGame_a3b1e53d7df15b62d651830bbd47a7516}{move\+Command} (std\+::vector$<$ std\+::string $>$ command)}\label{classGame_a3b1e53d7df15b62d651830bbd47a7516}
+
+\begin{DoxyCompactList}\small\item\em Actions lors de la détection de /move. \end{DoxyCompactList}\item 
+\hypertarget{classGame_a27e73a42585e02a6c375413f803b0032}{void \hyperlink{classGame_a27e73a42585e02a6c375413f803b0032}{attack\+Command} (std\+::vector$<$ std\+::string $>$ command)}\label{classGame_a27e73a42585e02a6c375413f803b0032}
+
+\begin{DoxyCompactList}\small\item\em Actions lors de la détection de /attack. \end{DoxyCompactList}\item 
+void \hyperlink{classGame_a7c81b1033a3a8d6758ab0bf1c10a451c}{add\+Obs} (\hyperlink{classObserver}{Observer} $\ast$o)
+\begin{DoxyCompactList}\small\item\em Ajout d'un poiteur vers observateur à la liste obs. \end{DoxyCompactList}\item 
+void \hyperlink{classGame_a759618d920dd0e0f74f4bba89d35e56e}{rm\+Obs} (\hyperlink{classObserver}{Observer} $\ast$o)
+\begin{DoxyCompactList}\small\item\em La suppression d'un pointeur vers observateur de la liste obs, s'il existe. \end{DoxyCompactList}\item 
+\hypertarget{classGame_a3ac1bb304b96d6df0d350d39dc651cd2}{void \hyperlink{classGame_a3ac1bb304b96d6df0d350d39dc651cd2}{notify\+Obs} ()}\label{classGame_a3ac1bb304b96d6df0d350d39dc651cd2}
+
+\begin{DoxyCompactList}\small\item\em Notifie à tous les observateurs de la liste obs que cette classe a changé \end{DoxyCompactList}\item 
+\hypertarget{classGame_af36ccea6518e85542e7efc07ba425de0}{\hyperlink{classData}{Data} $\ast$ \hyperlink{classGame_af36ccea6518e85542e7efc07ba425de0}{get\+Data} ()}\label{classGame_af36ccea6518e85542e7efc07ba425de0}
+
+\begin{DoxyCompactList}\small\item\em Retourne les data pour l'observer \hyperlink{classWindow}{Window}. \end{DoxyCompactList}\item 
+\hypertarget{classGame_af2a02d3d8e78f4246c97ae06dd74f04f}{\hyperlink{classMap}{Map} $\ast$ \hyperlink{classGame_af2a02d3d8e78f4246c97ae06dd74f04f}{get\+Map} ()}\label{classGame_af2a02d3d8e78f4246c97ae06dd74f04f}
+
+\begin{DoxyCompactList}\small\item\em Retourne la map pour l'observer \hyperlink{classWindow}{Window}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe qui centralisera tout le jeu. 
+
+Définition à la ligne 29 du fichier game.\+hpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classGame_a7c81b1033a3a8d6758ab0bf1c10a451c}{\index{Game@{Game}!add\+Obs@{add\+Obs}}
+\index{add\+Obs@{add\+Obs}!Game@{Game}}
+\subsubsection[{add\+Obs}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::add\+Obs (
+\begin{DoxyParamCaption}
+\item[{{\bf Observer} $\ast$}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classGame_a7c81b1033a3a8d6758ab0bf1c10a451c}
+
+
+Ajout d'un poiteur vers observateur à la liste obs. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em o} & un pointeur vers observateur \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{classSubject_a4a12fdee2e95909a575066103986fa85}{Subject}.
+
+\hypertarget{classGame_a759618d920dd0e0f74f4bba89d35e56e}{\index{Game@{Game}!rm\+Obs@{rm\+Obs}}
+\index{rm\+Obs@{rm\+Obs}!Game@{Game}}
+\subsubsection[{rm\+Obs}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+::rm\+Obs (
+\begin{DoxyParamCaption}
+\item[{{\bf Observer} $\ast$}]{o}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classGame_a759618d920dd0e0f74f4bba89d35e56e}
+
+
+La suppression d'un pointeur vers observateur de la liste obs, s'il existe. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em o} & un pointeur vers observateur \\
+\hline
+\end{DoxyParams}
+
+
+Implémente \hyperlink{classSubject_a1005f6c36e1a65fb13f1f0fa908b82e0}{Subject}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{game_8hpp}{game.\+hpp}\end{DoxyCompactItemize}

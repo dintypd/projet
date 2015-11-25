@@ -1,0 +1,85 @@
+\hypertarget{classSpawner}{\section{Référence de la classe Spawner}
+\label{classSpawner}\index{Spawner@{Spawner}}
+}
+
+
+Classe permettant l'utilisation des spawner (générateur d'unités)  
+
+
+
+
+{\ttfamily \#include $<$spawner.\+hpp$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classSpawner_a184706828dba74f9400a0e7ed175998c}{Spawner} (\hyperlink{classUnit}{Unit} $\ast$prototype)
+\item 
+\hyperlink{classSpawner_a59d8e3d4d6dc6c25f38ce5d4fcc5e8e6}{$\sim$\+Spawner} ()
+\item 
+\hyperlink{classUnit}{Unit} $\ast$ \hyperlink{classSpawner_ac3b94465446cf0afe31fd6bd5d135c65}{spawn\+Unit} (\hyperlink{classPosition}{Position} position)
+\item 
+unsigned int \hyperlink{classSpawner_a10e44285b671baeeb4e83eae92bdcf86}{get\+Cost} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe permettant l'utilisation des spawner (générateur d'unités) 
+
+Définition à la ligne 19 du fichier spawner.\+hpp.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classSpawner_a184706828dba74f9400a0e7ed175998c}{\index{Spawner@{Spawner}!Spawner@{Spawner}}
+\index{Spawner@{Spawner}!Spawner@{Spawner}}
+\subsubsection[{Spawner}]{\setlength{\rightskip}{0pt plus 5cm}Spawner\+::\+Spawner (
+\begin{DoxyParamCaption}
+\item[{{\bf Unit} $\ast$}]{prototype}
+\end{DoxyParamCaption}
+)}}\label{classSpawner_a184706828dba74f9400a0e7ed175998c}
+Constructeur 
+\begin{DoxyParams}{Paramètres}
+{\em prototype} & le prototype qui sert de base au spawner \\
+\hline
+\end{DoxyParams}
+\hypertarget{classSpawner_a59d8e3d4d6dc6c25f38ce5d4fcc5e8e6}{\index{Spawner@{Spawner}!````~Spawner@{$\sim$\+Spawner}}
+\index{````~Spawner@{$\sim$\+Spawner}!Spawner@{Spawner}}
+\subsubsection[{$\sim$\+Spawner}]{\setlength{\rightskip}{0pt plus 5cm}Spawner\+::$\sim$\+Spawner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSpawner_a59d8e3d4d6dc6c25f38ce5d4fcc5e8e6}
+Destructeur 
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classSpawner_a10e44285b671baeeb4e83eae92bdcf86}{\index{Spawner@{Spawner}!get\+Cost@{get\+Cost}}
+\index{get\+Cost@{get\+Cost}!Spawner@{Spawner}}
+\subsubsection[{get\+Cost}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Spawner\+::get\+Cost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classSpawner_a10e44285b671baeeb4e83eae92bdcf86}
+Retourne le coût de l'unité \begin{DoxyReturn}{Renvoie}
+un entier correspondant au cout 
+\end{DoxyReturn}
+\hypertarget{classSpawner_ac3b94465446cf0afe31fd6bd5d135c65}{\index{Spawner@{Spawner}!spawn\+Unit@{spawn\+Unit}}
+\index{spawn\+Unit@{spawn\+Unit}!Spawner@{Spawner}}
+\subsubsection[{spawn\+Unit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unit}$\ast$ Spawner\+::spawn\+Unit (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position}
+\end{DoxyParamCaption}
+)}}\label{classSpawner_ac3b94465446cf0afe31fd6bd5d135c65}
+Méthode qui copie le prototype et retourne l'unité correspondante 
+\begin{DoxyParams}{Paramètres}
+{\em position} & la position que prendra l'unité retournée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+une unité correspondante au prototype 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{spawner_8hpp}{spawner.\+hpp}\end{DoxyCompactItemize}

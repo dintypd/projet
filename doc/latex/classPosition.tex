@@ -1,0 +1,158 @@
+\hypertarget{classPosition}{\section{Référence de la classe Position}
+\label{classPosition}\index{Position@{Position}}
+}
+
+
+Classe implémentant une position sur la map.  
+
+
+
+
+{\ttfamily \#include $<$position.\+hpp$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPosition_a3b1b8f105448a2d70dcc622ba475d13f}{Position} (unsigned int X, unsigned int Y)
+\begin{DoxyCompactList}\small\item\em Constructeur, crée une position. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classPosition_a175e80a49f22b64fd5adee597d996f12}{get\+X} ()
+\begin{DoxyCompactList}\small\item\em getter de X \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classPosition_ab4200021493a42e7f6755231ad98bece}{get\+Y} ()
+\begin{DoxyCompactList}\small\item\em getter de Y \end{DoxyCompactList}\item 
+void \hyperlink{classPosition_aed892c6444ea8f9cf0b03490306d3382}{set\+X} (unsigned int x)
+\begin{DoxyCompactList}\small\item\em setter de X \end{DoxyCompactList}\item 
+void \hyperlink{classPosition_a557e6df4fac8167f3dd287889d2e1c0a}{set\+Y} (unsigned int y)
+\begin{DoxyCompactList}\small\item\em setter de Y \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classPosition_a917de1eeb8ba5056636b4274d7444a20}{distance} (\hyperlink{classPosition}{Position} position) const 
+\begin{DoxyCompactList}\small\item\em renvoie la distance entre la position actuelle et une autre position \end{DoxyCompactList}\item 
+\hypertarget{classPosition_ab3245f578d0c01b1c4a39a8e5df5a82c}{bool \hyperlink{classPosition_ab3245f578d0c01b1c4a39a8e5df5a82c}{operator==} (\hyperlink{classPosition}{Position} const \&position)}\label{classPosition_ab3245f578d0c01b1c4a39a8e5df5a82c}
+
+\begin{DoxyCompactList}\small\item\em surcharge de l'opérateur == \end{DoxyCompactList}\item 
+\hypertarget{classPosition_a93014db59c98c0f95eb2056bf546f956}{void \hyperlink{classPosition_a93014db59c98c0f95eb2056bf546f956}{afficher} () const }\label{classPosition_a93014db59c98c0f95eb2056bf546f956}
+
+\begin{DoxyCompactList}\small\item\em affiche la position \end{DoxyCompactList}\item 
+\hypertarget{classPosition_a429c01611d2b0d7dfb06d182ad60928c}{\hyperlink{classPosition}{Position} \hyperlink{classPosition_a429c01611d2b0d7dfb06d182ad60928c}{up} () const }\label{classPosition_a429c01611d2b0d7dfb06d182ad60928c}
+
+\begin{DoxyCompactList}\small\item\em méthode qui calcule la position au dessus de \char`\"{}this\char`\"{} \end{DoxyCompactList}\item 
+\hypertarget{classPosition_a20fbdadf072a7f285e8181f339776c0c}{\hyperlink{classPosition}{Position} \hyperlink{classPosition_a20fbdadf072a7f285e8181f339776c0c}{down} () const }\label{classPosition_a20fbdadf072a7f285e8181f339776c0c}
+
+\begin{DoxyCompactList}\small\item\em méthode qui calcule la position en dessous de \char`\"{}this\char`\"{} \end{DoxyCompactList}\item 
+\hypertarget{classPosition_ad90cc325cca474c6c140b63c9bc69ddd}{\hyperlink{classPosition}{Position} \hyperlink{classPosition_ad90cc325cca474c6c140b63c9bc69ddd}{left} () const }\label{classPosition_ad90cc325cca474c6c140b63c9bc69ddd}
+
+\begin{DoxyCompactList}\small\item\em méthode qui calcule la position a gauche de \char`\"{}this\char`\"{} \end{DoxyCompactList}\item 
+\hypertarget{classPosition_a5dff15ebfa9df6de047e0268c9e29728}{\hyperlink{classPosition}{Position} \hyperlink{classPosition_a5dff15ebfa9df6de047e0268c9e29728}{right} () const }\label{classPosition_a5dff15ebfa9df6de047e0268c9e29728}
+
+\begin{DoxyCompactList}\small\item\em méthode qui calcule la position a droite de \char`\"{}this\char`\"{} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe implémentant une position sur la map. 
+
+Définition à la ligne 19 du fichier position.\+hpp.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{classPosition_a3b1b8f105448a2d70dcc622ba475d13f}{\index{Position@{Position}!Position@{Position}}
+\index{Position@{Position}!Position@{Position}}
+\subsubsection[{Position}]{\setlength{\rightskip}{0pt plus 5cm}Position\+::\+Position (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{X, }
+\item[{unsigned int}]{Y}
+\end{DoxyParamCaption}
+)}}\label{classPosition_a3b1b8f105448a2d70dcc622ba475d13f}
+
+
+Constructeur, crée une position. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em X} & \\
+\hline
+{\em Y} & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classPosition_a917de1eeb8ba5056636b4274d7444a20}{\index{Position@{Position}!distance@{distance}}
+\index{distance@{distance}!Position@{Position}}
+\subsubsection[{distance}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Position\+::distance (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position}
+\end{DoxyParamCaption}
+) const}}\label{classPosition_a917de1eeb8ba5056636b4274d7444a20}
+
+
+renvoie la distance entre la position actuelle et une autre position 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position,l'autre} & position \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPosition_a175e80a49f22b64fd5adee597d996f12}{\index{Position@{Position}!get\+X@{get\+X}}
+\index{get\+X@{get\+X}!Position@{Position}}
+\subsubsection[{get\+X}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Position\+::get\+X (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPosition_a175e80a49f22b64fd5adee597d996f12}
+
+
+getter de X 
+
+\begin{DoxyReturn}{Renvoie}
+X, la valeur de X 
+\end{DoxyReturn}
+\hypertarget{classPosition_ab4200021493a42e7f6755231ad98bece}{\index{Position@{Position}!get\+Y@{get\+Y}}
+\index{get\+Y@{get\+Y}!Position@{Position}}
+\subsubsection[{get\+Y}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Position\+::get\+Y (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classPosition_ab4200021493a42e7f6755231ad98bece}
+
+
+getter de Y 
+
+\begin{DoxyReturn}{Renvoie}
+Y, la valeur de Y 
+\end{DoxyReturn}
+\hypertarget{classPosition_aed892c6444ea8f9cf0b03490306d3382}{\index{Position@{Position}!set\+X@{set\+X}}
+\index{set\+X@{set\+X}!Position@{Position}}
+\subsubsection[{set\+X}]{\setlength{\rightskip}{0pt plus 5cm}void Position\+::set\+X (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{x}
+\end{DoxyParamCaption}
+)}}\label{classPosition_aed892c6444ea8f9cf0b03490306d3382}
+
+
+setter de X 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x,la} & nouvelle valeur de X \\
+\hline
+\end{DoxyParams}
+\hypertarget{classPosition_a557e6df4fac8167f3dd287889d2e1c0a}{\index{Position@{Position}!set\+Y@{set\+Y}}
+\index{set\+Y@{set\+Y}!Position@{Position}}
+\subsubsection[{set\+Y}]{\setlength{\rightskip}{0pt plus 5cm}void Position\+::set\+Y (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{y}
+\end{DoxyParamCaption}
+)}}\label{classPosition_a557e6df4fac8167f3dd287889d2e1c0a}
+
+
+setter de Y 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em y,la} & nouvelle valeur de Y \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{position_8hpp}{position.\+hpp}\end{DoxyCompactItemize}

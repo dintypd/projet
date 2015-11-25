@@ -6,10 +6,10 @@
  *
 **/
 
-#include "concretemove.h"
-#include "map.h"
-#include "path.h"
-#include "unit.h"
+#include "concretemove.hpp"
+#include "map.hpp"
+#include "path.hpp"
+#include "unit.hpp"
 
 #include <iostream>
 

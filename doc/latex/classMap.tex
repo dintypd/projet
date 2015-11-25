@@ -1,0 +1,355 @@
+\hypertarget{classMap}{\section{Référence de la classe Map}
+\label{classMap}\index{Map@{Map}}
+}
+
+
+Classe permettant l'utilisation d'une map.  
+
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classMap_ae50ababdf30fcb0f5a10d38c1984eb75}{\hyperlink{classMap_ae50ababdf30fcb0f5a10d38c1984eb75}{Map} (std\+::vector$<$ std\+::vector$<$ unsigned int $>$$>$ tiles, std\+::vector$<$ \hyperlink{classPosition}{Position} $>$ starting\+Positions)}\label{classMap_ae50ababdf30fcb0f5a10d38c1984eb75}
+
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hypertarget{classMap_aa403fbe09394ccf39747588f5168e3b2}{\hyperlink{classMap_aa403fbe09394ccf39747588f5168e3b2}{$\sim$\+Map} ()}\label{classMap_aa403fbe09394ccf39747588f5168e3b2}
+
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+bool \hyperlink{classMap_a82b16c404e0e9a3f11619a4c040d6f74}{is\+Valid\+Path} (\hyperlink{classUnit}{Unit} $\ast$unit, \hyperlink{classPath}{Path} $\ast$path) const 
+\begin{DoxyCompactList}\small\item\em Méthode qui teste si un chemin est valide pour une unité donnée. \end{DoxyCompactList}\item 
+bool \hyperlink{classMap_a708c3a1b9b5e0771fedc078c8a22677a}{is\+Valid\+View\+Line} (\hyperlink{classUnit}{Unit} $\ast$unit, \hyperlink{classPosition}{Position} position) const 
+\begin{DoxyCompactList}\small\item\em Méthode qui teste si une ligne de vue est valide pour une unité donnée. \end{DoxyCompactList}\item 
+bool \hyperlink{classMap_a48877a918e3766b284120918b183b9d4}{is\+Valid\+Summon\+Position} (\hyperlink{classPosition}{Position} position, \hyperlink{classPlayer}{Player} $\ast$player) const 
+\begin{DoxyCompactList}\small\item\em Méthode qui teste si une unité peut être invoquée à la position donnée. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector\\*
+$<$ unsigned int $>$ $>$ \hyperlink{classMap_a902613cfaf7782f2212b088eccc2f0e7}{get\+Tiles} () const 
+\begin{DoxyCompactList}\small\item\em Méthode qui retourne le tableau de tiles. \end{DoxyCompactList}\item 
+\hyperlink{classUnit}{Unit} $\ast$ \hyperlink{classMap_a947916f15873cfad436bd8c156d8bcbf}{get\+Unit\+At} (\hyperlink{classPosition}{Position} position) const 
+\begin{DoxyCompactList}\small\item\em Méthode qui retourne une unité présente à une position donnée. \end{DoxyCompactList}\item 
+\hyperlink{classUnit}{Unit} $\ast$ \hyperlink{classMap_a5e9e5a63b3ffd5a7051d86cfb2ae2925}{get\+Unit} (unsigned int id) const 
+\begin{DoxyCompactList}\small\item\em Accesseur de l'unité en fonction de son identifiant. \end{DoxyCompactList}\item 
+bool \hyperlink{classMap_a150dfa9e7f3c31e8f7b8bdba6fe4a433}{is\+Unit} (unsigned int id) const 
+\begin{DoxyCompactList}\small\item\em Permet de savoir si une unité existe. \end{DoxyCompactList}\item 
+bool \hyperlink{classMap_ac1383a7aa9471f09d4a2f8708d872008}{is\+Unit\+At} (\hyperlink{classPosition}{Position} position) const 
+\begin{DoxyCompactList}\small\item\em Méthode testant la présence d'une unité à une position donnée. \end{DoxyCompactList}\item 
+\hyperlink{classBase}{Base} $\ast$ \hyperlink{classMap_a1943a0744e258950e341d368bdaec868}{get\+Base\+At} (\hyperlink{classPosition}{Position} position) const 
+\begin{DoxyCompactList}\small\item\em Méthode qui retourne la base à la position donnée. \end{DoxyCompactList}\item 
+bool \hyperlink{classMap_ad89412c547ebdcdd0831a8a7700c3f18}{is\+Base\+At} (\hyperlink{classPosition}{Position} position) const 
+\begin{DoxyCompactList}\small\item\em Méthode qui teste si une base est présente à la position donnée. \end{DoxyCompactList}\item 
+void \hyperlink{classMap_aee81c8e1fdb01828b733d392f5c1e068}{add\+Player} (\hyperlink{classPlayer}{Player} $\ast$player)
+\begin{DoxyCompactList}\small\item\em Ajoute un joueur sur la map. \end{DoxyCompactList}\item 
+std\+::map$<$ unsigned int, \hyperlink{classPlayer}{Player} $\ast$ $>$ $\ast$ \hyperlink{classMap_a8e1b744435056e5fff197956d1cfdfb7}{get\+Players} ()
+\begin{DoxyCompactList}\small\item\em Accesseur de la map des joueurs. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classMap_aaac0c6132fd80f0db5969833fed068c2}{get\+Size} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur de la taille de la map. \end{DoxyCompactList}\item 
+bool \hyperlink{classMap_a1c5ffa96157a27bba9673135974b200c}{is\+Blocked} (\hyperlink{classPosition}{Position} position) const 
+\begin{DoxyCompactList}\small\item\em Teste si la position donnée est bloquée. \end{DoxyCompactList}\item 
+void \hyperlink{classMap_adeacfcfebbc96d2818acf8e10f56a36e}{die} (\hyperlink{classUnit}{Unit} $\ast$unit)
+\begin{DoxyCompactList}\small\item\em Effectue les actions à la mort d'une unité \end{DoxyCompactList}\item 
+\hypertarget{classMap_a8cf8d2999a559ac2d6d1e7bcc09ecafb}{void \hyperlink{classMap_a8cf8d2999a559ac2d6d1e7bcc09ecafb}{base\+Break} ()}\label{classMap_a8cf8d2999a559ac2d6d1e7bcc09ecafb}
+
+\begin{DoxyCompactList}\small\item\em Effectue les actions à la mort d'une base. \end{DoxyCompactList}\item 
+\hyperlink{classPlayer}{Player} $\ast$ \hyperlink{classMap_ab99bf425d6dd3c9de7db90d54308a9b7}{get\+Winner} ()
+\begin{DoxyCompactList}\small\item\em Accesseur du gagnant de la partie. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe permettant l'utilisation d'une map. 
+
+Définition à la ligne 26 du fichier map.\+hpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classMap_aee81c8e1fdb01828b733d392f5c1e068}{\index{Map@{Map}!add\+Player@{add\+Player}}
+\index{add\+Player@{add\+Player}!Map@{Map}}
+\subsubsection[{add\+Player}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::add\+Player (
+\begin{DoxyParamCaption}
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+)}}\label{classMap_aee81c8e1fdb01828b733d392f5c1e068}
+
+
+Ajoute un joueur sur la map. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em player} & le joueur à ajouté \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMap_adeacfcfebbc96d2818acf8e10f56a36e}{\index{Map@{Map}!die@{die}}
+\index{die@{die}!Map@{Map}}
+\subsubsection[{die}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::die (
+\begin{DoxyParamCaption}
+\item[{{\bf Unit} $\ast$}]{unit}
+\end{DoxyParamCaption}
+)}}\label{classMap_adeacfcfebbc96d2818acf8e10f56a36e}
+
+
+Effectue les actions à la mort d'une unité 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unit} & une unité \\
+\hline
+\end{DoxyParams}
+\hypertarget{classMap_a1943a0744e258950e341d368bdaec868}{\index{Map@{Map}!get\+Base\+At@{get\+Base\+At}}
+\index{get\+Base\+At@{get\+Base\+At}!Map@{Map}}
+\subsubsection[{get\+Base\+At}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Base}$\ast$ Map\+::get\+Base\+At (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position}
+\end{DoxyParamCaption}
+) const}}\label{classMap_a1943a0744e258950e341d368bdaec868}
+
+
+Méthode qui retourne la base à la position donnée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position} & la position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la base 
+\end{DoxyReturn}
+\hypertarget{classMap_a8e1b744435056e5fff197956d1cfdfb7}{\index{Map@{Map}!get\+Players@{get\+Players}}
+\index{get\+Players@{get\+Players}!Map@{Map}}
+\subsubsection[{get\+Players}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$unsigned int, {\bf Player}$\ast$$>$$\ast$ Map\+::get\+Players (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMap_a8e1b744435056e5fff197956d1cfdfb7}
+
+
+Accesseur de la map des joueurs. 
+
+\begin{DoxyReturn}{Renvoie}
+une map id -\/$>$ joueur contenant tous les joueurs 
+\end{DoxyReturn}
+\hypertarget{classMap_aaac0c6132fd80f0db5969833fed068c2}{\index{Map@{Map}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Map@{Map}}
+\subsubsection[{get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Map\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classMap_aaac0c6132fd80f0db5969833fed068c2}
+
+
+Accesseur de la taille de la map. 
+
+\begin{DoxyReturn}{Renvoie}
+un unsigned int 
+\end{DoxyReturn}
+\hypertarget{classMap_a902613cfaf7782f2212b088eccc2f0e7}{\index{Map@{Map}!get\+Tiles@{get\+Tiles}}
+\index{get\+Tiles@{get\+Tiles}!Map@{Map}}
+\subsubsection[{get\+Tiles}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::vector$<$unsigned int$>$ $>$ Map\+::get\+Tiles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classMap_a902613cfaf7782f2212b088eccc2f0e7}
+
+
+Méthode qui retourne le tableau de tiles. 
+
+\begin{DoxyReturn}{Renvoie}
+le tableau des tiles 
+\end{DoxyReturn}
+\hypertarget{classMap_a5e9e5a63b3ffd5a7051d86cfb2ae2925}{\index{Map@{Map}!get\+Unit@{get\+Unit}}
+\index{get\+Unit@{get\+Unit}!Map@{Map}}
+\subsubsection[{get\+Unit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unit}$\ast$ Map\+::get\+Unit (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id}
+\end{DoxyParamCaption}
+) const}}\label{classMap_a5e9e5a63b3ffd5a7051d86cfb2ae2925}
+
+
+Accesseur de l'unité en fonction de son identifiant. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & l'identifiant de l'unité \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+l'unité qui possède id comme identifiant 
+\end{DoxyReturn}
+\hypertarget{classMap_a947916f15873cfad436bd8c156d8bcbf}{\index{Map@{Map}!get\+Unit\+At@{get\+Unit\+At}}
+\index{get\+Unit\+At@{get\+Unit\+At}!Map@{Map}}
+\subsubsection[{get\+Unit\+At}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unit}$\ast$ Map\+::get\+Unit\+At (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position}
+\end{DoxyParamCaption}
+) const}}\label{classMap_a947916f15873cfad436bd8c156d8bcbf}
+
+
+Méthode qui retourne une unité présente à une position donnée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position} & la position à laquelle on va récupèrer l'unité \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+l'unité présente à la position donnée 
+\end{DoxyReturn}
+\hypertarget{classMap_ab99bf425d6dd3c9de7db90d54308a9b7}{\index{Map@{Map}!get\+Winner@{get\+Winner}}
+\index{get\+Winner@{get\+Winner}!Map@{Map}}
+\subsubsection[{get\+Winner}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Player}$\ast$ Map\+::get\+Winner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classMap_ab99bf425d6dd3c9de7db90d54308a9b7}
+
+
+Accesseur du gagnant de la partie. 
+
+\begin{DoxyReturn}{Renvoie}
+une joueur 
+\end{DoxyReturn}
+\hypertarget{classMap_ad89412c547ebdcdd0831a8a7700c3f18}{\index{Map@{Map}!is\+Base\+At@{is\+Base\+At}}
+\index{is\+Base\+At@{is\+Base\+At}!Map@{Map}}
+\subsubsection[{is\+Base\+At}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::is\+Base\+At (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position}
+\end{DoxyParamCaption}
+) const}}\label{classMap_ad89412c547ebdcdd0831a8a7700c3f18}
+
+
+Méthode qui teste si une base est présente à la position donnée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position} & la position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vrai si il y a une base 
+\end{DoxyReturn}
+\hypertarget{classMap_a1c5ffa96157a27bba9673135974b200c}{\index{Map@{Map}!is\+Blocked@{is\+Blocked}}
+\index{is\+Blocked@{is\+Blocked}!Map@{Map}}
+\subsubsection[{is\+Blocked}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::is\+Blocked (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position}
+\end{DoxyParamCaption}
+) const}}\label{classMap_a1c5ffa96157a27bba9673135974b200c}
+
+
+Teste si la position donnée est bloquée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position} & une position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vrai si la position est bloquée, faux sinon 
+\end{DoxyReturn}
+\hypertarget{classMap_a150dfa9e7f3c31e8f7b8bdba6fe4a433}{\index{Map@{Map}!is\+Unit@{is\+Unit}}
+\index{is\+Unit@{is\+Unit}!Map@{Map}}
+\subsubsection[{is\+Unit}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::is\+Unit (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{id}
+\end{DoxyParamCaption}
+) const}}\label{classMap_a150dfa9e7f3c31e8f7b8bdba6fe4a433}
+
+
+Permet de savoir si une unité existe. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em id} & l'identifiant de l'unité \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vrai si l'unité existe 
+\end{DoxyReturn}
+\hypertarget{classMap_ac1383a7aa9471f09d4a2f8708d872008}{\index{Map@{Map}!is\+Unit\+At@{is\+Unit\+At}}
+\index{is\+Unit\+At@{is\+Unit\+At}!Map@{Map}}
+\subsubsection[{is\+Unit\+At}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::is\+Unit\+At (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position}
+\end{DoxyParamCaption}
+) const}}\label{classMap_ac1383a7aa9471f09d4a2f8708d872008}
+
+
+Méthode testant la présence d'une unité à une position donnée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position} & la position a laquelle on veut savoir si une unité est présente \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vrai s'il y a une unité à la position donnée 
+\end{DoxyReturn}
+\hypertarget{classMap_a82b16c404e0e9a3f11619a4c040d6f74}{\index{Map@{Map}!is\+Valid\+Path@{is\+Valid\+Path}}
+\index{is\+Valid\+Path@{is\+Valid\+Path}!Map@{Map}}
+\subsubsection[{is\+Valid\+Path}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::is\+Valid\+Path (
+\begin{DoxyParamCaption}
+\item[{{\bf Unit} $\ast$}]{unit, }
+\item[{{\bf Path} $\ast$}]{path}
+\end{DoxyParamCaption}
+) const}}\label{classMap_a82b16c404e0e9a3f11619a4c040d6f74}
+
+
+Méthode qui teste si un chemin est valide pour une unité donnée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unit} & l'unité permetant de savoir l'emplacement de départ du chemin \\
+\hline
+{\em path} & le chemin à tester \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vrai si le chemin est valide 
+\end{DoxyReturn}
+\hypertarget{classMap_a48877a918e3766b284120918b183b9d4}{\index{Map@{Map}!is\+Valid\+Summon\+Position@{is\+Valid\+Summon\+Position}}
+\index{is\+Valid\+Summon\+Position@{is\+Valid\+Summon\+Position}!Map@{Map}}
+\subsubsection[{is\+Valid\+Summon\+Position}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::is\+Valid\+Summon\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position, }
+\item[{{\bf Player} $\ast$}]{player}
+\end{DoxyParamCaption}
+) const}}\label{classMap_a48877a918e3766b284120918b183b9d4}
+
+
+Méthode qui teste si une unité peut être invoquée à la position donnée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position} & la position d'invocation \\
+\hline
+{\em player} & le joueur qui invoque \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vrai si l'unité peut être invoquée à la position p 
+\end{DoxyReturn}
+\hypertarget{classMap_a708c3a1b9b5e0771fedc078c8a22677a}{\index{Map@{Map}!is\+Valid\+View\+Line@{is\+Valid\+View\+Line}}
+\index{is\+Valid\+View\+Line@{is\+Valid\+View\+Line}!Map@{Map}}
+\subsubsection[{is\+Valid\+View\+Line}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::is\+Valid\+View\+Line (
+\begin{DoxyParamCaption}
+\item[{{\bf Unit} $\ast$}]{unit, }
+\item[{{\bf Position}}]{position}
+\end{DoxyParamCaption}
+) const}}\label{classMap_a708c3a1b9b5e0771fedc078c8a22677a}
+
+
+Méthode qui teste si une ligne de vue est valide pour une unité donnée. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em unit} & l'unité permetant de savoir l'emplacement de départ de l'action \\
+\hline
+{\em position} & la position ou l'action doit être effectuée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vrai si la ligne de vue est valide 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{map_8hpp}{map.\+hpp}\end{DoxyCompactItemize}

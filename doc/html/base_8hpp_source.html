@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>Projet Design Pattern:  Fichier source de src/base.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Projet Design Pattern
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">base.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="base_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef BASE_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define BASE_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="position_8hpp.html">position.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">class </span><a class="code" href="classPlayer.html">Player</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">class </span><a class="code" href="classHPLoss.html">HPLoss</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classBase.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBase.html">Base</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _hp,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                     _maxHP,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                     _summonRange,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                     _buildRange;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="classPlayer.html">Player</a>* _player;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="classHPLoss.html">HPLoss</a>* _hpLoss;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="classPosition.html">Position</a> _position;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="classBase.html#a32aefb7f04339edda2e2517502dd27b2">Base</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> hp, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> summonRange, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> buildRange, <a class="code" href="classHPLoss.html">HPLoss</a>* <a class="code" href="classBase.html#a3f6ba779a531b048daa9cec42c945b91">hpLoss</a>, <a class="code" href="classPosition.html">Position</a> position);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;         <a class="code" href="classBase.html#a722da881b6c70cfcbde9243abcfbf334">~Base</a>();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;         </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classBase.html#a7f6a0b45ce6331d7bfb0d6f716d5ba60">getSummonRange</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classBase.html#a1bd08f26289caa9aa0028efd9dae8d9e">getBuildRange</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classBase.html#a1a3daeb406afce579a88debf4424b0a0">afficher</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classBase.html#a0e05c8081bb85324b884abfa6712f6fb">setHP</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classBase.html#a8fd6606cff73e39cd05225bd7b395218">getHP</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classBase.html#a8599d1b3c4d1b744d5e3d42abfb47361">getMaxHP</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classBase.html#a0e2dd85f633ed25b9ab144fb7c769b7b">setPlayer</a>(<a class="code" href="classPlayer.html">Player</a>* player);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="classPosition.html">Position</a> <a class="code" href="classBase.html#ae2abb880ce9543ac70419714f8c1181f">getPosition</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classBase.html#a17fc3f12f7aedbf5a8be8f0f271a3f62">setPosition</a>(<a class="code" href="classPosition.html">Position</a> position);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classBase.html#a3f6ba779a531b048daa9cec42c945b91">hpLoss</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif // BASE_HPP</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="ttc" id="classBase_html"><div class="ttname"><a href="classBase.html">Base</a></div><div class="ttdoc">Classe définissant une base. </div><div class="ttdef"><b>Definition:</b> <a href="base_8hpp_source.html#l00021">base.hpp:21</a></div></div>
+<div class="ttc" id="classBase_html_a0e2dd85f633ed25b9ab144fb7c769b7b"><div class="ttname"><a href="classBase.html#a0e2dd85f633ed25b9ab144fb7c769b7b">Base::setPlayer</a></div><div class="ttdeci">void setPlayer(Player *player)</div><div class="ttdoc">Modificateur du joueur associé à la base. </div></div>
+<div class="ttc" id="classBase_html_ae2abb880ce9543ac70419714f8c1181f"><div class="ttname"><a href="classBase.html#ae2abb880ce9543ac70419714f8c1181f">Base::getPosition</a></div><div class="ttdeci">Position getPosition() const </div><div class="ttdoc">Accesseur de la position de la base. </div></div>
+<div class="ttc" id="classBase_html_a0e05c8081bb85324b884abfa6712f6fb"><div class="ttname"><a href="classBase.html#a0e05c8081bb85324b884abfa6712f6fb">Base::setHP</a></div><div class="ttdeci">void setHP(unsigned int value)</div><div class="ttdoc">Modificateur du nombre de points de vie. </div></div>
+<div class="ttc" id="classPosition_html"><div class="ttname"><a href="classPosition.html">Position</a></div><div class="ttdoc">Classe implémentant une position sur la map. </div><div class="ttdef"><b>Definition:</b> <a href="position_8hpp_source.html#l00019">position.hpp:19</a></div></div>
+<div class="ttc" id="classBase_html_a1bd08f26289caa9aa0028efd9dae8d9e"><div class="ttname"><a href="classBase.html#a1bd08f26289caa9aa0028efd9dae8d9e">Base::getBuildRange</a></div><div class="ttdeci">unsigned int getBuildRange() const </div><div class="ttdoc">Accesseur de la portée de construction. </div></div>
+<div class="ttc" id="classBase_html_a3f6ba779a531b048daa9cec42c945b91"><div class="ttname"><a href="classBase.html#a3f6ba779a531b048daa9cec42c945b91">Base::hpLoss</a></div><div class="ttdeci">void hpLoss(unsigned int value)</div><div class="ttdoc">L&#39;unité perd des points de vie. </div></div>
+<div class="ttc" id="classHPLoss_html"><div class="ttname"><a href="classHPLoss.html">HPLoss</a></div><div class="ttdoc">Classe virtuelle pure permettant l&#39;utilisation de différents comportement de la perte de points de vi...</div><div class="ttdef"><b>Definition:</b> <a href="hploss_8hpp_source.html#l00020">hploss.hpp:20</a></div></div>
+<div class="ttc" id="classBase_html_a17fc3f12f7aedbf5a8be8f0f271a3f62"><div class="ttname"><a href="classBase.html#a17fc3f12f7aedbf5a8be8f0f271a3f62">Base::setPosition</a></div><div class="ttdeci">void setPosition(Position position)</div><div class="ttdoc">Modificateur de la position de la base. </div></div>
+<div class="ttc" id="classBase_html_a8599d1b3c4d1b744d5e3d42abfb47361"><div class="ttname"><a href="classBase.html#a8599d1b3c4d1b744d5e3d42abfb47361">Base::getMaxHP</a></div><div class="ttdeci">unsigned int getMaxHP() const </div><div class="ttdoc">Accesseur des points de vie max. </div></div>
+<div class="ttc" id="classBase_html_a1a3daeb406afce579a88debf4424b0a0"><div class="ttname"><a href="classBase.html#a1a3daeb406afce579a88debf4424b0a0">Base::afficher</a></div><div class="ttdeci">void afficher() const </div><div class="ttdoc">Affiche la base. </div></div>
+<div class="ttc" id="classBase_html_a32aefb7f04339edda2e2517502dd27b2"><div class="ttname"><a href="classBase.html#a32aefb7f04339edda2e2517502dd27b2">Base::Base</a></div><div class="ttdeci">Base(unsigned int hp, unsigned int summonRange, unsigned int buildRange, HPLoss *hpLoss, Position position)</div><div class="ttdoc">Constructeur. </div></div>
+<div class="ttc" id="classBase_html_a8fd6606cff73e39cd05225bd7b395218"><div class="ttname"><a href="classBase.html#a8fd6606cff73e39cd05225bd7b395218">Base::getHP</a></div><div class="ttdeci">unsigned int getHP() const </div><div class="ttdoc">Accesseur des points de vie. </div></div>
+<div class="ttc" id="position_8hpp_html"><div class="ttname"><a href="position_8hpp.html">position.hpp</a></div><div class="ttdoc">definition de la classe Position </div></div>
+<div class="ttc" id="classBase_html_a722da881b6c70cfcbde9243abcfbf334"><div class="ttname"><a href="classBase.html#a722da881b6c70cfcbde9243abcfbf334">Base::~Base</a></div><div class="ttdeci">~Base()</div><div class="ttdoc">Destructeur. </div></div>
+<div class="ttc" id="classBase_html_a7f6a0b45ce6331d7bfb0d6f716d5ba60"><div class="ttname"><a href="classBase.html#a7f6a0b45ce6331d7bfb0d6f716d5ba60">Base::getSummonRange</a></div><div class="ttdeci">unsigned int getSummonRange() const </div><div class="ttdoc">Accesseur de la portée d&#39;invocation. </div></div>
+<div class="ttc" id="classPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdoc">Classe définissant un joueur. </div><div class="ttdef"><b>Definition:</b> <a href="player_8hpp_source.html#l00022">player.hpp:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mercredi 25 Novembre 2015 11:58:57 pour Projet Design Pattern par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

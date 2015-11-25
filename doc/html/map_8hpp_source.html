@@ -1,0 +1,190 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>Projet Design Pattern:  Fichier source de src/map.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Projet Design Pattern
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">map.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="map_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef MAP_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define MAP_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="position_8hpp.html">position.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="classPlayer.html">Player</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span><a class="code" href="classUnit.html">Unit</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span><a class="code" href="classPath.html">Path</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span><a class="code" href="classBase.html">Base</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classMap.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMap.html">Map</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _size;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        std::vector&lt;std::vector&lt;unsigned int&gt;&gt; _tiles;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        std::vector&lt;Position&gt; _startingPositions;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        std::map&lt;unsigned int, Player*&gt; _players;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classMap.html#ae50ababdf30fcb0f5a10d38c1984eb75">Map</a>(std::vector&lt;std::vector&lt;unsigned int&gt;&gt; tiles,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            std::vector&lt;Position&gt; startingPositions);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;         <a class="code" href="classMap.html#aa403fbe09394ccf39747588f5168e3b2">~Map</a>();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classMap.html#a82b16c404e0e9a3f11619a4c040d6f74">isValidPath</a>(<a class="code" href="classUnit.html">Unit</a>* unit, <a class="code" href="classPath.html">Path</a>* path) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="comment">// NON IMPLEMENTEE /////////////////////</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"></span>        <span class="keywordtype">bool</span> <a class="code" href="classMap.html#a708c3a1b9b5e0771fedc078c8a22677a">isValidViewLine</a>(<a class="code" href="classUnit.html">Unit</a>* unit, <a class="code" href="classPosition.html">Position</a> position) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classMap.html#a48877a918e3766b284120918b183b9d4">isValidSummonPosition</a>(<a class="code" href="classPosition.html">Position</a> position, <a class="code" href="classPlayer.html">Player</a>* player) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        std::vector&lt;std::vector&lt;unsigned int&gt;&gt; <a class="code" href="classMap.html#a902613cfaf7782f2212b088eccc2f0e7">getTiles</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="classUnit.html">Unit</a>* <a class="code" href="classMap.html#a947916f15873cfad436bd8c156d8bcbf">getUnitAt</a>(<a class="code" href="classPosition.html">Position</a> position) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="classUnit.html">Unit</a>* <a class="code" href="classMap.html#a5e9e5a63b3ffd5a7051d86cfb2ae2925">getUnit</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;         <span class="keywordtype">bool</span> <a class="code" href="classMap.html#a150dfa9e7f3c31e8f7b8bdba6fe4a433">isUnit</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classMap.html#ac1383a7aa9471f09d4a2f8708d872008">isUnitAt</a>(<a class="code" href="classPosition.html">Position</a> position) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="classBase.html">Base</a>* <a class="code" href="classMap.html#a1943a0744e258950e341d368bdaec868">getBaseAt</a>(<a class="code" href="classPosition.html">Position</a> position) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classMap.html#ad89412c547ebdcdd0831a8a7700c3f18">isBaseAt</a>(<a class="code" href="classPosition.html">Position</a> position) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classMap.html#aee81c8e1fdb01828b733d392f5c1e068">addPlayer</a>(<a class="code" href="classPlayer.html">Player</a>* player);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        std::map&lt;unsigned int, Player*&gt; * <a class="code" href="classMap.html#a8e1b744435056e5fff197956d1cfdfb7">getPlayers</a>();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classMap.html#aaac0c6132fd80f0db5969833fed068c2">getSize</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classMap.html#a1c5ffa96157a27bba9673135974b200c">isBlocked</a>(<a class="code" href="classPosition.html">Position</a> position) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classMap.html#adeacfcfebbc96d2818acf8e10f56a36e">die</a>(<a class="code" href="classUnit.html">Unit</a>* unit);</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classMap.html#a8cf8d2999a559ac2d6d1e7bcc09ecafb">baseBreak</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <a class="code" href="classPlayer.html">Player</a>* <a class="code" href="classMap.html#ab99bf425d6dd3c9de7db90d54308a9b7">getWinner</a>();</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;};</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#endif // MAP_HPP</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="ttc" id="classBase_html"><div class="ttname"><a href="classBase.html">Base</a></div><div class="ttdoc">Classe définissant une base. </div><div class="ttdef"><b>Definition:</b> <a href="base_8hpp_source.html#l00021">base.hpp:21</a></div></div>
+<div class="ttc" id="classMap_html_a902613cfaf7782f2212b088eccc2f0e7"><div class="ttname"><a href="classMap.html#a902613cfaf7782f2212b088eccc2f0e7">Map::getTiles</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; unsigned int &gt; &gt; getTiles() const </div><div class="ttdoc">Méthode qui retourne le tableau de tiles. </div></div>
+<div class="ttc" id="classMap_html_aaac0c6132fd80f0db5969833fed068c2"><div class="ttname"><a href="classMap.html#aaac0c6132fd80f0db5969833fed068c2">Map::getSize</a></div><div class="ttdeci">unsigned int getSize() const </div><div class="ttdoc">Accesseur de la taille de la map. </div></div>
+<div class="ttc" id="classMap_html_aa403fbe09394ccf39747588f5168e3b2"><div class="ttname"><a href="classMap.html#aa403fbe09394ccf39747588f5168e3b2">Map::~Map</a></div><div class="ttdeci">~Map()</div><div class="ttdoc">Destructeur. </div></div>
+<div class="ttc" id="classPosition_html"><div class="ttname"><a href="classPosition.html">Position</a></div><div class="ttdoc">Classe implémentant une position sur la map. </div><div class="ttdef"><b>Definition:</b> <a href="position_8hpp_source.html#l00019">position.hpp:19</a></div></div>
+<div class="ttc" id="classMap_html_adeacfcfebbc96d2818acf8e10f56a36e"><div class="ttname"><a href="classMap.html#adeacfcfebbc96d2818acf8e10f56a36e">Map::die</a></div><div class="ttdeci">void die(Unit *unit)</div><div class="ttdoc">Effectue les actions à la mort d&#39;une unité </div></div>
+<div class="ttc" id="classMap_html_ac1383a7aa9471f09d4a2f8708d872008"><div class="ttname"><a href="classMap.html#ac1383a7aa9471f09d4a2f8708d872008">Map::isUnitAt</a></div><div class="ttdeci">bool isUnitAt(Position position) const </div><div class="ttdoc">Méthode testant la présence d&#39;une unité à une position donnée. </div></div>
+<div class="ttc" id="classMap_html_a947916f15873cfad436bd8c156d8bcbf"><div class="ttname"><a href="classMap.html#a947916f15873cfad436bd8c156d8bcbf">Map::getUnitAt</a></div><div class="ttdeci">Unit * getUnitAt(Position position) const </div><div class="ttdoc">Méthode qui retourne une unité présente à une position donnée. </div></div>
+<div class="ttc" id="classMap_html_a8e1b744435056e5fff197956d1cfdfb7"><div class="ttname"><a href="classMap.html#a8e1b744435056e5fff197956d1cfdfb7">Map::getPlayers</a></div><div class="ttdeci">std::map&lt; unsigned int, Player * &gt; * getPlayers()</div><div class="ttdoc">Accesseur de la map des joueurs. </div></div>
+<div class="ttc" id="classMap_html_ab99bf425d6dd3c9de7db90d54308a9b7"><div class="ttname"><a href="classMap.html#ab99bf425d6dd3c9de7db90d54308a9b7">Map::getWinner</a></div><div class="ttdeci">Player * getWinner()</div><div class="ttdoc">Accesseur du gagnant de la partie. </div></div>
+<div class="ttc" id="classMap_html_aee81c8e1fdb01828b733d392f5c1e068"><div class="ttname"><a href="classMap.html#aee81c8e1fdb01828b733d392f5c1e068">Map::addPlayer</a></div><div class="ttdeci">void addPlayer(Player *player)</div><div class="ttdoc">Ajoute un joueur sur la map. </div></div>
+<div class="ttc" id="classPath_html"><div class="ttname"><a href="classPath.html">Path</a></div><div class="ttdoc">Classe implémentant un chemin (path) sur la map. </div><div class="ttdef"><b>Definition:</b> <a href="path_8hpp_source.html#l00021">path.hpp:21</a></div></div>
+<div class="ttc" id="classMap_html_a5e9e5a63b3ffd5a7051d86cfb2ae2925"><div class="ttname"><a href="classMap.html#a5e9e5a63b3ffd5a7051d86cfb2ae2925">Map::getUnit</a></div><div class="ttdeci">Unit * getUnit(unsigned int id) const </div><div class="ttdoc">Accesseur de l&#39;unité en fonction de son identifiant. </div></div>
+<div class="ttc" id="classMap_html_a8cf8d2999a559ac2d6d1e7bcc09ecafb"><div class="ttname"><a href="classMap.html#a8cf8d2999a559ac2d6d1e7bcc09ecafb">Map::baseBreak</a></div><div class="ttdeci">void baseBreak()</div><div class="ttdoc">Effectue les actions à la mort d&#39;une base. </div></div>
+<div class="ttc" id="classMap_html_a48877a918e3766b284120918b183b9d4"><div class="ttname"><a href="classMap.html#a48877a918e3766b284120918b183b9d4">Map::isValidSummonPosition</a></div><div class="ttdeci">bool isValidSummonPosition(Position position, Player *player) const </div><div class="ttdoc">Méthode qui teste si une unité peut être invoquée à la position donnée. </div></div>
+<div class="ttc" id="classMap_html"><div class="ttname"><a href="classMap.html">Map</a></div><div class="ttdoc">Classe permettant l&#39;utilisation d&#39;une map. </div><div class="ttdef"><b>Definition:</b> <a href="map_8hpp_source.html#l00026">map.hpp:26</a></div></div>
+<div class="ttc" id="classMap_html_a1943a0744e258950e341d368bdaec868"><div class="ttname"><a href="classMap.html#a1943a0744e258950e341d368bdaec868">Map::getBaseAt</a></div><div class="ttdeci">Base * getBaseAt(Position position) const </div><div class="ttdoc">Méthode qui retourne la base à la position donnée. </div></div>
+<div class="ttc" id="classMap_html_ae50ababdf30fcb0f5a10d38c1984eb75"><div class="ttname"><a href="classMap.html#ae50ababdf30fcb0f5a10d38c1984eb75">Map::Map</a></div><div class="ttdeci">Map(std::vector&lt; std::vector&lt; unsigned int &gt;&gt; tiles, std::vector&lt; Position &gt; startingPositions)</div><div class="ttdoc">Constructeur. </div></div>
+<div class="ttc" id="classMap_html_a1c5ffa96157a27bba9673135974b200c"><div class="ttname"><a href="classMap.html#a1c5ffa96157a27bba9673135974b200c">Map::isBlocked</a></div><div class="ttdeci">bool isBlocked(Position position) const </div><div class="ttdoc">Teste si la position donnée est bloquée. </div></div>
+<div class="ttc" id="classMap_html_ad89412c547ebdcdd0831a8a7700c3f18"><div class="ttname"><a href="classMap.html#ad89412c547ebdcdd0831a8a7700c3f18">Map::isBaseAt</a></div><div class="ttdeci">bool isBaseAt(Position position) const </div><div class="ttdoc">Méthode qui teste si une base est présente à la position donnée. </div></div>
+<div class="ttc" id="position_8hpp_html"><div class="ttname"><a href="position_8hpp.html">position.hpp</a></div><div class="ttdoc">definition de la classe Position </div></div>
+<div class="ttc" id="classMap_html_a150dfa9e7f3c31e8f7b8bdba6fe4a433"><div class="ttname"><a href="classMap.html#a150dfa9e7f3c31e8f7b8bdba6fe4a433">Map::isUnit</a></div><div class="ttdeci">bool isUnit(unsigned int id) const </div><div class="ttdoc">Permet de savoir si une unité existe. </div></div>
+<div class="ttc" id="classMap_html_a708c3a1b9b5e0771fedc078c8a22677a"><div class="ttname"><a href="classMap.html#a708c3a1b9b5e0771fedc078c8a22677a">Map::isValidViewLine</a></div><div class="ttdeci">bool isValidViewLine(Unit *unit, Position position) const </div><div class="ttdoc">Méthode qui teste si une ligne de vue est valide pour une unité donnée. </div></div>
+<div class="ttc" id="classUnit_html"><div class="ttname"><a href="classUnit.html">Unit</a></div><div class="ttdoc">Classe permettant l&#39;utilisation d&#39;unités. </div><div class="ttdef"><b>Definition:</b> <a href="unit_8hpp_source.html#l00026">unit.hpp:26</a></div></div>
+<div class="ttc" id="classPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdoc">Classe définissant un joueur. </div><div class="ttdef"><b>Definition:</b> <a href="player_8hpp_source.html#l00022">player.hpp:22</a></div></div>
+<div class="ttc" id="classMap_html_a82b16c404e0e9a3f11619a4c040d6f74"><div class="ttname"><a href="classMap.html#a82b16c404e0e9a3f11619a4c040d6f74">Map::isValidPath</a></div><div class="ttdeci">bool isValidPath(Unit *unit, Path *path) const </div><div class="ttdoc">Méthode qui teste si un chemin est valide pour une unité donnée. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mercredi 25 Novembre 2015 11:58:57 pour Projet Design Pattern par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

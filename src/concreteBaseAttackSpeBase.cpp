@@ -6,12 +6,13 @@
  *
 **/
 
-#include "concreteBaseAttackSpeBase.h"
+#include "concreteBaseAttackSpeBase.hpp"
+#include "map.hpp"
+#include "position.hpp"
+#include "unit.hpp"
+#include "base.hpp"
+
 #include <iostream>
-#include "map.h"
-#include "position.h"
-#include "unit.h"
-#include "base.h"
 
 using namespace std;
 

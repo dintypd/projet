@@ -6,9 +6,9 @@
  *
 **/
 
-#include "spawner.h"
-#include "unit.h"
-#include "position.h"
+#include "spawner.hpp"
+#include "unit.hpp"
+#include "position.hpp"
 
 using namespace std;
 

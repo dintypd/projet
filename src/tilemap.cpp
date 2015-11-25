@@ -5,7 +5,7 @@
  * @brief Implémentation des méthodes de la classe TileMap
 **/
 
-#include "tilemap.h"
+#include "tilemap.hpp"
 
 using namespace std;
 

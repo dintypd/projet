@@ -1,0 +1,86 @@
+\hypertarget{classHPLoss}{\section{Référence de la classe H\+P\+Loss}
+\label{classHPLoss}\index{H\+P\+Loss@{H\+P\+Loss}}
+}
+
+
+Classe virtuelle pure permettant l'utilisation de différents comportement de la perte de points de vie selon l'unité. Elle est utilisée dans le cadre du pattern Strategy.  
+
+
+
+
+{\ttfamily \#include $<$hploss.\+hpp$>$}
+
+Graphe d'héritage de H\+P\+Loss\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classHPLoss}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{classHPLoss_a9572e4b06e306798325e2b27d15244e2}{hp\+Loss} (unsigned int value, \hyperlink{classUnit}{Unit} $\ast$u)=0
+\begin{DoxyCompactList}\small\item\em destructeur (évite les warning) \end{DoxyCompactList}\item 
+virtual void \hyperlink{classHPLoss_a65218bfa1695b56033b5ba894ba0d778}{hp\+Loss} (unsigned int value, \hyperlink{classBase}{Base} $\ast$b)=0
+\begin{DoxyCompactList}\small\item\em Méthode virtuelle pure de perte d'hp des bases. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe virtuelle pure permettant l'utilisation de différents comportement de la perte de points de vie selon l'unité. Elle est utilisée dans le cadre du pattern Strategy. 
+
+Définition à la ligne 20 du fichier hploss.\+hpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classHPLoss_a9572e4b06e306798325e2b27d15244e2}{\index{H\+P\+Loss@{H\+P\+Loss}!hp\+Loss@{hp\+Loss}}
+\index{hp\+Loss@{hp\+Loss}!H\+P\+Loss@{H\+P\+Loss}}
+\subsubsection[{hp\+Loss}]{\setlength{\rightskip}{0pt plus 5cm}virtual void H\+P\+Loss\+::hp\+Loss (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{value, }
+\item[{{\bf Unit} $\ast$}]{u}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classHPLoss_a9572e4b06e306798325e2b27d15244e2}
+
+
+destructeur (évite les warning) 
+
+Méthode virtuelle pure de perte d'hp des unité 
+\begin{DoxyParams}{Paramètres}
+{\em value} & un entier positif \\
+\hline
+{\em u} & l'unité qui prend des dégats \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{classConcreteHPLoss_a5bebc84735ab86cd54f19a8488464558}{Concrete\+H\+P\+Loss}, et \hyperlink{classConcreteHPLossSpeDef_ad62272f839de14217c84688bd2fa5aba}{Concrete\+H\+P\+Loss\+Spe\+Def}.
+
+\hypertarget{classHPLoss_a65218bfa1695b56033b5ba894ba0d778}{\index{H\+P\+Loss@{H\+P\+Loss}!hp\+Loss@{hp\+Loss}}
+\index{hp\+Loss@{hp\+Loss}!H\+P\+Loss@{H\+P\+Loss}}
+\subsubsection[{hp\+Loss}]{\setlength{\rightskip}{0pt plus 5cm}virtual void H\+P\+Loss\+::hp\+Loss (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{value, }
+\item[{{\bf Base} $\ast$}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classHPLoss_a65218bfa1695b56033b5ba894ba0d778}
+
+
+Méthode virtuelle pure de perte d'hp des bases. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em value} & un entier positif \\
+\hline
+{\em b} & la base qui prend des dégats \\
+\hline
+\end{DoxyParams}
+
+
+Implémenté dans \hyperlink{classConcreteHPLoss_ae15f6aa597fdc1e1fce3326beb90c335}{Concrete\+H\+P\+Loss}, et \hyperlink{classConcreteHPLossSpeDef_ad7b1e1fa122742674fe53e89a6c4b261}{Concrete\+H\+P\+Loss\+Spe\+Def}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{hploss_8hpp}{hploss.\+hpp}\end{DoxyCompactItemize}

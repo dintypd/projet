@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>Projet Design Pattern:  Fichier source de src/unit.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Projet Design Pattern
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">unit.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="unit_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef UNIT_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define UNIT_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="position_8hpp.html">position.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">class </span><a class="code" href="classMap.html">Map</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="classHPLoss.html">HPLoss</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">class </span><a class="code" href="classAttack.html">Attack</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span><a class="code" href="classMove.html">Move</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">class </span><a class="code" href="classPath.html">Path</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classUnit.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classUnit.html">Unit</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _id,       <span class="comment">// identifiant unique</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                     _range,    <span class="comment">// portée d&#39;attaque</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                     _ap,       <span class="comment">// Action Points</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                     _apMax,    <span class="comment">// Action Points Max</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                     _mp,       <span class="comment">// Move Points</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                     _mpMax,    <span class="comment">// Move Points Max</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                     _hp,       <span class="comment">// Health Points</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                     _hpMax,    <span class="comment">// Health Points Max</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                     _dmgs,     <span class="comment">// Damages</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                     _cost;     <span class="comment">// Coût </span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keyword">static</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> _nextId; <span class="comment">// le prochain objet aura cet identifiant + 1</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="classPosition.html">Position</a> _position;     <span class="comment">// Position actuelle</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="classAttack.html">Attack</a> *_attack;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="classHPLoss.html">HPLoss</a> *_hpLoss;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="classMove.html">Move</a> *_move;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">bool</span> _summoner;     <span class="comment">// unité peut invoquer près d&#39;elle?</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">bool</span> _builder;      <span class="comment">// unité peut construire?</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        std::string _image;     <span class="comment">// image de l&#39;unité</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;         <a class="code" href="classUnit.html#aa921e68cbe458d7cf65c8ba4c23bc162">Unit</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> range,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;              <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ap,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;              <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mp,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;              <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> hp,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;              <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dmgs,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;              <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> cost,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;              <a class="code" href="classAttack.html">Attack</a>* <a class="code" href="classUnit.html#ac06b8f6e30f851f15a42d8a1d951034a">attack</a>,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;              <a class="code" href="classHPLoss.html">HPLoss</a>* <a class="code" href="classUnit.html#a3090f43e2ee6a08587a160afaa26e7cd">hpLoss</a>,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;              <a class="code" href="classMove.html">Move</a>* <a class="code" href="classUnit.html#a8c6bfbaf9bf204baec6ba3c11468ec2f">move</a>,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;              <a class="code" href="classPosition.html">Position</a> position,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;              std::string image);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;              </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">//virtual ~Unit();</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classUnit.html#a5178a7baf2fb908a6232c3117af4bebd">getId</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <a class="code" href="classPosition.html">Position</a> <a class="code" href="classUnit.html#acf607fa2a07b1c50829c151a865ff4e6">getPosition</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classUnit.html#a583b24bee2b519bb4b6feb94502c2645">getRange</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classUnit.html#ac44844d1a66456789d803e157baf500d">getAP</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getMaxAP() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classUnit.html#ab63830d1bc4db11dc38634d5efe1401e">getMP</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getMaxMP() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classUnit.html#a2114b6ef6c9af9dddeb88aeddbc22043">getHP</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> getMaxHP() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classUnit.html#a95d364646c70c571be6c010506a6eb42">getDmgs</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="classUnit.html#a0fab4c57cd63d3a8c7019d074a645a87">getCost</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        std::string <a class="code" href="classUnit.html#ab2c57e3a68452586ef2b2585efa75439">getImage</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        </div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classUnit.html#a1a6263ae2b5dea9d789e15ed8992b5df">isSummoner</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        </div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="classUnit.html#afb4ddd2c148dcedcf76767a38096fbe3">isBuilder</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUnit.html#a7b6b1b0eaebc2ac76b263aac194bcac4">setRange</a>( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> range );</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUnit.html#ab45c2fef4fe3a279a032dc9643247d17">setAP</a> ( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ap );</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUnit.html#a9f64ea3c64f8c19564640a37e97c9788">setMP</a> ( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mp );</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUnit.html#ae3a714e956dce20972b8f6384c319439">setHP</a> ( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> hp );</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUnit.html#a9900634c53953be27d7e0bd2e00669b4">setDmgs</a> ( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dmgs );</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUnit.html#a518c16a1168ddde8fa3616dab1e034de">setPosition</a> ( <a class="code" href="classPosition.html">Position</a> pos );</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUnit.html#a28a3e0beaa973c59fef271452117191c">setImage</a> ( std::string image );        </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUnit.html#a9a35240ea4ccd698e65e4b466344a2cf">setSummoner</a>();     <span class="comment">// A utiliser suite a une upgrade =&gt; rend toujours TRUE</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUnit.html#a9be2e7f4127fb29d7165f4f108a1e095">setBuilder</a>();      <span class="comment">// A utiliser suite a une upgrade =&gt; rend toujours TRUE</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUnit.html#ac06b8f6e30f851f15a42d8a1d951034a">attack</a> ( <a class="code" href="classPosition.html">Position</a> pos, <a class="code" href="classMap.html">Map</a> *map );</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUnit.html#a3090f43e2ee6a08587a160afaa26e7cd">hpLoss</a> ( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> value );</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUnit.html#a8c6bfbaf9bf204baec6ba3c11468ec2f">move</a> ( <a class="code" href="classPath.html">Path</a> *path, <a class="code" href="classMap.html">Map</a> *map );</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keyword">virtual</span> std::string <a class="code" href="classUnit.html#adac07557f9c0b9005709c62263625c2d">classe</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUnit.html#a969abe2fc267339748d665c757991c33">afficher</a>();</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="classUnit.html">Unit</a>* <a class="code" href="classUnit.html#a90304713be4b7cc73f59358190dd39d4">clone</a>(<a class="code" href="classPosition.html">Position</a> position) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="classUnit.html#a21808f6976e0803ebdc1efcce18bd043">afficherInfos</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classUnit.html#a2657eec715871bdfc44711526bcff5fa">endTurn</a>();</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;};</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#endif // UNIT_HPP  </span></div>
+<div class="ttc" id="classUnit_html_a90304713be4b7cc73f59358190dd39d4"><div class="ttname"><a href="classUnit.html#a90304713be4b7cc73f59358190dd39d4">Unit::clone</a></div><div class="ttdeci">virtual Unit * clone(Position position) const =0</div><div class="ttdoc">Méthode qui retourne une unité possèdant le même type, mais aussi les même caractéristiques que "this...</div></div>
+<div class="ttc" id="classUnit_html_adac07557f9c0b9005709c62263625c2d"><div class="ttname"><a href="classUnit.html#adac07557f9c0b9005709c62263625c2d">Unit::classe</a></div><div class="ttdeci">virtual std::string classe() const =0</div><div class="ttdoc">Méthode virtuelle qui affiche le nom de la classe de l&#39;unité </div></div>
+<div class="ttc" id="classUnit_html_ae3a714e956dce20972b8f6384c319439"><div class="ttname"><a href="classUnit.html#ae3a714e956dce20972b8f6384c319439">Unit::setHP</a></div><div class="ttdeci">void setHP(unsigned int hp)</div><div class="ttdoc">Setter de points de vie. </div></div>
+<div class="ttc" id="classUnit_html_ab63830d1bc4db11dc38634d5efe1401e"><div class="ttname"><a href="classUnit.html#ab63830d1bc4db11dc38634d5efe1401e">Unit::getMP</a></div><div class="ttdeci">unsigned int getMP() const </div><div class="ttdoc">Accesseur des points de mouvement. </div></div>
+<div class="ttc" id="classUnit_html_a5178a7baf2fb908a6232c3117af4bebd"><div class="ttname"><a href="classUnit.html#a5178a7baf2fb908a6232c3117af4bebd">Unit::getId</a></div><div class="ttdeci">unsigned int getId() const </div><div class="ttdoc">Destructeur (évite les warnings) </div></div>
+<div class="ttc" id="classUnit_html_a2657eec715871bdfc44711526bcff5fa"><div class="ttname"><a href="classUnit.html#a2657eec715871bdfc44711526bcff5fa">Unit::endTurn</a></div><div class="ttdeci">void endTurn()</div><div class="ttdoc">Méthode qui éxécute les actions de fin de tour comme réinitialiser les pa et pm. </div></div>
+<div class="ttc" id="classUnit_html_a583b24bee2b519bb4b6feb94502c2645"><div class="ttname"><a href="classUnit.html#a583b24bee2b519bb4b6feb94502c2645">Unit::getRange</a></div><div class="ttdeci">unsigned int getRange() const </div><div class="ttdoc">Accesseur de la portée. </div></div>
+<div class="ttc" id="classUnit_html_ac06b8f6e30f851f15a42d8a1d951034a"><div class="ttname"><a href="classUnit.html#ac06b8f6e30f851f15a42d8a1d951034a">Unit::attack</a></div><div class="ttdeci">void attack(Position pos, Map *map)</div><div class="ttdoc">L&#39;unité attaque la position pos. </div></div>
+<div class="ttc" id="classUnit_html_a21808f6976e0803ebdc1efcce18bd043"><div class="ttname"><a href="classUnit.html#a21808f6976e0803ebdc1efcce18bd043">Unit::afficherInfos</a></div><div class="ttdeci">virtual void afficherInfos() const =0</div><div class="ttdoc">Affiche les infos de l&#39;unité </div></div>
+<div class="ttc" id="classUnit_html_a969abe2fc267339748d665c757991c33"><div class="ttname"><a href="classUnit.html#a969abe2fc267339748d665c757991c33">Unit::afficher</a></div><div class="ttdeci">void afficher()</div><div class="ttdoc">Méthode qui affiche la classe de l&#39;unité et sa position. </div></div>
+<div class="ttc" id="classUnit_html_a3090f43e2ee6a08587a160afaa26e7cd"><div class="ttname"><a href="classUnit.html#a3090f43e2ee6a08587a160afaa26e7cd">Unit::hpLoss</a></div><div class="ttdeci">void hpLoss(unsigned int value)</div><div class="ttdoc">L&#39;unité perd des points de vie. </div></div>
+<div class="ttc" id="classUnit_html_a9a35240ea4ccd698e65e4b466344a2cf"><div class="ttname"><a href="classUnit.html#a9a35240ea4ccd698e65e4b466344a2cf">Unit::setSummoner</a></div><div class="ttdeci">void setSummoner()</div><div class="ttdoc">Setter de capacité Summoner ( la rend TRUE ) </div></div>
+<div class="ttc" id="classAttack_html"><div class="ttname"><a href="classAttack.html">Attack</a></div><div class="ttdoc">Classe virtuelle pure permettant l&#39;utilisation de différents comportement d&#39;attaque selon l&#39;unité...</div><div class="ttdef"><b>Definition:</b> <a href="attack_8hpp_source.html#l00021">attack.hpp:21</a></div></div>
+<div class="ttc" id="classUnit_html_acf607fa2a07b1c50829c151a865ff4e6"><div class="ttname"><a href="classUnit.html#acf607fa2a07b1c50829c151a865ff4e6">Unit::getPosition</a></div><div class="ttdeci">Position getPosition() const </div><div class="ttdoc">Accesseur de la position. </div></div>
+<div class="ttc" id="classUnit_html_a1a6263ae2b5dea9d789e15ed8992b5df"><div class="ttname"><a href="classUnit.html#a1a6263ae2b5dea9d789e15ed8992b5df">Unit::isSummoner</a></div><div class="ttdeci">bool isSummoner() const </div><div class="ttdoc">Accesseur de la capacité Summoner. </div></div>
+<div class="ttc" id="classPosition_html"><div class="ttname"><a href="classPosition.html">Position</a></div><div class="ttdoc">Classe implémentant une position sur la map. </div><div class="ttdef"><b>Definition:</b> <a href="position_8hpp_source.html#l00019">position.hpp:19</a></div></div>
+<div class="ttc" id="classUnit_html_a9be2e7f4127fb29d7165f4f108a1e095"><div class="ttname"><a href="classUnit.html#a9be2e7f4127fb29d7165f4f108a1e095">Unit::setBuilder</a></div><div class="ttdeci">void setBuilder()</div><div class="ttdoc">Setter de capacité Builder ( la rend TRUE ) </div></div>
+<div class="ttc" id="classUnit_html_a0fab4c57cd63d3a8c7019d074a645a87"><div class="ttname"><a href="classUnit.html#a0fab4c57cd63d3a8c7019d074a645a87">Unit::getCost</a></div><div class="ttdeci">unsigned int getCost() const </div><div class="ttdoc">Accesseur du coût. </div></div>
+<div class="ttc" id="classUnit_html_a2114b6ef6c9af9dddeb88aeddbc22043"><div class="ttname"><a href="classUnit.html#a2114b6ef6c9af9dddeb88aeddbc22043">Unit::getHP</a></div><div class="ttdeci">unsigned int getHP() const </div><div class="ttdoc">Accesseur des points de vie. </div></div>
+<div class="ttc" id="classPath_html"><div class="ttname"><a href="classPath.html">Path</a></div><div class="ttdoc">Classe implémentant un chemin (path) sur la map. </div><div class="ttdef"><b>Definition:</b> <a href="path_8hpp_source.html#l00021">path.hpp:21</a></div></div>
+<div class="ttc" id="classMove_html"><div class="ttname"><a href="classMove.html">Move</a></div><div class="ttdoc">Classe virtuelle pure permettant l&#39;utilisation de différents comportement de déplacements selon l&#39;uni...</div><div class="ttdef"><b>Definition:</b> <a href="move_8hpp_source.html#l00021">move.hpp:21</a></div></div>
+<div class="ttc" id="classUnit_html_a9900634c53953be27d7e0bd2e00669b4"><div class="ttname"><a href="classUnit.html#a9900634c53953be27d7e0bd2e00669b4">Unit::setDmgs</a></div><div class="ttdeci">void setDmgs(unsigned int dmgs)</div><div class="ttdoc">Setter de dommages. </div></div>
+<div class="ttc" id="classHPLoss_html"><div class="ttname"><a href="classHPLoss.html">HPLoss</a></div><div class="ttdoc">Classe virtuelle pure permettant l&#39;utilisation de différents comportement de la perte de points de vi...</div><div class="ttdef"><b>Definition:</b> <a href="hploss_8hpp_source.html#l00020">hploss.hpp:20</a></div></div>
+<div class="ttc" id="classUnit_html_ac44844d1a66456789d803e157baf500d"><div class="ttname"><a href="classUnit.html#ac44844d1a66456789d803e157baf500d">Unit::getAP</a></div><div class="ttdeci">unsigned int getAP() const </div><div class="ttdoc">Accesseur des points d&#39;action. </div></div>
+<div class="ttc" id="classUnit_html_a28a3e0beaa973c59fef271452117191c"><div class="ttname"><a href="classUnit.html#a28a3e0beaa973c59fef271452117191c">Unit::setImage</a></div><div class="ttdeci">void setImage(std::string image)</div><div class="ttdoc">Setter d&#39;image. </div></div>
+<div class="ttc" id="classMap_html"><div class="ttname"><a href="classMap.html">Map</a></div><div class="ttdoc">Classe permettant l&#39;utilisation d&#39;une map. </div><div class="ttdef"><b>Definition:</b> <a href="map_8hpp_source.html#l00026">map.hpp:26</a></div></div>
+<div class="ttc" id="classUnit_html_aa921e68cbe458d7cf65c8ba4c23bc162"><div class="ttname"><a href="classUnit.html#aa921e68cbe458d7cf65c8ba4c23bc162">Unit::Unit</a></div><div class="ttdeci">Unit(unsigned int range, unsigned int ap, unsigned int mp, unsigned int hp, unsigned int dmgs, unsigned int cost, Attack *attack, HPLoss *hpLoss, Move *move, Position position, std::string image)</div><div class="ttdoc">Constructeur. </div></div>
+<div class="ttc" id="classUnit_html_a95d364646c70c571be6c010506a6eb42"><div class="ttname"><a href="classUnit.html#a95d364646c70c571be6c010506a6eb42">Unit::getDmgs</a></div><div class="ttdeci">unsigned int getDmgs() const </div><div class="ttdoc">Accesseur des dommages. </div></div>
+<div class="ttc" id="classUnit_html_a8c6bfbaf9bf204baec6ba3c11468ec2f"><div class="ttname"><a href="classUnit.html#a8c6bfbaf9bf204baec6ba3c11468ec2f">Unit::move</a></div><div class="ttdeci">void move(Path *path, Map *map)</div><div class="ttdoc">Déplace l&#39;unité </div></div>
+<div class="ttc" id="classUnit_html_a9f64ea3c64f8c19564640a37e97c9788"><div class="ttname"><a href="classUnit.html#a9f64ea3c64f8c19564640a37e97c9788">Unit::setMP</a></div><div class="ttdeci">void setMP(unsigned int mp)</div><div class="ttdoc">Setter de points de mouvement. </div></div>
+<div class="ttc" id="position_8hpp_html"><div class="ttname"><a href="position_8hpp.html">position.hpp</a></div><div class="ttdoc">definition de la classe Position </div></div>
+<div class="ttc" id="classUnit_html_a518c16a1168ddde8fa3616dab1e034de"><div class="ttname"><a href="classUnit.html#a518c16a1168ddde8fa3616dab1e034de">Unit::setPosition</a></div><div class="ttdeci">void setPosition(Position pos)</div><div class="ttdoc">Setter de positon. </div></div>
+<div class="ttc" id="classUnit_html_ab45c2fef4fe3a279a032dc9643247d17"><div class="ttname"><a href="classUnit.html#ab45c2fef4fe3a279a032dc9643247d17">Unit::setAP</a></div><div class="ttdeci">void setAP(unsigned int ap)</div><div class="ttdoc">Setter de points d&#39;action. </div></div>
+<div class="ttc" id="classUnit_html"><div class="ttname"><a href="classUnit.html">Unit</a></div><div class="ttdoc">Classe permettant l&#39;utilisation d&#39;unités. </div><div class="ttdef"><b>Definition:</b> <a href="unit_8hpp_source.html#l00026">unit.hpp:26</a></div></div>
+<div class="ttc" id="classUnit_html_a7b6b1b0eaebc2ac76b263aac194bcac4"><div class="ttname"><a href="classUnit.html#a7b6b1b0eaebc2ac76b263aac194bcac4">Unit::setRange</a></div><div class="ttdeci">void setRange(unsigned int range)</div><div class="ttdoc">Setter de portée. </div></div>
+<div class="ttc" id="classUnit_html_afb4ddd2c148dcedcf76767a38096fbe3"><div class="ttname"><a href="classUnit.html#afb4ddd2c148dcedcf76767a38096fbe3">Unit::isBuilder</a></div><div class="ttdeci">bool isBuilder() const </div><div class="ttdoc">Accesseur de la capacité Builder. </div></div>
+<div class="ttc" id="classUnit_html_ab2c57e3a68452586ef2b2585efa75439"><div class="ttname"><a href="classUnit.html#ab2c57e3a68452586ef2b2585efa75439">Unit::getImage</a></div><div class="ttdeci">std::string getImage() const </div><div class="ttdoc">Accesseur de l&#39;image. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mercredi 25 Novembre 2015 11:58:57 pour Projet Design Pattern par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

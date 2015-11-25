@@ -6,7 +6,7 @@
  *
 **/
 
-#include "archer.h"
+#include "archer.hpp"
 
 #include <iostream>
 

@@ -7,11 +7,11 @@
 **/
 
 #include <iostream>
-#include "unit.h"
-#include "attack.h"
-#include "move.h"
-#include "hploss.h"
-#include "path.h"
+#include "unit.hpp"
+#include "attack.hpp"
+#include "move.hpp"
+#include "hploss.hpp"
+#include "path.hpp"
 
 using namespace std;
 

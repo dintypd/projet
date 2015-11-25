@@ -1,0 +1,408 @@
+\hypertarget{classUnit}{\section{Référence de la classe Unit}
+\label{classUnit}\index{Unit@{Unit}}
+}
+
+
+Classe permettant l'utilisation d'unités.  
+
+
+
+
+{\ttfamily \#include $<$unit.\+hpp$>$}
+
+Graphe d'héritage de Unit\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classUnit}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classUnit_aa921e68cbe458d7cf65c8ba4c23bc162}{\hyperlink{classUnit_aa921e68cbe458d7cf65c8ba4c23bc162}{Unit} (unsigned int range, unsigned int ap, unsigned int mp, unsigned int hp, unsigned int dmgs, unsigned int cost, \hyperlink{classAttack}{Attack} $\ast$\hyperlink{classUnit_ac06b8f6e30f851f15a42d8a1d951034a}{attack}, \hyperlink{classHPLoss}{H\+P\+Loss} $\ast$\hyperlink{classUnit_a3090f43e2ee6a08587a160afaa26e7cd}{hp\+Loss}, \hyperlink{classMove}{Move} $\ast$\hyperlink{classUnit_a8c6bfbaf9bf204baec6ba3c11468ec2f}{move}, \hyperlink{classPosition}{Position} position, std\+::string image)}\label{classUnit_aa921e68cbe458d7cf65c8ba4c23bc162}
+
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classUnit_a5178a7baf2fb908a6232c3117af4bebd}{get\+Id} () const 
+\begin{DoxyCompactList}\small\item\em Destructeur (évite les warnings) \end{DoxyCompactList}\item 
+\hyperlink{classPosition}{Position} \hyperlink{classUnit_acf607fa2a07b1c50829c151a865ff4e6}{get\+Position} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur de la position. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classUnit_a583b24bee2b519bb4b6feb94502c2645}{get\+Range} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur de la portée. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classUnit_ac44844d1a66456789d803e157baf500d}{get\+A\+P} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur des points d'action. \end{DoxyCompactList}\item 
+\hypertarget{classUnit_ac869149c544c48d375318e4d0f2f118f}{unsigned int {\bfseries get\+Max\+A\+P} () const }\label{classUnit_ac869149c544c48d375318e4d0f2f118f}
+
+\item 
+unsigned int \hyperlink{classUnit_ab63830d1bc4db11dc38634d5efe1401e}{get\+M\+P} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur des points de mouvement. \end{DoxyCompactList}\item 
+\hypertarget{classUnit_ae8eea4bbc468f95b7ce52edddc37de53}{unsigned int {\bfseries get\+Max\+M\+P} () const }\label{classUnit_ae8eea4bbc468f95b7ce52edddc37de53}
+
+\item 
+unsigned int \hyperlink{classUnit_a2114b6ef6c9af9dddeb88aeddbc22043}{get\+H\+P} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur des points de vie. \end{DoxyCompactList}\item 
+\hypertarget{classUnit_aa04fff8cffcb1da0e0fb4cbfda3e37d7}{unsigned int {\bfseries get\+Max\+H\+P} () const }\label{classUnit_aa04fff8cffcb1da0e0fb4cbfda3e37d7}
+
+\item 
+unsigned int \hyperlink{classUnit_a95d364646c70c571be6c010506a6eb42}{get\+Dmgs} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur des dommages. \end{DoxyCompactList}\item 
+unsigned int \hyperlink{classUnit_a0fab4c57cd63d3a8c7019d074a645a87}{get\+Cost} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur du coût. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classUnit_ab2c57e3a68452586ef2b2585efa75439}{get\+Image} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur de l'image. \end{DoxyCompactList}\item 
+bool \hyperlink{classUnit_a1a6263ae2b5dea9d789e15ed8992b5df}{is\+Summoner} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur de la capacité Summoner. \end{DoxyCompactList}\item 
+bool \hyperlink{classUnit_afb4ddd2c148dcedcf76767a38096fbe3}{is\+Builder} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur de la capacité Builder. \end{DoxyCompactList}\item 
+\hypertarget{classUnit_a7b6b1b0eaebc2ac76b263aac194bcac4}{void \hyperlink{classUnit_a7b6b1b0eaebc2ac76b263aac194bcac4}{set\+Range} (unsigned int range)}\label{classUnit_a7b6b1b0eaebc2ac76b263aac194bcac4}
+
+\begin{DoxyCompactList}\small\item\em Setter de portée. \end{DoxyCompactList}\item 
+\hypertarget{classUnit_ab45c2fef4fe3a279a032dc9643247d17}{void \hyperlink{classUnit_ab45c2fef4fe3a279a032dc9643247d17}{set\+A\+P} (unsigned int ap)}\label{classUnit_ab45c2fef4fe3a279a032dc9643247d17}
+
+\begin{DoxyCompactList}\small\item\em Setter de points d'action. \end{DoxyCompactList}\item 
+\hypertarget{classUnit_a9f64ea3c64f8c19564640a37e97c9788}{void \hyperlink{classUnit_a9f64ea3c64f8c19564640a37e97c9788}{set\+M\+P} (unsigned int mp)}\label{classUnit_a9f64ea3c64f8c19564640a37e97c9788}
+
+\begin{DoxyCompactList}\small\item\em Setter de points de mouvement. \end{DoxyCompactList}\item 
+\hypertarget{classUnit_ae3a714e956dce20972b8f6384c319439}{void \hyperlink{classUnit_ae3a714e956dce20972b8f6384c319439}{set\+H\+P} (unsigned int hp)}\label{classUnit_ae3a714e956dce20972b8f6384c319439}
+
+\begin{DoxyCompactList}\small\item\em Setter de points de vie. \end{DoxyCompactList}\item 
+\hypertarget{classUnit_a9900634c53953be27d7e0bd2e00669b4}{void \hyperlink{classUnit_a9900634c53953be27d7e0bd2e00669b4}{set\+Dmgs} (unsigned int dmgs)}\label{classUnit_a9900634c53953be27d7e0bd2e00669b4}
+
+\begin{DoxyCompactList}\small\item\em Setter de dommages. \end{DoxyCompactList}\item 
+\hypertarget{classUnit_a518c16a1168ddde8fa3616dab1e034de}{void \hyperlink{classUnit_a518c16a1168ddde8fa3616dab1e034de}{set\+Position} (\hyperlink{classPosition}{Position} pos)}\label{classUnit_a518c16a1168ddde8fa3616dab1e034de}
+
+\begin{DoxyCompactList}\small\item\em Setter de positon. \end{DoxyCompactList}\item 
+\hypertarget{classUnit_a28a3e0beaa973c59fef271452117191c}{void \hyperlink{classUnit_a28a3e0beaa973c59fef271452117191c}{set\+Image} (std\+::string image)}\label{classUnit_a28a3e0beaa973c59fef271452117191c}
+
+\begin{DoxyCompactList}\small\item\em Setter d'image. \end{DoxyCompactList}\item 
+\hypertarget{classUnit_a9a35240ea4ccd698e65e4b466344a2cf}{void \hyperlink{classUnit_a9a35240ea4ccd698e65e4b466344a2cf}{set\+Summoner} ()}\label{classUnit_a9a35240ea4ccd698e65e4b466344a2cf}
+
+\begin{DoxyCompactList}\small\item\em Setter de capacité Summoner ( la rend T\+R\+U\+E ) \end{DoxyCompactList}\item 
+\hypertarget{classUnit_a9be2e7f4127fb29d7165f4f108a1e095}{void \hyperlink{classUnit_a9be2e7f4127fb29d7165f4f108a1e095}{set\+Builder} ()}\label{classUnit_a9be2e7f4127fb29d7165f4f108a1e095}
+
+\begin{DoxyCompactList}\small\item\em Setter de capacité Builder ( la rend T\+R\+U\+E ) \end{DoxyCompactList}\item 
+void \hyperlink{classUnit_ac06b8f6e30f851f15a42d8a1d951034a}{attack} (\hyperlink{classPosition}{Position} pos, \hyperlink{classMap}{Map} $\ast$map)
+\begin{DoxyCompactList}\small\item\em L'unité attaque la position pos. \end{DoxyCompactList}\item 
+void \hyperlink{classUnit_a3090f43e2ee6a08587a160afaa26e7cd}{hp\+Loss} (unsigned int value)
+\begin{DoxyCompactList}\small\item\em L'unité perd des points de vie. \end{DoxyCompactList}\item 
+void \hyperlink{classUnit_a8c6bfbaf9bf204baec6ba3c11468ec2f}{move} (\hyperlink{classPath}{Path} $\ast$path, \hyperlink{classMap}{Map} $\ast$map)
+\begin{DoxyCompactList}\small\item\em Déplace l'unité \end{DoxyCompactList}\item 
+\hypertarget{classUnit_adac07557f9c0b9005709c62263625c2d}{virtual std\+::string \hyperlink{classUnit_adac07557f9c0b9005709c62263625c2d}{classe} () const =0}\label{classUnit_adac07557f9c0b9005709c62263625c2d}
+
+\begin{DoxyCompactList}\small\item\em Méthode virtuelle qui affiche le nom de la classe de l'unité \end{DoxyCompactList}\item 
+\hypertarget{classUnit_a969abe2fc267339748d665c757991c33}{void \hyperlink{classUnit_a969abe2fc267339748d665c757991c33}{afficher} ()}\label{classUnit_a969abe2fc267339748d665c757991c33}
+
+\begin{DoxyCompactList}\small\item\em Méthode qui affiche la classe de l'unité et sa position. \end{DoxyCompactList}\item 
+virtual \hyperlink{classUnit}{Unit} $\ast$ \hyperlink{classUnit_a90304713be4b7cc73f59358190dd39d4}{clone} (\hyperlink{classPosition}{Position} position) const =0
+\begin{DoxyCompactList}\small\item\em Méthode qui retourne une unité possèdant le même type, mais aussi les même caractéristiques que \char`\"{}this\char`\"{}. \end{DoxyCompactList}\item 
+\hypertarget{classUnit_a21808f6976e0803ebdc1efcce18bd043}{virtual void \hyperlink{classUnit_a21808f6976e0803ebdc1efcce18bd043}{afficher\+Infos} () const =0}\label{classUnit_a21808f6976e0803ebdc1efcce18bd043}
+
+\begin{DoxyCompactList}\small\item\em Affiche les infos de l'unité \end{DoxyCompactList}\item 
+\hypertarget{classUnit_a2657eec715871bdfc44711526bcff5fa}{void \hyperlink{classUnit_a2657eec715871bdfc44711526bcff5fa}{end\+Turn} ()}\label{classUnit_a2657eec715871bdfc44711526bcff5fa}
+
+\begin{DoxyCompactList}\small\item\em Méthode qui éxécute les actions de fin de tour comme réinitialiser les pa et pm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classUnit_a4ec9562822eaba84e141ee30fc5d5561}{unsigned int {\bfseries \+\_\+id}}\label{classUnit_a4ec9562822eaba84e141ee30fc5d5561}
+
+\item 
+\hypertarget{classUnit_a7579bd13c0b683e3275ff84dcd39e614}{unsigned int {\bfseries \+\_\+range}}\label{classUnit_a7579bd13c0b683e3275ff84dcd39e614}
+
+\item 
+\hypertarget{classUnit_a968cd238d6ef530d33d2006a6dc80fba}{unsigned int {\bfseries \+\_\+ap}}\label{classUnit_a968cd238d6ef530d33d2006a6dc80fba}
+
+\item 
+\hypertarget{classUnit_aa5e25f6bb01279bf6909b631427fc3ae}{unsigned int {\bfseries \+\_\+ap\+Max}}\label{classUnit_aa5e25f6bb01279bf6909b631427fc3ae}
+
+\item 
+\hypertarget{classUnit_a84f6e9cf680ab7099e66caa5351ce79a}{unsigned int {\bfseries \+\_\+mp}}\label{classUnit_a84f6e9cf680ab7099e66caa5351ce79a}
+
+\item 
+\hypertarget{classUnit_a1fc6881c9ee518068f06636ff62d0a1c}{unsigned int {\bfseries \+\_\+mp\+Max}}\label{classUnit_a1fc6881c9ee518068f06636ff62d0a1c}
+
+\item 
+\hypertarget{classUnit_a59c016727ae555e75b61bc4b892d59c8}{unsigned int {\bfseries \+\_\+hp}}\label{classUnit_a59c016727ae555e75b61bc4b892d59c8}
+
+\item 
+\hypertarget{classUnit_abad6457e178bd9ca252256f5a18bd6a3}{unsigned int {\bfseries \+\_\+hp\+Max}}\label{classUnit_abad6457e178bd9ca252256f5a18bd6a3}
+
+\item 
+\hypertarget{classUnit_a9446a74a19fc662bc46d0a35651d6257}{unsigned int {\bfseries \+\_\+dmgs}}\label{classUnit_a9446a74a19fc662bc46d0a35651d6257}
+
+\item 
+\hypertarget{classUnit_a752100201cd0ce04b6a361068eaa65ec}{unsigned int {\bfseries \+\_\+cost}}\label{classUnit_a752100201cd0ce04b6a361068eaa65ec}
+
+\item 
+\hypertarget{classUnit_a6b77105078af83db82bfd4006a154e74}{\hyperlink{classPosition}{Position} {\bfseries \+\_\+position}}\label{classUnit_a6b77105078af83db82bfd4006a154e74}
+
+\item 
+\hypertarget{classUnit_ad6e87d9c5ea0823038a73cd725fc9b9c}{\hyperlink{classAttack}{Attack} $\ast$ {\bfseries \+\_\+attack}}\label{classUnit_ad6e87d9c5ea0823038a73cd725fc9b9c}
+
+\item 
+\hypertarget{classUnit_a1c139b04cef906782f4a96e520d9a898}{\hyperlink{classHPLoss}{H\+P\+Loss} $\ast$ {\bfseries \+\_\+hp\+Loss}}\label{classUnit_a1c139b04cef906782f4a96e520d9a898}
+
+\item 
+\hypertarget{classUnit_ad706684b8e916ef6a4df0c627a530afd}{\hyperlink{classMove}{Move} $\ast$ {\bfseries \+\_\+move}}\label{classUnit_ad706684b8e916ef6a4df0c627a530afd}
+
+\item 
+\hypertarget{classUnit_ab0e6ee2082c96facf7b6e297bb032e18}{bool {\bfseries \+\_\+summoner}}\label{classUnit_ab0e6ee2082c96facf7b6e297bb032e18}
+
+\item 
+\hypertarget{classUnit_a18e0ba8d6b5a45db49111dc5140cc634}{bool {\bfseries \+\_\+builder}}\label{classUnit_a18e0ba8d6b5a45db49111dc5140cc634}
+
+\item 
+\hypertarget{classUnit_a6760f1e268d6abe3413b5fd91d3c3c0f}{std\+::string {\bfseries \+\_\+image}}\label{classUnit_a6760f1e268d6abe3413b5fd91d3c3c0f}
+
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés statiques}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classUnit_aff329e42743a57d23cd317dbbae9e4db}{static unsigned int {\bfseries \+\_\+next\+Id}}\label{classUnit_aff329e42743a57d23cd317dbbae9e4db}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe permettant l'utilisation d'unités. 
+
+Définition à la ligne 26 du fichier unit.\+hpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classUnit_ac06b8f6e30f851f15a42d8a1d951034a}{\index{Unit@{Unit}!attack@{attack}}
+\index{attack@{attack}!Unit@{Unit}}
+\subsubsection[{attack}]{\setlength{\rightskip}{0pt plus 5cm}void Unit\+::attack (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{pos, }
+\item[{{\bf Map} $\ast$}]{map}
+\end{DoxyParamCaption}
+)}}\label{classUnit_ac06b8f6e30f851f15a42d8a1d951034a}
+
+
+L'unité attaque la position pos. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pos} & La position à attaquer \\
+\hline
+{\em map} & La carte \\
+\hline
+\end{DoxyParams}
+\hypertarget{classUnit_a90304713be4b7cc73f59358190dd39d4}{\index{Unit@{Unit}!clone@{clone}}
+\index{clone@{clone}!Unit@{Unit}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Unit}$\ast$ Unit\+::clone (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{classUnit_a90304713be4b7cc73f59358190dd39d4}
+
+
+Méthode qui retourne une unité possèdant le même type, mais aussi les même caractéristiques que \char`\"{}this\char`\"{}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position} & la position assignée à l'unité retournée \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un clone de \char`\"{}this\char`\"{} 
+\end{DoxyReturn}
+
+
+Implémenté dans \hyperlink{classArcher_a898839f83f972b3e2c000c9dfb92487c}{Archer}, et \hyperlink{classKnight_aff78fcbbd38c405b5c35f348160edce3}{Knight}.
+
+\hypertarget{classUnit_ac44844d1a66456789d803e157baf500d}{\index{Unit@{Unit}!get\+A\+P@{get\+A\+P}}
+\index{get\+A\+P@{get\+A\+P}!Unit@{Unit}}
+\subsubsection[{get\+A\+P}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Unit\+::get\+A\+P (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classUnit_ac44844d1a66456789d803e157baf500d}
+
+
+Accesseur des points d'action. 
+
+\begin{DoxyReturn}{Renvoie}
+le nombre de P\+A 
+\end{DoxyReturn}
+\hypertarget{classUnit_a0fab4c57cd63d3a8c7019d074a645a87}{\index{Unit@{Unit}!get\+Cost@{get\+Cost}}
+\index{get\+Cost@{get\+Cost}!Unit@{Unit}}
+\subsubsection[{get\+Cost}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Unit\+::get\+Cost (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classUnit_a0fab4c57cd63d3a8c7019d074a645a87}
+
+
+Accesseur du coût. 
+
+\begin{DoxyReturn}{Renvoie}
+le coût 
+\end{DoxyReturn}
+\hypertarget{classUnit_a95d364646c70c571be6c010506a6eb42}{\index{Unit@{Unit}!get\+Dmgs@{get\+Dmgs}}
+\index{get\+Dmgs@{get\+Dmgs}!Unit@{Unit}}
+\subsubsection[{get\+Dmgs}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Unit\+::get\+Dmgs (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classUnit_a95d364646c70c571be6c010506a6eb42}
+
+
+Accesseur des dommages. 
+
+\begin{DoxyReturn}{Renvoie}
+les dommages 
+\end{DoxyReturn}
+\hypertarget{classUnit_a2114b6ef6c9af9dddeb88aeddbc22043}{\index{Unit@{Unit}!get\+H\+P@{get\+H\+P}}
+\index{get\+H\+P@{get\+H\+P}!Unit@{Unit}}
+\subsubsection[{get\+H\+P}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Unit\+::get\+H\+P (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classUnit_a2114b6ef6c9af9dddeb88aeddbc22043}
+
+
+Accesseur des points de vie. 
+
+\begin{DoxyReturn}{Renvoie}
+le nombre de H\+P 
+\end{DoxyReturn}
+\hypertarget{classUnit_a5178a7baf2fb908a6232c3117af4bebd}{\index{Unit@{Unit}!get\+Id@{get\+Id}}
+\index{get\+Id@{get\+Id}!Unit@{Unit}}
+\subsubsection[{get\+Id}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Unit\+::get\+Id (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classUnit_a5178a7baf2fb908a6232c3117af4bebd}
+
+
+Destructeur (évite les warnings) 
+
+Accesseur de l'identifiant \begin{DoxyReturn}{Renvoie}
+l'identifiant du décor 
+\end{DoxyReturn}
+\hypertarget{classUnit_ab2c57e3a68452586ef2b2585efa75439}{\index{Unit@{Unit}!get\+Image@{get\+Image}}
+\index{get\+Image@{get\+Image}!Unit@{Unit}}
+\subsubsection[{get\+Image}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Unit\+::get\+Image (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classUnit_ab2c57e3a68452586ef2b2585efa75439}
+
+
+Accesseur de l'image. 
+
+\begin{DoxyReturn}{Renvoie}
+l'image 
+\end{DoxyReturn}
+\hypertarget{classUnit_ab63830d1bc4db11dc38634d5efe1401e}{\index{Unit@{Unit}!get\+M\+P@{get\+M\+P}}
+\index{get\+M\+P@{get\+M\+P}!Unit@{Unit}}
+\subsubsection[{get\+M\+P}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Unit\+::get\+M\+P (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classUnit_ab63830d1bc4db11dc38634d5efe1401e}
+
+
+Accesseur des points de mouvement. 
+
+\begin{DoxyReturn}{Renvoie}
+le nombre de P\+M 
+\end{DoxyReturn}
+\hypertarget{classUnit_acf607fa2a07b1c50829c151a865ff4e6}{\index{Unit@{Unit}!get\+Position@{get\+Position}}
+\index{get\+Position@{get\+Position}!Unit@{Unit}}
+\subsubsection[{get\+Position}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Position} Unit\+::get\+Position (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classUnit_acf607fa2a07b1c50829c151a865ff4e6}
+
+
+Accesseur de la position. 
+
+\begin{DoxyReturn}{Renvoie}
+la position du décor 
+\end{DoxyReturn}
+\hypertarget{classUnit_a583b24bee2b519bb4b6feb94502c2645}{\index{Unit@{Unit}!get\+Range@{get\+Range}}
+\index{get\+Range@{get\+Range}!Unit@{Unit}}
+\subsubsection[{get\+Range}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Unit\+::get\+Range (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classUnit_a583b24bee2b519bb4b6feb94502c2645}
+
+
+Accesseur de la portée. 
+
+\begin{DoxyReturn}{Renvoie}
+la portée d'attaque 
+\end{DoxyReturn}
+\hypertarget{classUnit_a3090f43e2ee6a08587a160afaa26e7cd}{\index{Unit@{Unit}!hp\+Loss@{hp\+Loss}}
+\index{hp\+Loss@{hp\+Loss}!Unit@{Unit}}
+\subsubsection[{hp\+Loss}]{\setlength{\rightskip}{0pt plus 5cm}void Unit\+::hp\+Loss (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{value}
+\end{DoxyParamCaption}
+)}}\label{classUnit_a3090f43e2ee6a08587a160afaa26e7cd}
+
+
+L'unité perd des points de vie. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em value} & Le nomdre d'H\+P perdus \\
+\hline
+\end{DoxyParams}
+\hypertarget{classUnit_afb4ddd2c148dcedcf76767a38096fbe3}{\index{Unit@{Unit}!is\+Builder@{is\+Builder}}
+\index{is\+Builder@{is\+Builder}!Unit@{Unit}}
+\subsubsection[{is\+Builder}]{\setlength{\rightskip}{0pt plus 5cm}bool Unit\+::is\+Builder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classUnit_afb4ddd2c148dcedcf76767a38096fbe3}
+
+
+Accesseur de la capacité Builder. 
+
+\begin{DoxyReturn}{Renvoie}
+booléen V/\+F 
+\end{DoxyReturn}
+\hypertarget{classUnit_a1a6263ae2b5dea9d789e15ed8992b5df}{\index{Unit@{Unit}!is\+Summoner@{is\+Summoner}}
+\index{is\+Summoner@{is\+Summoner}!Unit@{Unit}}
+\subsubsection[{is\+Summoner}]{\setlength{\rightskip}{0pt plus 5cm}bool Unit\+::is\+Summoner (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classUnit_a1a6263ae2b5dea9d789e15ed8992b5df}
+
+
+Accesseur de la capacité Summoner. 
+
+\begin{DoxyReturn}{Renvoie}
+booléen V/\+F 
+\end{DoxyReturn}
+\hypertarget{classUnit_a8c6bfbaf9bf204baec6ba3c11468ec2f}{\index{Unit@{Unit}!move@{move}}
+\index{move@{move}!Unit@{Unit}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void Unit\+::move (
+\begin{DoxyParamCaption}
+\item[{{\bf Path} $\ast$}]{path, }
+\item[{{\bf Map} $\ast$}]{map}
+\end{DoxyParamCaption}
+)}}\label{classUnit_a8c6bfbaf9bf204baec6ba3c11468ec2f}
+
+
+Déplace l'unité 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em path} & Le chemin emprunté \\
+\hline
+{\em map} & La carte \\
+\hline
+\end{DoxyParams}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{unit_8hpp}{unit.\+hpp}\end{DoxyCompactItemize}

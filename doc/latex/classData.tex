@@ -1,0 +1,141 @@
+\hypertarget{classData}{\section{Référence de la classe Data}
+\label{classData}\index{Data@{Data}}
+}
+
+
+Classe qui centralise toute les données du jeu.  
+
+
+
+
+{\ttfamily \#include $<$data.\+hpp$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classData_af11f741cb7f587e2e495452a8905a22a}{\hyperlink{classData_af11f741cb7f587e2e495452a8905a22a}{Data} ()}\label{classData_af11f741cb7f587e2e495452a8905a22a}
+
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+\hypertarget{classData_aab31956423290f0d62dcca47ab4d16dd}{\hyperlink{classData_aab31956423290f0d62dcca47ab4d16dd}{$\sim$\+Data} ()}\label{classData_aab31956423290f0d62dcca47ab4d16dd}
+
+\begin{DoxyCompactList}\small\item\em Destructeur. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector\\*
+$<$ unsigned int $>$ $>$ \hyperlink{classData_afa20d9cff2f1a3e174b7afcfb5a324fe}{get\+Tiles\+\_\+\+Map} ()
+\item 
+std\+::vector$<$ \hyperlink{classPosition}{Position} $>$ \hyperlink{classData_a37701a5ef2e31ae2b0c7a78ac943e316}{get\+Starting\+Positions\+\_\+\+Map} ()
+\item 
+std\+::map$<$ std\+::string, \\*
+unsigned int $>$ \hyperlink{classData_a28356240fd39ccba1e700b903c4bec95}{get\+Unsigned\+Int\+Data\+\_\+\+Base} ()
+\item 
+\hyperlink{classHPLoss}{H\+P\+Loss} $\ast$ \hyperlink{classData_ac3ee5887346af353d837b0cd989e86df}{get\+H\+P\+Loss\+Behavior\+\_\+\+Base} ()
+\item 
+\hyperlink{classSpawner}{Spawner} $\ast$ \hyperlink{classData_ae1e9282b13a0c50cd3e25da0de4527ac}{get\+Spawner} (std\+::string classe)
+\item 
+bool \hyperlink{classData_ad3fadb201a8698fee0981d7567024b23}{is\+Classe} (std\+::string classe)
+\item 
+std\+::vector$<$ std\+::string $>$ \hyperlink{classData_a6da2bc0e5b92dd41c3e3cae7440c2a1d}{get\+Classes} ()
+\item 
+unsigned int \hyperlink{classData_a24b4103d5c16ef50f996e2e058ee41e2}{get\+Golds\+\_\+\+Player} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+Classe qui centralise toute les données du jeu. 
+
+Définition à la ligne 30 du fichier data.\+hpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classData_a6da2bc0e5b92dd41c3e3cae7440c2a1d}{\index{Data@{Data}!get\+Classes@{get\+Classes}}
+\index{get\+Classes@{get\+Classes}!Data@{Data}}
+\subsubsection[{get\+Classes}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::string$>$ Data\+::get\+Classes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classData_a6da2bc0e5b92dd41c3e3cae7440c2a1d}
+Accesseur de la liste des classes \begin{DoxyReturn}{Renvoie}
+un tableau de string 
+\end{DoxyReturn}
+\hypertarget{classData_a24b4103d5c16ef50f996e2e058ee41e2}{\index{Data@{Data}!get\+Golds\+\_\+\+Player@{get\+Golds\+\_\+\+Player}}
+\index{get\+Golds\+\_\+\+Player@{get\+Golds\+\_\+\+Player}!Data@{Data}}
+\subsubsection[{get\+Golds\+\_\+\+Player}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int Data\+::get\+Golds\+\_\+\+Player (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classData_a24b4103d5c16ef50f996e2e058ee41e2}
+Retourne le nombre de golds des joueurs à l'initialisattion \begin{DoxyReturn}{Renvoie}
+un unsigned int 
+\end{DoxyReturn}
+\hypertarget{classData_ac3ee5887346af353d837b0cd989e86df}{\index{Data@{Data}!get\+H\+P\+Loss\+Behavior\+\_\+\+Base@{get\+H\+P\+Loss\+Behavior\+\_\+\+Base}}
+\index{get\+H\+P\+Loss\+Behavior\+\_\+\+Base@{get\+H\+P\+Loss\+Behavior\+\_\+\+Base}!Data@{Data}}
+\subsubsection[{get\+H\+P\+Loss\+Behavior\+\_\+\+Base}]{\setlength{\rightskip}{0pt plus 5cm}{\bf H\+P\+Loss}$\ast$ Data\+::get\+H\+P\+Loss\+Behavior\+\_\+\+Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classData_ac3ee5887346af353d837b0cd989e86df}
+Retourne le comportement de perte d'hp des bases \hypertarget{classData_ae1e9282b13a0c50cd3e25da0de4527ac}{\index{Data@{Data}!get\+Spawner@{get\+Spawner}}
+\index{get\+Spawner@{get\+Spawner}!Data@{Data}}
+\subsubsection[{get\+Spawner}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Spawner}$\ast$ Data\+::get\+Spawner (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{classe}
+\end{DoxyParamCaption}
+)}}\label{classData_ae1e9282b13a0c50cd3e25da0de4527ac}
+Retourne le spawner associé à la classe en paramètre 
+\begin{DoxyParams}{Paramètres}
+{\em classe} & la classe dont on veut le spawner \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un pointeur vers spawner 
+\end{DoxyReturn}
+\hypertarget{classData_a37701a5ef2e31ae2b0c7a78ac943e316}{\index{Data@{Data}!get\+Starting\+Positions\+\_\+\+Map@{get\+Starting\+Positions\+\_\+\+Map}}
+\index{get\+Starting\+Positions\+\_\+\+Map@{get\+Starting\+Positions\+\_\+\+Map}!Data@{Data}}
+\subsubsection[{get\+Starting\+Positions\+\_\+\+Map}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<${\bf Position}$>$ Data\+::get\+Starting\+Positions\+\_\+\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classData_a37701a5ef2e31ae2b0c7a78ac943e316}
+Retourne un vector contenant les positions de départ de la map \begin{DoxyReturn}{Renvoie}
+un tableau de position 
+\end{DoxyReturn}
+\hypertarget{classData_afa20d9cff2f1a3e174b7afcfb5a324fe}{\index{Data@{Data}!get\+Tiles\+\_\+\+Map@{get\+Tiles\+\_\+\+Map}}
+\index{get\+Tiles\+\_\+\+Map@{get\+Tiles\+\_\+\+Map}!Data@{Data}}
+\subsubsection[{get\+Tiles\+\_\+\+Map}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::vector$<$unsigned int$>$ $>$ Data\+::get\+Tiles\+\_\+\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classData_afa20d9cff2f1a3e174b7afcfb5a324fe}
+Méthode qui retourne un vector de vector qui correspond aux cases accessibles ou non de la map de base sans les décors \begin{DoxyReturn}{Renvoie}
+un tableau de tableau de booleen 
+\end{DoxyReturn}
+\hypertarget{classData_a28356240fd39ccba1e700b903c4bec95}{\index{Data@{Data}!get\+Unsigned\+Int\+Data\+\_\+\+Base@{get\+Unsigned\+Int\+Data\+\_\+\+Base}}
+\index{get\+Unsigned\+Int\+Data\+\_\+\+Base@{get\+Unsigned\+Int\+Data\+\_\+\+Base}!Data@{Data}}
+\subsubsection[{get\+Unsigned\+Int\+Data\+\_\+\+Base}]{\setlength{\rightskip}{0pt plus 5cm}std\+::map$<$std\+::string, unsigned int$>$ Data\+::get\+Unsigned\+Int\+Data\+\_\+\+Base (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classData_a28356240fd39ccba1e700b903c4bec95}
+Retourne toutes les données de type unsigned int de la classe base afin d'initialiser les instances de celle-\/ci \begin{DoxyReturn}{Renvoie}
+une map string-\/$>$unsigned int 
+\end{DoxyReturn}
+\hypertarget{classData_ad3fadb201a8698fee0981d7567024b23}{\index{Data@{Data}!is\+Classe@{is\+Classe}}
+\index{is\+Classe@{is\+Classe}!Data@{Data}}
+\subsubsection[{is\+Classe}]{\setlength{\rightskip}{0pt plus 5cm}bool Data\+::is\+Classe (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{classe}
+\end{DoxyParamCaption}
+)}}\label{classData_ad3fadb201a8698fee0981d7567024b23}
+Méthode qui vérifie si une classe existe 
+\begin{DoxyParams}{Paramètres}
+{\em classe} & la classe dont on veut savoir si elle existe \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+vrai si la classe est clé de la map \+\_\+spawner\+List 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{data_8hpp}{data.\+hpp}\end{DoxyCompactItemize}

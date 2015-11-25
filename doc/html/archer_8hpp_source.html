@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>Projet Design Pattern:  Fichier source de src/archer.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Projet Design Pattern
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">archer.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="archer_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef ARCHER_HPP</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define ARCHER_HPP</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="unit_8hpp.html">unit.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classArcher.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classArcher.html">Archer</a> : <span class="keyword">public</span> <a class="code" href="classUnit.html">Unit</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="classArcher.html#a339791774caa50d6a8d3a5b7a10fb228">Archer</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> range,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;               <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ap,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;               <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mp,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;               <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> hp,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;               <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> dmgs,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;               <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> cost,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;               <a class="code" href="classAttack.html">Attack</a>* <a class="code" href="classUnit.html#ac06b8f6e30f851f15a42d8a1d951034a">attack</a>,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;               <a class="code" href="classHPLoss.html">HPLoss</a>* <a class="code" href="classUnit.html#a3090f43e2ee6a08587a160afaa26e7cd">hpLoss</a>,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;               <a class="code" href="classMove.html">Move</a>* <a class="code" href="classUnit.html#a8c6bfbaf9bf204baec6ba3c11468ec2f">move</a>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;               <a class="code" href="classPosition.html">Position</a> position,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;               std::string image);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        std::string <a class="code" href="classArcher.html#a41ff30d3d1eac71a13bd5b5cc86a2d6b">classe</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="classUnit.html">Unit</a>* <a class="code" href="classArcher.html#a898839f83f972b3e2c000c9dfb92487c">clone</a>(<a class="code" href="classPosition.html">Position</a> position) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classArcher.html#a711fbb1d20af0d71b68e35b41507615b">afficherInfos</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif // ARCHER_HPP</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="ttc" id="classUnit_html_ac06b8f6e30f851f15a42d8a1d951034a"><div class="ttname"><a href="classUnit.html#ac06b8f6e30f851f15a42d8a1d951034a">Unit::attack</a></div><div class="ttdeci">void attack(Position pos, Map *map)</div><div class="ttdoc">L&#39;unité attaque la position pos. </div></div>
+<div class="ttc" id="classArcher_html_a711fbb1d20af0d71b68e35b41507615b"><div class="ttname"><a href="classArcher.html#a711fbb1d20af0d71b68e35b41507615b">Archer::afficherInfos</a></div><div class="ttdeci">void afficherInfos() const </div><div class="ttdoc">affiche les différentes informations sur l&#39;archer </div></div>
+<div class="ttc" id="classUnit_html_a3090f43e2ee6a08587a160afaa26e7cd"><div class="ttname"><a href="classUnit.html#a3090f43e2ee6a08587a160afaa26e7cd">Unit::hpLoss</a></div><div class="ttdeci">void hpLoss(unsigned int value)</div><div class="ttdoc">L&#39;unité perd des points de vie. </div></div>
+<div class="ttc" id="classArcher_html_a41ff30d3d1eac71a13bd5b5cc86a2d6b"><div class="ttname"><a href="classArcher.html#a41ff30d3d1eac71a13bd5b5cc86a2d6b">Archer::classe</a></div><div class="ttdeci">std::string classe() const </div><div class="ttdoc">Accesseur de la classe. </div></div>
+<div class="ttc" id="classAttack_html"><div class="ttname"><a href="classAttack.html">Attack</a></div><div class="ttdoc">Classe virtuelle pure permettant l&#39;utilisation de différents comportement d&#39;attaque selon l&#39;unité...</div><div class="ttdef"><b>Definition:</b> <a href="attack_8hpp_source.html#l00021">attack.hpp:21</a></div></div>
+<div class="ttc" id="classPosition_html"><div class="ttname"><a href="classPosition.html">Position</a></div><div class="ttdoc">Classe implémentant une position sur la map. </div><div class="ttdef"><b>Definition:</b> <a href="position_8hpp_source.html#l00019">position.hpp:19</a></div></div>
+<div class="ttc" id="classArcher_html_a898839f83f972b3e2c000c9dfb92487c"><div class="ttname"><a href="classArcher.html#a898839f83f972b3e2c000c9dfb92487c">Archer::clone</a></div><div class="ttdeci">Unit * clone(Position position) const </div><div class="ttdoc">construit un archer identique à la position donnée </div></div>
+<div class="ttc" id="classArcher_html_a339791774caa50d6a8d3a5b7a10fb228"><div class="ttname"><a href="classArcher.html#a339791774caa50d6a8d3a5b7a10fb228">Archer::Archer</a></div><div class="ttdeci">Archer(unsigned int range, unsigned int ap, unsigned int mp, unsigned int hp, unsigned int dmgs, unsigned int cost, Attack *attack, HPLoss *hpLoss, Move *move, Position position, std::string image)</div><div class="ttdoc">Constructeur. </div></div>
+<div class="ttc" id="unit_8hpp_html"><div class="ttname"><a href="unit_8hpp.html">unit.hpp</a></div><div class="ttdoc">Définition de la classe Unit. </div></div>
+<div class="ttc" id="classMove_html"><div class="ttname"><a href="classMove.html">Move</a></div><div class="ttdoc">Classe virtuelle pure permettant l&#39;utilisation de différents comportement de déplacements selon l&#39;uni...</div><div class="ttdef"><b>Definition:</b> <a href="move_8hpp_source.html#l00021">move.hpp:21</a></div></div>
+<div class="ttc" id="classArcher_html"><div class="ttname"><a href="classArcher.html">Archer</a></div><div class="ttdoc">Classe définissant un archer. </div><div class="ttdef"><b>Definition:</b> <a href="archer_8hpp_source.html#l00020">archer.hpp:20</a></div></div>
+<div class="ttc" id="classHPLoss_html"><div class="ttname"><a href="classHPLoss.html">HPLoss</a></div><div class="ttdoc">Classe virtuelle pure permettant l&#39;utilisation de différents comportement de la perte de points de vi...</div><div class="ttdef"><b>Definition:</b> <a href="hploss_8hpp_source.html#l00020">hploss.hpp:20</a></div></div>
+<div class="ttc" id="classUnit_html_a8c6bfbaf9bf204baec6ba3c11468ec2f"><div class="ttname"><a href="classUnit.html#a8c6bfbaf9bf204baec6ba3c11468ec2f">Unit::move</a></div><div class="ttdeci">void move(Path *path, Map *map)</div><div class="ttdoc">Déplace l&#39;unité </div></div>
+<div class="ttc" id="classUnit_html"><div class="ttname"><a href="classUnit.html">Unit</a></div><div class="ttdoc">Classe permettant l&#39;utilisation d&#39;unités. </div><div class="ttdef"><b>Definition:</b> <a href="unit_8hpp_source.html#l00026">unit.hpp:26</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mercredi 25 Novembre 2015 11:58:57 pour Projet Design Pattern par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

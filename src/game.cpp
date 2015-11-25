@@ -6,18 +6,18 @@
  *
 **/
 
-#include "game.h"
-#include "map.h"
-#include "base.h"
-#include "window.h"
-#include "player.h"
-#include "data.h"
-#include "unit.h"
-#include "knight.h"
-#include "spawner.h"
-#include "path.h"
-#include "position.h"
-#include "observer.h"
+#include "game.hpp"
+#include "map.hpp"
+#include "base.hpp"
+#include "window.hpp"
+#include "player.hpp"
+#include "data.hpp"
+#include "unit.hpp"
+#include "knight.hpp"
+#include "spawner.hpp"
+#include "path.hpp"
+#include "position.hpp"
+#include "observer.hpp"
 
 #include <algorithm>
 #include <vector>

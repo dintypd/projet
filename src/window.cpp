@@ -5,15 +5,15 @@
  * @brief Implémentation des méthodes de la classe Window
 **/
 
-#include "window.h"
-#include "subject.h"
-#include "tilemap.h"
-#include "map.h"
-#include "unit.h"
-#include "data.h"
-#include "base.h"
-#include "player.h"
-#include "game.h"
+#include "window.hpp"
+#include "subject.hpp"
+#include "tilemap.hpp"
+#include "map.hpp"
+#include "unit.hpp"
+#include "data.hpp"
+#include "base.hpp"
+#include "player.hpp"
+#include "game.hpp"
 #include <iterator>
 #include <iostream>
 #include <vector>

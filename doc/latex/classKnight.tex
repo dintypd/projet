@@ -1,0 +1,84 @@
+\hypertarget{classKnight}{\section{Référence de la classe Knight}
+\label{classKnight}\index{Knight@{Knight}}
+}
+
+
+Classe définissant un chevalier.  
+
+
+Graphe d'héritage de Knight\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classKnight}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classKnight_ae965f0055f4e556c17bdd1a48599c11c}{\hyperlink{classKnight_ae965f0055f4e556c17bdd1a48599c11c}{Knight} (unsigned int range, unsigned int ap, unsigned int mp, unsigned int hp, unsigned int dmgs, unsigned int cost, \hyperlink{classAttack}{Attack} $\ast$\hyperlink{classUnit_ac06b8f6e30f851f15a42d8a1d951034a}{attack}, \hyperlink{classHPLoss}{H\+P\+Loss} $\ast$\hyperlink{classUnit_a3090f43e2ee6a08587a160afaa26e7cd}{hp\+Loss}, \hyperlink{classMove}{Move} $\ast$\hyperlink{classUnit_a8c6bfbaf9bf204baec6ba3c11468ec2f}{move}, \hyperlink{classPosition}{Position} position, std\+::string image)}\label{classKnight_ae965f0055f4e556c17bdd1a48599c11c}
+
+\begin{DoxyCompactList}\small\item\em Constructeur. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{classKnight_a62f9fd4f850fe38a491cbc31a9768e51}{classe} () const 
+\begin{DoxyCompactList}\small\item\em Accesseur de la classe. \end{DoxyCompactList}\item 
+\hyperlink{classUnit}{Unit} $\ast$ \hyperlink{classKnight_aff78fcbbd38c405b5c35f348160edce3}{clone} (\hyperlink{classPosition}{Position} position) const 
+\begin{DoxyCompactList}\small\item\em construit un knight identique à la position donnée \end{DoxyCompactList}\item 
+\hypertarget{classKnight_a3aa88288ca9bc2d319c5ee1b4569fdfc}{void \hyperlink{classKnight_a3aa88288ca9bc2d319c5ee1b4569fdfc}{afficher\+Infos} () const }\label{classKnight_a3aa88288ca9bc2d319c5ee1b4569fdfc}
+
+\begin{DoxyCompactList}\small\item\em affiche les différentes informations sur l'archer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+Classe définissant un chevalier. 
+
+Définition à la ligne 19 du fichier knight.\+hpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{classKnight_a62f9fd4f850fe38a491cbc31a9768e51}{\index{Knight@{Knight}!classe@{classe}}
+\index{classe@{classe}!Knight@{Knight}}
+\subsubsection[{classe}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Knight\+::classe (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classKnight_a62f9fd4f850fe38a491cbc31a9768e51}
+
+
+Accesseur de la classe. 
+
+\begin{DoxyReturn}{Renvoie}
+\char`\"{}knight\char`\"{} 
+\end{DoxyReturn}
+
+
+Implémente \hyperlink{classUnit_adac07557f9c0b9005709c62263625c2d}{Unit}.
+
+\hypertarget{classKnight_aff78fcbbd38c405b5c35f348160edce3}{\index{Knight@{Knight}!clone@{clone}}
+\index{clone@{clone}!Knight@{Knight}}
+\subsubsection[{clone}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Unit}$\ast$ Knight\+::clone (
+\begin{DoxyParamCaption}
+\item[{{\bf Position}}]{position}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [virtual]}}}\label{classKnight_aff78fcbbd38c405b5c35f348160edce3}
+
+
+construit un knight identique à la position donnée 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em position} & une position \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un knight 
+\end{DoxyReturn}
+
+
+Implémente \hyperlink{classUnit_a90304713be4b7cc73f59358190dd39d4}{Unit}.
+
+
+
+La documentation de cette classe a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{knight_8hpp}{knight.\+hpp}\end{DoxyCompactItemize}

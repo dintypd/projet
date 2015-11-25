@@ -6,19 +6,19 @@
  *
 **/
 
-#include "data.h"
-#include "position.h"
-#include "attack.h"
-#include "concreteBaseAttack.h"
-#include "concreteBaseAttackSpeBase.h"
-#include "concretehploss.h"
-#include "concretehplossspedef.h"
-#include "concretemove.h"
-#include "move.h"
-#include "hploss.h"
-#include "knight.h"
-#include "archer.h"
-#include "spawner.h"
+#include "data.hpp"
+#include "position.hpp"
+#include "attack.hpp"
+#include "concreteBaseAttack.hpp"
+#include "concreteBaseAttackSpeBase.hpp"
+#include "concretehploss.hpp"
+#include "concretehplossspedef.hpp"
+#include "concretemove.hpp"
+#include "move.hpp"
+#include "hploss.hpp"
+#include "knight.hpp"
+#include "archer.hpp"
+#include "spawner.hpp"
 
 using namespace std;
 

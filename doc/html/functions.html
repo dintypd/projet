@@ -1,0 +1,595 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.7"/>
+<title>Projet Design Pattern: Membres de classe</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Projet Design Pattern
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.7 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="annotated.html"><span>Liste&#160;des&#160;classes</span></a></li>
+      <li><a href="classes.html"><span>Index&#160;des&#160;classes</span></a></li>
+      <li><a href="hierarchy.html"><span>Hiérarchie&#160;des&#160;classes</span></a></li>
+      <li class="current"><a href="functions.html"><span>Membres&#160;de&#160;classe</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow3" class="tabs2">
+    <ul class="tablist">
+      <li class="current"><a href="functions.html"><span>Tout</span></a></li>
+      <li><a href="functions_func.html"><span>Fonctions</span></a></li>
+    </ul>
+  </div>
+  <div id="navrow4" class="tabs3">
+    <ul class="tablist">
+      <li><a href="#index_a"><span>a</span></a></li>
+      <li><a href="#index_b"><span>b</span></a></li>
+      <li><a href="#index_c"><span>c</span></a></li>
+      <li><a href="#index_d"><span>d</span></a></li>
+      <li><a href="#index_e"><span>e</span></a></li>
+      <li><a href="#index_g"><span>g</span></a></li>
+      <li><a href="#index_h"><span>h</span></a></li>
+      <li><a href="#index_i"><span>i</span></a></li>
+      <li><a href="#index_k"><span>k</span></a></li>
+      <li><a href="#index_l"><span>l</span></a></li>
+      <li><a href="#index_m"><span>m</span></a></li>
+      <li><a href="#index_n"><span>n</span></a></li>
+      <li><a href="#index_o"><span>o</span></a></li>
+      <li><a href="#index_p"><span>p</span></a></li>
+      <li><a href="#index_q"><span>q</span></a></li>
+      <li><a href="#index_r"><span>r</span></a></li>
+      <li><a href="#index_s"><span>s</span></a></li>
+      <li><a href="#index_u"><span>u</span></a></li>
+      <li><a href="#index_w"><span>w</span></a></li>
+      <li class="current"><a href="#index_~"><span>~</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="contents">
+<div class="textblock">Liste de tous les membres de classe documentés avec des liens vers la documentation de classe de chaque membre :</div>
+
+<h3><a class="anchor" id="index_a"></a>- a -</h3><ul>
+<li>addGolds()
+: <a class="el" href="classPlayer.html#a3b8380f4cd58fe75a985c0c2e3f32c8a">Player</a>
+</li>
+<li>addObs()
+: <a class="el" href="classGame.html#a7c81b1033a3a8d6758ab0bf1c10a451c">Game</a>
+, <a class="el" href="classSubject.html#a4a12fdee2e95909a575066103986fa85">Subject</a>
+</li>
+<li>addPlayer()
+: <a class="el" href="classMap.html#aee81c8e1fdb01828b733d392f5c1e068">Map</a>
+</li>
+<li>afficheGolds()
+: <a class="el" href="classPlayer.html#a93eb96604ac6b679bda65a8bb18083ee">Player</a>
+</li>
+<li>afficher()
+: <a class="el" href="classBase.html#a1a3daeb406afce579a88debf4424b0a0">Base</a>
+, <a class="el" href="classPosition.html#a93014db59c98c0f95eb2056bf546f956">Position</a>
+, <a class="el" href="classUnit.html#a969abe2fc267339748d665c757991c33">Unit</a>
+</li>
+<li>afficherInfos()
+: <a class="el" href="classArcher.html#a711fbb1d20af0d71b68e35b41507615b">Archer</a>
+, <a class="el" href="classKnight.html#a3aa88288ca9bc2d319c5ee1b4569fdfc">Knight</a>
+, <a class="el" href="classUnit.html#a21808f6976e0803ebdc1efcce18bd043">Unit</a>
+</li>
+<li>afficheUnits()
+: <a class="el" href="classPlayer.html#a2e72d8952b9fa896bd750e24ec5c6497">Player</a>
+</li>
+<li>Archer()
+: <a class="el" href="classArcher.html#a339791774caa50d6a8d3a5b7a10fb228">Archer</a>
+</li>
+<li>Attack()
+: <a class="el" href="classAttack.html#ab7a4ca023e07dd3c94ea31c081046f9e">Attack</a>
+</li>
+<li>attack()
+: <a class="el" href="classAttack.html#aa741caafef0d80bb0a00ce39e5bf6e2d">Attack</a>
+, <a class="el" href="classConcreteBaseAttack.html#a35cf2248ae6a719ba6041f95ea1428a2">ConcreteBaseAttack</a>
+, <a class="el" href="classConcreteBaseAttackSpeBase.html#a4b215e51d3146516ecf77e23d19a92de">ConcreteBaseAttackSpeBase</a>
+, <a class="el" href="classUnit.html#ac06b8f6e30f851f15a42d8a1d951034a">Unit</a>
+</li>
+<li>attackCommand()
+: <a class="el" href="classGame.html#a27e73a42585e02a6c375413f803b0032">Game</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_b"></a>- b -</h3><ul>
+<li>Base()
+: <a class="el" href="classBase.html#a32aefb7f04339edda2e2517502dd27b2">Base</a>
+</li>
+<li>baseBreak()
+: <a class="el" href="classMap.html#a8cf8d2999a559ac2d6d1e7bcc09ecafb">Map</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_c"></a>- c -</h3><ul>
+<li>classe()
+: <a class="el" href="classArcher.html#a41ff30d3d1eac71a13bd5b5cc86a2d6b">Archer</a>
+, <a class="el" href="classKnight.html#a62f9fd4f850fe38a491cbc31a9768e51">Knight</a>
+, <a class="el" href="classUnit.html#adac07557f9c0b9005709c62263625c2d">Unit</a>
+</li>
+<li>clone()
+: <a class="el" href="classArcher.html#a898839f83f972b3e2c000c9dfb92487c">Archer</a>
+, <a class="el" href="classKnight.html#aff78fcbbd38c405b5c35f348160edce3">Knight</a>
+, <a class="el" href="classUnit.html#a90304713be4b7cc73f59358190dd39d4">Unit</a>
+</li>
+<li>ConcreteBaseAttack()
+: <a class="el" href="classConcreteBaseAttack.html#a1695c43e01c14d65b893443866bc3ca7">ConcreteBaseAttack</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_d"></a>- d -</h3><ul>
+<li>Data()
+: <a class="el" href="classData.html#af11f741cb7f587e2e495452a8905a22a">Data</a>
+</li>
+<li>die()
+: <a class="el" href="classMap.html#adeacfcfebbc96d2818acf8e10f56a36e">Map</a>
+</li>
+<li>distance()
+: <a class="el" href="classPosition.html#a917de1eeb8ba5056636b4274d7444a20">Position</a>
+</li>
+<li>down()
+: <a class="el" href="classPosition.html#a20fbdadf072a7f285e8181f339776c0c">Position</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_e"></a>- e -</h3><ul>
+<li>endOfGame()
+: <a class="el" href="classGame.html#a217c5bd3b04bcf146b312cb17e2621e3">Game</a>
+</li>
+<li>endTurn()
+: <a class="el" href="classGame.html#a987b5442cddbc9376b7fe55a9fcbd42e">Game</a>
+, <a class="el" href="classPlayer.html#a8a6677e3a5b23a764ee224336fc61dba">Player</a>
+, <a class="el" href="classUnit.html#a2657eec715871bdfc44711526bcff5fa">Unit</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>Game()
+: <a class="el" href="classGame.html#ad59df6562a58a614fda24622d3715b65">Game</a>
+</li>
+<li>getAP()
+: <a class="el" href="classUnit.html#ac44844d1a66456789d803e157baf500d">Unit</a>
+</li>
+<li>getBase()
+: <a class="el" href="classPlayer.html#a1a3f0608b817489ecce50a53da619270">Player</a>
+</li>
+<li>getBaseAt()
+: <a class="el" href="classMap.html#a1943a0744e258950e341d368bdaec868">Map</a>
+</li>
+<li>getBuildRange()
+: <a class="el" href="classBase.html#a1bd08f26289caa9aa0028efd9dae8d9e">Base</a>
+</li>
+<li>getClasses()
+: <a class="el" href="classData.html#a6da2bc0e5b92dd41c3e3cae7440c2a1d">Data</a>
+</li>
+<li>getCost()
+: <a class="el" href="classSpawner.html#a10e44285b671baeeb4e83eae92bdcf86">Spawner</a>
+, <a class="el" href="classUnit.html#a0fab4c57cd63d3a8c7019d074a645a87">Unit</a>
+</li>
+<li>getData()
+: <a class="el" href="classGame.html#af36ccea6518e85542e7efc07ba425de0">Game</a>
+, <a class="el" href="classSubject.html#ab847f18f48b243cf2104d7b8bc4fdb62">Subject</a>
+</li>
+<li>getDmgs()
+: <a class="el" href="classUnit.html#a95d364646c70c571be6c010506a6eb42">Unit</a>
+</li>
+<li>getGolds()
+: <a class="el" href="classPlayer.html#a5a300fd8e477c6d9f19266763970daaf">Player</a>
+</li>
+<li>getGolds_Player()
+: <a class="el" href="classData.html#a24b4103d5c16ef50f996e2e058ee41e2">Data</a>
+</li>
+<li>getHP()
+: <a class="el" href="classBase.html#a8fd6606cff73e39cd05225bd7b395218">Base</a>
+, <a class="el" href="classUnit.html#a2114b6ef6c9af9dddeb88aeddbc22043">Unit</a>
+</li>
+<li>getHPLossBehavior_Base()
+: <a class="el" href="classData.html#ac3ee5887346af353d837b0cd989e86df">Data</a>
+</li>
+<li>getId()
+: <a class="el" href="classPlayer.html#a6e7e67674bf8f2896cff3ef7f4fa7e0d">Player</a>
+, <a class="el" href="classUnit.html#a5178a7baf2fb908a6232c3117af4bebd">Unit</a>
+</li>
+<li>getImage()
+: <a class="el" href="classUnit.html#ab2c57e3a68452586ef2b2585efa75439">Unit</a>
+</li>
+<li>getMap()
+: <a class="el" href="classGame.html#af2a02d3d8e78f4246c97ae06dd74f04f">Game</a>
+, <a class="el" href="classSubject.html#ac5639945604c72dc64e4a173bf60a516">Subject</a>
+</li>
+<li>getMaxHP()
+: <a class="el" href="classBase.html#a8599d1b3c4d1b744d5e3d42abfb47361">Base</a>
+</li>
+<li>getMP()
+: <a class="el" href="classUnit.html#ab63830d1bc4db11dc38634d5efe1401e">Unit</a>
+</li>
+<li>getName()
+: <a class="el" href="classPlayer.html#ad4c6a95f1cf69c44d0c585465b101c70">Player</a>
+</li>
+<li>getNext()
+: <a class="el" href="classPlayer.html#a6f9f2357bacaeb64a926b98da355afd7">Player</a>
+</li>
+<li>getPlayers()
+: <a class="el" href="classMap.html#a8e1b744435056e5fff197956d1cfdfb7">Map</a>
+</li>
+<li>getPosition()
+: <a class="el" href="classBase.html#ae2abb880ce9543ac70419714f8c1181f">Base</a>
+, <a class="el" href="classPath.html#a1d790239748af16e157aaa04ce262a36">Path</a>
+, <a class="el" href="classUnit.html#acf607fa2a07b1c50829c151a865ff4e6">Unit</a>
+</li>
+<li>getRange()
+: <a class="el" href="classUnit.html#a583b24bee2b519bb4b6feb94502c2645">Unit</a>
+</li>
+<li>getSize()
+: <a class="el" href="classMap.html#aaac0c6132fd80f0db5969833fed068c2">Map</a>
+</li>
+<li>getSpawner()
+: <a class="el" href="classData.html#ae1e9282b13a0c50cd3e25da0de4527ac">Data</a>
+</li>
+<li>getStartingPositions_Map()
+: <a class="el" href="classData.html#a37701a5ef2e31ae2b0c7a78ac943e316">Data</a>
+</li>
+<li>getSummonRange()
+: <a class="el" href="classBase.html#a7f6a0b45ce6331d7bfb0d6f716d5ba60">Base</a>
+</li>
+<li>getTiles()
+: <a class="el" href="classMap.html#a902613cfaf7782f2212b088eccc2f0e7">Map</a>
+</li>
+<li>getTiles_Map()
+: <a class="el" href="classData.html#afa20d9cff2f1a3e174b7afcfb5a324fe">Data</a>
+</li>
+<li>getUnit()
+: <a class="el" href="classMap.html#a5e9e5a63b3ffd5a7051d86cfb2ae2925">Map</a>
+, <a class="el" href="classPlayer.html#af8d6f506784f7dc1c1dd49db84f31831">Player</a>
+</li>
+<li>getUnitAt()
+: <a class="el" href="classMap.html#a947916f15873cfad436bd8c156d8bcbf">Map</a>
+</li>
+<li>getUnits()
+: <a class="el" href="classPlayer.html#a1184d2d25acc16958d0e7710fe0f00ec">Player</a>
+</li>
+<li>getUnsignedIntData_Base()
+: <a class="el" href="classData.html#a28356240fd39ccba1e700b903c4bec95">Data</a>
+</li>
+<li>getWinner()
+: <a class="el" href="classMap.html#ab99bf425d6dd3c9de7db90d54308a9b7">Map</a>
+</li>
+<li>getX()
+: <a class="el" href="classPosition.html#a175e80a49f22b64fd5adee597d996f12">Position</a>
+</li>
+<li>getY()
+: <a class="el" href="classPosition.html#ab4200021493a42e7f6755231ad98bece">Position</a>
+</li>
+<li>goldsCommand()
+: <a class="el" href="classGame.html#a470d2a7a0da91c8287276d6135840dfd">Game</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_h"></a>- h -</h3><ul>
+<li>helpCommand()
+: <a class="el" href="classGame.html#a2f6be379e2d5bc1cce58f1ec96422ba8">Game</a>
+</li>
+<li>hpLoss()
+: <a class="el" href="classBase.html#a3f6ba779a531b048daa9cec42c945b91">Base</a>
+, <a class="el" href="classConcreteHPLoss.html#a5bebc84735ab86cd54f19a8488464558">ConcreteHPLoss</a>
+, <a class="el" href="classConcreteHPLossSpeDef.html#ad62272f839de14217c84688bd2fa5aba">ConcreteHPLossSpeDef</a>
+, <a class="el" href="classHPLoss.html#a9572e4b06e306798325e2b27d15244e2">HPLoss</a>
+, <a class="el" href="classUnit.html#a3090f43e2ee6a08587a160afaa26e7cd">Unit</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>infosCommand()
+: <a class="el" href="classGame.html#acea1269edf0a00ada8e765e385ab5df1">Game</a>
+</li>
+<li>isBaseAt()
+: <a class="el" href="classMap.html#ad89412c547ebdcdd0831a8a7700c3f18">Map</a>
+</li>
+<li>isBlocked()
+: <a class="el" href="classMap.html#a1c5ffa96157a27bba9673135974b200c">Map</a>
+</li>
+<li>isBuilder()
+: <a class="el" href="classUnit.html#afb4ddd2c148dcedcf76767a38096fbe3">Unit</a>
+</li>
+<li>isClasse()
+: <a class="el" href="classData.html#ad3fadb201a8698fee0981d7567024b23">Data</a>
+</li>
+<li>isSummoner()
+: <a class="el" href="classUnit.html#a1a6263ae2b5dea9d789e15ed8992b5df">Unit</a>
+</li>
+<li>isUnit()
+: <a class="el" href="classMap.html#a150dfa9e7f3c31e8f7b8bdba6fe4a433">Map</a>
+</li>
+<li>isUnitAt()
+: <a class="el" href="classMap.html#ac1383a7aa9471f09d4a2f8708d872008">Map</a>
+</li>
+<li>isValidPath()
+: <a class="el" href="classMap.html#a82b16c404e0e9a3f11619a4c040d6f74">Map</a>
+</li>
+<li>isValidSummonPosition()
+: <a class="el" href="classMap.html#a48877a918e3766b284120918b183b9d4">Map</a>
+</li>
+<li>isValidViewLine()
+: <a class="el" href="classMap.html#a708c3a1b9b5e0771fedc078c8a22677a">Map</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_k"></a>- k -</h3><ul>
+<li>kill()
+: <a class="el" href="classPlayer.html#a96a07d17d57a83a43c7f639803e02f49">Player</a>
+</li>
+<li>Knight()
+: <a class="el" href="classKnight.html#ae965f0055f4e556c17bdd1a48599c11c">Knight</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_l"></a>- l -</h3><ul>
+<li>left()
+: <a class="el" href="classPosition.html#ad90cc325cca474c6c140b63c9bc69ddd">Position</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_m"></a>- m -</h3><ul>
+<li>Map()
+: <a class="el" href="classMap.html#ae50ababdf30fcb0f5a10d38c1984eb75">Map</a>
+</li>
+<li>move()
+: <a class="el" href="classConcreteMove.html#adbbcf93faa6dad1660a922618b905ff1">ConcreteMove</a>
+, <a class="el" href="classMove.html#ace4540308f0bbd21d71a18b2ff7c972d">Move</a>
+, <a class="el" href="classUnit.html#a8c6bfbaf9bf204baec6ba3c11468ec2f">Unit</a>
+</li>
+<li>moveCommand()
+: <a class="el" href="classGame.html#a3b1e53d7df15b62d651830bbd47a7516">Game</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_n"></a>- n -</h3><ul>
+<li>notifyObs()
+: <a class="el" href="classGame.html#a3ac1bb304b96d6df0d350d39dc651cd2">Game</a>
+, <a class="el" href="classSubject.html#a421d620f3f93365bfd57cd1e9165e501">Subject</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_o"></a>- o -</h3><ul>
+<li>operator==()
+: <a class="el" href="classPosition.html#ab3245f578d0c01b1c4a39a8e5df5a82c">Position</a>
+</li>
+<li>operator[]()
+: <a class="el" href="classPath.html#a3b2b7259396354a7a79245065a363373">Path</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>play()
+: <a class="el" href="classGame.html#aa333825d0bca80e91e53c7e23f053405">Game</a>
+</li>
+<li>Player()
+: <a class="el" href="classPlayer.html#a64124cbd4f373c5b7ebec1aaee471e06">Player</a>
+</li>
+<li>popPos()
+: <a class="el" href="classPath.html#a3ba977222e0dbfbf731bdf1d4856f5de">Path</a>
+</li>
+<li>Position()
+: <a class="el" href="classPosition.html#a3b1b8f105448a2d70dcc622ba475d13f">Position</a>
+</li>
+<li>pushPos()
+: <a class="el" href="classPath.html#af2fb51479b719021bbdb3a1d540d1c78">Path</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_q"></a>- q -</h3><ul>
+<li>quit()
+: <a class="el" href="classWindow.html#ad21ca1bd9a5c01411800f931bd7b1f7d">Window</a>
+</li>
+<li>quitCommand()
+: <a class="el" href="classGame.html#a2be014c3f87a1a6f9169ee0c3d002360">Game</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_r"></a>- r -</h3><ul>
+<li>right()
+: <a class="el" href="classPosition.html#a5dff15ebfa9df6de047e0268c9e29728">Position</a>
+</li>
+<li>rmGolds()
+: <a class="el" href="classPlayer.html#a375e40b8080b58b5fe5296d44ab74f8e">Player</a>
+</li>
+<li>rmObs()
+: <a class="el" href="classGame.html#a759618d920dd0e0f74f4bba89d35e56e">Game</a>
+, <a class="el" href="classSubject.html#a1005f6c36e1a65fb13f1f0fa908b82e0">Subject</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_s"></a>- s -</h3><ul>
+<li>setAP()
+: <a class="el" href="classUnit.html#ab45c2fef4fe3a279a032dc9643247d17">Unit</a>
+</li>
+<li>setBuilder()
+: <a class="el" href="classUnit.html#a9be2e7f4127fb29d7165f4f108a1e095">Unit</a>
+</li>
+<li>setDmgs()
+: <a class="el" href="classUnit.html#a9900634c53953be27d7e0bd2e00669b4">Unit</a>
+</li>
+<li>setHP()
+: <a class="el" href="classBase.html#a0e05c8081bb85324b884abfa6712f6fb">Base</a>
+, <a class="el" href="classUnit.html#ae3a714e956dce20972b8f6384c319439">Unit</a>
+</li>
+<li>setImage()
+: <a class="el" href="classUnit.html#a28a3e0beaa973c59fef271452117191c">Unit</a>
+</li>
+<li>setMP()
+: <a class="el" href="classUnit.html#a9f64ea3c64f8c19564640a37e97c9788">Unit</a>
+</li>
+<li>setNext()
+: <a class="el" href="classPlayer.html#aa25996d64c6b562ac737c548bdc687a6">Player</a>
+</li>
+<li>setPlayer()
+: <a class="el" href="classBase.html#a0e2dd85f633ed25b9ab144fb7c769b7b">Base</a>
+</li>
+<li>setPosition()
+: <a class="el" href="classBase.html#a17fc3f12f7aedbf5a8be8f0f271a3f62">Base</a>
+, <a class="el" href="classUnit.html#a518c16a1168ddde8fa3616dab1e034de">Unit</a>
+</li>
+<li>setRange()
+: <a class="el" href="classUnit.html#a7b6b1b0eaebc2ac76b263aac194bcac4">Unit</a>
+</li>
+<li>setSummoner()
+: <a class="el" href="classUnit.html#a9a35240ea4ccd698e65e4b466344a2cf">Unit</a>
+</li>
+<li>setX()
+: <a class="el" href="classPosition.html#aed892c6444ea8f9cf0b03490306d3382">Position</a>
+</li>
+<li>setY()
+: <a class="el" href="classPosition.html#a557e6df4fac8167f3dd287889d2e1c0a">Position</a>
+</li>
+<li>size()
+: <a class="el" href="classPath.html#a5a0eb3303c0e3fed707c9e0cf6f31257">Path</a>
+</li>
+<li>Spawner()
+: <a class="el" href="classSpawner.html#a184706828dba74f9400a0e7ed175998c">Spawner</a>
+</li>
+<li>spawnUnit()
+: <a class="el" href="classSpawner.html#ac3b94465446cf0afe31fd6bd5d135c65">Spawner</a>
+</li>
+<li>summon()
+: <a class="el" href="classPlayer.html#a8963d12d2c4e47cd073ed9829dd86c79">Player</a>
+</li>
+<li>summonCommand()
+: <a class="el" href="classGame.html#a762c24a729cfdc357acbd5c6ecc4c4f8">Game</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_u"></a>- u -</h3><ul>
+<li>Unit()
+: <a class="el" href="classUnit.html#aa921e68cbe458d7cf65c8ba4c23bc162">Unit</a>
+</li>
+<li>unitsCommand()
+: <a class="el" href="classGame.html#af22614489ceb0cf9a0081016314c75df">Game</a>
+</li>
+<li>up()
+: <a class="el" href="classPosition.html#a429c01611d2b0d7dfb06d182ad60928c">Position</a>
+</li>
+<li>update()
+: <a class="el" href="classObserver.html#a27884af3c43e814cc1e613cd593efb55">Observer</a>
+, <a class="el" href="classWindow.html#a23acb0c66756df8121ce5d54a8c28d72">Window</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_w"></a>- w -</h3><ul>
+<li>Window()
+: <a class="el" href="classWindow.html#a2e2ce3cfbd3e468d389d8a9212e7b2ac">Window</a>
+</li>
+</ul>
+
+
+<h3><a class="anchor" id="index_~"></a>- ~ -</h3><ul>
+<li>~Base()
+: <a class="el" href="classBase.html#a722da881b6c70cfcbde9243abcfbf334">Base</a>
+</li>
+<li>~Data()
+: <a class="el" href="classData.html#aab31956423290f0d62dcca47ab4d16dd">Data</a>
+</li>
+<li>~Game()
+: <a class="el" href="classGame.html#ae3d112ca6e0e55150d2fdbc704474530">Game</a>
+</li>
+<li>~Map()
+: <a class="el" href="classMap.html#aa403fbe09394ccf39747588f5168e3b2">Map</a>
+</li>
+<li>~Player()
+: <a class="el" href="classPlayer.html#a749d2c00e1fe0f5c2746f7505a58c062">Player</a>
+</li>
+<li>~Spawner()
+: <a class="el" href="classSpawner.html#a59d8e3d4d6dc6c25f38ce5d4fcc5e8e6">Spawner</a>
+</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mercredi 25 Novembre 2015 11:59:02 pour Projet Design Pattern par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.7
+</small></address>
+</body>
+</html>

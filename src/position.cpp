@@ -7,7 +7,7 @@
 **/
 #include <stdlib.h>
 #include <stdio.h>
-#include "position.h"
+#include "position.hpp"
 
 using namespace std;
 

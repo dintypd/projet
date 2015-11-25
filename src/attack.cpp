@@ -5,7 +5,7 @@
  * @brief Implémentation des stratégies d'attaque
 **/
 
-#include "attack.h"
+#include "attack.hpp"
 
 Attack::Attack(unsigned int ap)
 : _ap(ap)
